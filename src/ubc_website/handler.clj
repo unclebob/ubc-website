@@ -1,13 +1,11 @@
 (ns ubc-website.handler
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
-            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
-
-(defn front-page []
-  "Hello World")
+            [ring.middleware.defaults :refer [wrap-defaults site-defaults]])
+  (:use [ubc-website.views :as views]))
 
 (defroutes app-routes
-  (GET "/" [] (front-page))
+  (GET "/" [] (views/front-page))
   (route/not-found "Not Found"))
 
 (def app

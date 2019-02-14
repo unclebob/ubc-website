@@ -1,0 +1,39 @@
+body {
+    background: rgba(12, 255, 49, 0.09);
+}
+
+#ubc {
+    margin-top: 0;
+    color: #008f00;
+    text-align: center;
+    font-family: "Courier New", monospace;
+    font-size: 40pt;
+    text-shadow: 3px 2px #a5a5a5;
+    font-weight: bold;
+}
+
+#ubc-subtitle {
+    margin-top: 0;
+    color: #000000;
+    text-align: center;
+    font-family: "Times New Roman", serif;
+    font-size: 25pt;
+    text-shadow: 1px 1px #a5a5a5;
+    font-style: italic;
+}
+#header {
+    height: 220px;
+}
+
+#products {
+    float: left;
+    width: 70%;
+    border: thin solid darkgreen;
+}
+#sidebar {
+    float: right;
+    width: 28%;
+    border: thin solid darkgreen;
+
+}
+
