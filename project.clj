@@ -4,10 +4,13 @@
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [compojure "1.6.1"]
-                 [ring/ring-defaults "0.3.2"]
-                 [hiccup "1.0.5"]]
+                 [ring "1.7.1"]
+                 [hiccup "1.0.5"]
+                 [http-kit "2.3.0"]]
   :plugins [[lein-ring "0.12.4"]]
   :ring {:handler ubc-website.handler/app}
   :profiles
-  {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                        [ring/ring-mock "0.3.2"]]}})
+  {:dev
+   [{:plugins [[com.jakemccrary/lein-test-refresh "0.23.0"]]}
+    {:dependencies [[javax.servlet/servlet-api "2.5"]
+                    [ring/ring-mock "0.3.2"]]}]})

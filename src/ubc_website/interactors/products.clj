@@ -1,3 +1,3 @@
 (ns ubc-website.interactors.products)
 
-(defn products [] "products")
+(defn get-products [] "products")

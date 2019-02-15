@@ -1,7 +1,10 @@
 (ns ubc-website.views
   (:use [hiccup core page]
-        [ubc-website.interactors.products :only [products]]
+        [ubc-website.interactors.products :only [get-products]]
         [ubc-website.interactors.sidebar :only [sidebar]]))
+
+(defn products []
+  (html (get-products)))
 
 (defn front-page []
   (html5
