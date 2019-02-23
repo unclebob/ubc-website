@@ -1,12 +1,7 @@
-(ns ubc-website.views
-  (:use [hiccup core page]
-        [ubc-website.interactors.products :only [get-products]]
-        [ubc-website.interactors.sidebar :only [sidebar]]))
+(ns ubc-website.views.front-page
+  (:use [hiccup core page]))
 
-(defn products []
-  (html (get-products)))
-
-(defn front-page []
+(defn show []
   (html5
     [:head
      [:title "UBC"]
@@ -19,6 +14,6 @@
                         :align "right"}]
       [:p#ubc "Uncle Bob Martin"]
       [:p#ubc-subtitle "Software Speaker and Teacher"]]
-     [:div#products (products)]
-     [:div#sidebar (sidebar)]
+     [:div#products "products"]
+     [:div#sidebar "sidebar"]
      ]))
