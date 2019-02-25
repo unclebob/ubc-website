@@ -1,7 +1,8 @@
 (ns ubc-website.views.front-page
-  (:use [hiccup core page]))
+  (:use [hiccup core page])
+    (:require [ubc-website.presenters.front-page :as p]))
 
-(defn show []
+(defn show [{:keys [categories] :as front-page-data}]
   (html5
     [:head
      [:title "UBC"]
@@ -14,6 +15,6 @@
                         :align "right"}]
       [:p#ubc "Uncle Bob Martin"]
       [:p#ubc-subtitle "Software Speaker and Teacher"]]
-     [:div#products "products"]
+     (vec (concat [:div#products] (p/present-product-categories categories)))
      [:div#sidebar "sidebar"]
      ]))
