@@ -31,8 +31,7 @@ body {
 }
 
 div.product-category {
-    margin-top: 5px;
-    border: 2px solid black;
+    margin-top: 10px;
 }
 
 p.product-category {

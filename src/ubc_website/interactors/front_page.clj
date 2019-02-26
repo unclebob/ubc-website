@@ -1,20 +1,34 @@
 (ns ubc-website.interactors.front-page
   (:require
-    [ubc-website.views.front-page :as front-page]))
+    [ubc-website.views.front-page :as front-page]
+    [me.raynes.fs :as fs]))
 
-(def mock-front-page-data
-  {:categories
-   [{:product-category "Category1"
-     :products [{:product-name "Product1"
-                 :product-description "Description _1_"}
-                {:product-name "Product2"
-                 :product-description "Description 2"}]}
-    {:product-category "Category2"
-     :products [{:product-name "Product3"
-                 :product-description "Description 3"}
-                {:product-name "Product4"
-                 :product-description "Description 4"}]}]})
+(defn strip-name [name]
+  (let [parts (clojure.string/split (fs/name name) #"_")]
+    (second parts)))
+
+(defn make-product [name description]
+  {:product-name name :product-description description})
+
+(defn make-products [directory]
+  (let [product-files (sort (fs/list-dir directory))
+        descriptions (map slurp product-files)
+        product-names (map strip-name product-files)
+        products (map make-product product-names descriptions)]
+    products))
+
+(defn make-category [directory]
+  (let [category-name (strip-name directory)]
+    {:product-category category-name
+     :products (make-products directory)}))
+
+(defn get-categories [directory]
+  (let [files (fs/list-dir directory)
+        directories (sort (filter fs/directory? files))
+        categories (map make-category directories)]
+    categories))
 
 (defn exec []
-  (let [front-page-data mock-front-page-data]
-    (front-page/show front-page-data)))
+  (let [front-page-categories (get-categories "resources/public/categories")]
+    (println front-page-categories)
+    (front-page/show {:categories front-page-categories})))

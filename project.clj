@@ -7,6 +7,7 @@
                  [ring "1.7.1"]
                  [hiccup "1.0.5"]
                  [markdown-to-hiccup "0.6.2"]
+                 [me.raynes/fs "1.4.6"]
                  [http-kit "2.3.0"]]
   :plugins [[lein-ring "0.12.4"]]
   :ring {:handler ubc-website.handler/app}
