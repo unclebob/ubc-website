@@ -3,7 +3,8 @@
             [clojure.spec.alpha :as s]
             [ubc-website.entities.products :as products]
             [ubc-website.presenters.front-page :as front-page]
-            [ubc-website.presenters.util :refer [all-vectors?]]))
+            [ubc-website.presenters.testutil :refer [all-vectors?]]
+            [ubc-website.presenters.util :refer [markdown]]))
 
 (defn check-presentation [categories expected-presentation]
   (let [valid (s/explain-data ::products/categories categories)
@@ -31,7 +32,7 @@
         [:p.product-category "Category"]
         [:div.product
          [:p.product-name "Product"]
-         [:p.product-description "Description"]]]]))
+         [:div.product-description (markdown "Description")]]]]))
 
   (testing "two products in one category"
     (check-presentation
@@ -44,10 +45,10 @@
         [:p.product-category "Category"]
         [:div.product
          [:p.product-name "Product1"]
-         [:p.product-description "Description1"]]
+         [:div.product-description (markdown "Description1")]]
         [:div.product
          [:p.product-name "Product2"]
-         [:p.product-description "Description2"]]]]))
+         [:div.product-description (markdown "Description2")]]]]))
 
   (testing "two products in each of two categories"
     (check-presentation
@@ -65,17 +66,17 @@
         [:p.product-category "Category1"]
         [:div.product
          [:p.product-name "Product1"]
-         [:p.product-description "Description1"]]
+         [:div.product-description (markdown "Description1")]]
         [:div.product
          [:p.product-name "Product2"]
-         [:p.product-description "Description2"]]]
+         [:div.product-description (markdown "Description2")]]]
        [:div.product-category
         [:p.product-category "Category2"]
         [:div.product
          [:p.product-name "Product3"]
-         [:p.product-description "Description3"]]
+         [:div.product-description (markdown "Description3")]]
         [:div.product
          [:p.product-name "Product4"]
-         [:p.product-description "Description4"]]]]))
+         [:div.product-description (markdown "Description4")]]]]))
 
   )

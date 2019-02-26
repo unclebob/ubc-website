@@ -39,7 +39,7 @@ p.product-category {
     font-family: Arial, sans-serif;
     font-size: 20pt;
     margin-left: 5px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 2px;
 }
 
@@ -51,12 +51,12 @@ div.product {
 p.product-name {
     font-family: Arial, sans-serif;
     font-size: 14pt;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: 2px;
 }
 
-p.product-description {
+div.product-description {
     margin-top: 2px;
     margin-left: 10px;
     margin-bottom: 1px;

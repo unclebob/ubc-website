@@ -6,14 +6,14 @@
   {:categories
    [{:product-category "Category1"
      :products [{:product-name "Product1"
-                 :product-description "Description1"}
+                 :product-description "Description _1_"}
                 {:product-name "Product2"
-                 :product-description "Description2"}]}
+                 :product-description "Description 2"}]}
     {:product-category "Category2"
      :products [{:product-name "Product3"
-                 :product-description "Description3"}
+                 :product-description "Description 3"}
                 {:product-name "Product4"
-                 :product-description "Description4"}]}]})
+                 :product-description "Description 4"}]}]})
 
 (defn exec []
   (let [front-page-data mock-front-page-data]

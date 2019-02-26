@@ -1,4 +1,4 @@
-(ns ubc-website.presenters.util
+(ns ubc-website.presenters.testutil
   (:require [clojure.test :refer :all]))
 
 (defn all-vectors? [hiccup]

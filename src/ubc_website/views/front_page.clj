@@ -1,8 +1,10 @@
 (ns ubc-website.views.front-page
   (:use [hiccup core page])
-    (:require [ubc-website.presenters.front-page :as p]))
+  (:require
+    [ubc-website.presenters.front-page :as p]
+    [ubc-website.presenters.util :refer [add-hiccup]]))
 
-(defn show [{:keys [categories] :as front-page-data}]
+(defn show [{:keys [categories]}]
   (html5
     [:head
      [:title "UBC"]
@@ -15,6 +17,6 @@
                         :align "right"}]
       [:p#ubc "Uncle Bob Martin"]
       [:p#ubc-subtitle "Software Speaker and Teacher"]]
-     (vec (concat [:div#products] (p/present-product-categories categories)))
+     (add-hiccup [:div#products] (p/present-product-categories categories))
      [:div#sidebar "sidebar"]
      ]))
