@@ -30,5 +30,4 @@
 
 (defn exec []
   (let [front-page-categories (get-categories "resources/public/categories")]
-    (println front-page-categories)
     (front-page/show {:categories front-page-categories})))
