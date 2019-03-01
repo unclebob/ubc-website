@@ -7,9 +7,11 @@
             [ubc-website.entities.products :as products]
             [ubc-website.interactors.front-page :as fp]
             [me.raynes.fs :as fs]
+            [clj-time.core :as t]
+            [clj-time.format :as t-fmt]
             ))
 
-(def directory "Categories-Test")
+(def directory "FrontPageInteractor-Test")
 
 (defn clear-directory []
   (fs/delete-dir directory)
@@ -30,7 +32,7 @@
     (is (nil? valid))
     (is (= expected categories))))
 
-(deftest test-get-products
+(deftest test-get-categories
   (clear-directory)
   (testing "no Categories Directory"
     (check-categories directory []))
@@ -71,3 +73,42 @@
                          :product-description "D2"}
                         {:product-name "P3"
                          :product-description "D3"}]}])))
+
+(def today (t/date-time 2019 3 1))
+(def yesterday (t/minus today (t/days 1)))
+(def future-delta (t/days 3))
+
+(defn create-event [date suffix description]
+  (let [time-format (t-fmt/formatter "yyyyMMdd")
+        event-name (str (t-fmt/unparse time-format date) "_" suffix)]
+    (spit (str directory "/" event-name) description)
+    )
+  )
+
+(deftest testGetEvents
+  (testing "no events"
+    (clear-directory)
+    (let [events (fp/get-events directory today future-delta)]
+      (is (= events [])))
+    )
+
+  (testing "one current event"
+    (clear-directory)
+    (create-event today "suffix" "description")
+    (let [events (fp/get-events directory today future-delta)]
+      (is (= events [{:date today :description "description"}]))))
+
+  (testing "don't get past events"
+    (clear-directory)
+    (create-event yesterday "y-suffix" "y-description")
+    (create-event today "t-suffix" "t-description")
+    (let [events (fp/get-events directory today future-delta)]
+      (is (= events [{:date today :description "t-description"}]))))
+
+  (testing "don't get events too far in future"
+    (clear-directory)
+    (create-event today "t-suffix" "t-description")
+    (create-event (t/plus today future-delta) "f-suffix" "f-description")
+    (let [events (fp/get-events directory today future-delta)]
+      (is (= events [{:date today :description "t-description"}]))))
+  )

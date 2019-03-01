@@ -1,7 +1,9 @@
 (ns ubc-website.interactors.front-page
   (:require
     [ubc-website.views.front-page :as front-page]
-    [me.raynes.fs :as fs]))
+    [me.raynes.fs :as fs]
+    [clj-time.core :as t]
+    [clj-time.format :as t-fmt]))
 
 (defn strip-name [name]
   (let [parts (clojure.string/split (fs/name name) #"_")]
@@ -28,6 +30,40 @@
         categories (map make-category directories)]
     categories))
 
+(def event-formatter (t-fmt/formatter "yyyyMMdd"))
+
+(defn event-file->date [event-file]
+  (let [event-name (first (clojure.string/split (fs/name event-file) #"_"))
+        date (t-fmt/parse event-formatter event-name)]
+    date))
+
+(defn event-file->event [event-file]
+  (let [event-description (slurp event-file)
+        date (event-file->date event-file)]
+    {:date date :description event-description})
+  )
+
+(defn unexpired? [today event-file]
+  (let [date (event-file->date event-file)]
+    (or (t/equal? date today)
+        (t/after? date today))))
+
+(defn current? [cutoff-date event-file]
+  (let [date (event-file->date event-file)]
+    (t/before? date cutoff-date)))
+
+(defn get-events [directory date cutoff]
+  (let [event-files (fs/list-dir directory)
+        unexpired-files (filter (partial unexpired? date) event-files)
+        cutoff-date (t/plus date cutoff)
+        current-files (filter (partial current? cutoff-date) unexpired-files)
+        events (map event-file->event current-files)]
+    events))
+
 (defn exec []
-  (let [front-page-categories (get-categories "resources/public/categories")]
-    (front-page/show {:categories front-page-categories})))
+  (let [today (t/today-at-midnight)
+        categories (get-categories "resources/public/categories")
+        events (get-events "resources/public/events" today (t/months 3))
+        front-page-data {:categories categories
+                         :events events}]
+    (front-page/show front-page-data)))
