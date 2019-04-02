@@ -38,7 +38,7 @@ p.product-category {
     font-family: Arial, sans-serif;
     font-size: 20pt;
     margin-left: 5px;
-    margin-top: 0;
+    margin-top: 50px;
     margin-bottom: 2px;
 }
 
@@ -69,11 +69,11 @@ div.product-description {
     margin-top: 10px;
 }
 
-#event-title {
+.sidebar-title {
     font-family: Arial, sans-serif;
     font-size: 20pt;
     margin-left: 5px;
-    margin-top: 0;
+    margin-top: 50px;
     margin-bottom: 2px;
 }
 
@@ -98,4 +98,6 @@ div.event-description {
     font-size: 12pt;
     font-family: "Times New Roman", serif
 }
+
+
 
