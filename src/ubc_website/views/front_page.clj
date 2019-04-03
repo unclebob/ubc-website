@@ -7,7 +7,14 @@
 ;link from publish.twitter.com
 (def embedded-twitter-feed "<a class=\"twitter-timeline\" data-width=\"400\" data-height=\"400\" data-theme=\"light\" href=\"https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw\">Tweets by unclebobmartin</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
 
-(defn show [{:keys [categories events]}]
+(defn format-book [book-ref]
+  [[:div.book
+   [:p.book "Book"]]])
+
+(defn format-books [book-refs]
+  (vec (map format-book book-refs)))
+
+(defn show [{:keys [categories events books]}]
   (html5
     [:head
      [:title "UBC"]
@@ -28,6 +35,6 @@
      (add-hiccup [:p.sidebar-title "Uncle Bob's Tweets"]
                  embedded-twitter-feed)
      (add-hiccup [:p.sidebar-title "Recommended Books"]
-                 "")
+                 (format-books books))
 
      ]]))

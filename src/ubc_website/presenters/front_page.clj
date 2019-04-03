@@ -31,3 +31,9 @@
 
 (defn present-events [events]
   (vec (map present-event events)))
+
+(defn present-book [book-ref]
+  [[:div.book
+   [:p.book "Book"]]])
+
+

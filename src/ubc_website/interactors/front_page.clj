@@ -3,7 +3,8 @@
     [ubc-website.views.front-page :as front-page]
     [me.raynes.fs :as fs]
     [clj-time.core :as t]
-    [clj-time.format :as t-fmt]))
+    [clj-time.format :as t-fmt]
+    [clojure.data.json :as json]))
 
 (defn strip-name [name]
   (let [parts (clojure.string/split (fs/name name) #"_")]
@@ -59,6 +60,15 @@
         current-files (filter (partial current? cutoff-date) unexpired-files)
         events (map event-file->event current-files)]
     events))
+
+(defn get-book-data [isbn]
+  (let [book-url (format "https://openlibrary.org/api/books?bibkeys=ISBN:%s&format=json&jscmd=data" isbn)
+        book-json (json/read-str (slurp book-url))
+        book-json (book-json (first (keys book-json)))]
+    {:title (book-json "title")
+     :by (book-json "by_statement")
+     :publisher ((first (book-json "publishers")) "name")
+     :date (book-json "publish_date")}))
 
 (defn exec []
   (let [today (t/today-at-midnight)

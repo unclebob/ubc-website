@@ -99,5 +99,18 @@ div.event-description {
     font-family: "Times New Roman", serif
 }
 
+div.book {
+    margin-bottom: 1px;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+
+p.book {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2px;
+}
 
 
