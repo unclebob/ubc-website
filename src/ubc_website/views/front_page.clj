@@ -12,10 +12,11 @@
 
 (defn format-product-category [category]
   (let [product-presentations (map format-product (:products category))]
-    (vec
-      (concat [:div.product-category
-               [:p.product-category (:product-category category)]]
-              (vec product-presentations)))))
+    [:div.product-category
+     [:p.product-category (:product-category category)]
+     (vec
+       (concat [:div.product-category-scroll]
+               (vec product-presentations)))]))
 
 (defn format-product-categories [categories]
   (let [presented-categories (map format-product-category categories)]
@@ -47,16 +48,16 @@
                   :align "left"}]
       [:a {:href "/files/about.md"}
        [:img#caricature {:src "/images/BobCaricature.jpg"
-                        :align "right"}]]
+                         :align "right"}]]
       [:p#ubc "Uncle Bob Martin"]
       [:p#ubc-subtitle "Programmer, Speaker, Teacher"]]
      (add-hiccup [:div#products] (format-product-categories categories))
      [:div#sidebar
-     (add-hiccup [:p.sidebar-title "Up Comming Events"]
-                 (p/present-events events))
-     (add-hiccup [:p.sidebar-title "Uncle Bob's Tweets"]
-                 embedded-twitter-feed)
-     (add-hiccup [:p.sidebar-title "Recommended Books"]
-                 (format-books books))
+      (add-hiccup [:p.sidebar-title "Up Comming Events"]
+                  (p/present-events events))
+      (add-hiccup [:p.sidebar-title "Uncle Bob's Tweets"]
+                  embedded-twitter-feed)
+      (add-hiccup [:p.sidebar-title "Recommended Books"]
+                  (format-books books))
 
-     ]]))
+      ]]))

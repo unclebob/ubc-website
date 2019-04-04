@@ -8,7 +8,7 @@
 
 (defn check-presentation [categories expected-presentation]
   (let [valid (s/explain-data ::products/categories categories)
-        presentation (front-page/present-product-categories categories)]
+        presentation (front-page/format-product-categories categories)]
     (is (nil? valid))
     (is (all-vectors? presentation))
     (is (= presentation expected-presentation))))
