@@ -48,15 +48,15 @@
     (create-category "002_Category2")
     (create-category "001_Category1")
     (check-categories directory [{:product-category "Category1" :products []}
-            {:product-category "Category2" :products []}]))
+                                 {:product-category "Category2" :products []}]))
 
   (testing "one category one product"
     (clear-directory)
     (create-category "001_Category")
     (create-product "001_Category" "001_Product" "Description")
     (check-categories directory [{:product-category "Category"
-             :products [{:product-name "Product"
-                         :product-description "Description"}]}]))
+                                  :products [{:product-name "Product"
+                                              :product-description "Description"}]}]))
 
   (testing "two categories three products"
     (clear-directory)
@@ -66,13 +66,13 @@
     (create-product "002_C2" "002_P2" "D2")
     (create-product "002_C2" "003_P3" "D3")
     (check-categories directory [{:product-category "C1"
-             :products [{:product-name "P1"
-                         :product-description "D1"}]}
-            {:product-category "C2"
-             :products [{:product-name "P2"
-                         :product-description "D2"}
-                        {:product-name "P3"
-                         :product-description "D3"}]}])))
+                                  :products [{:product-name "P1"
+                                              :product-description "D1"}]}
+                                 {:product-category "C2"
+                                  :products [{:product-name "P2"
+                                              :product-description "D2"}
+                                             {:product-name "P3"
+                                              :product-description "D3"}]}])))
 
 (def today (t/date-time 2019 3 1))
 (def yesterday (t/minus today (t/days 1)))
@@ -111,4 +111,26 @@
     (create-event (t/plus today future-delta) "f-suffix" "f-description")
     (let [events (fp/get-events directory today future-delta)]
       (is (= events [{:date today :description "t-description"}]))))
+  )
+
+(defn create-book [file-name book-data]
+  (spit (str directory "/" file-name) book-data)
+  )
+
+(deftest testGetBooks
+  (testing "no books"
+    (clear-directory)
+    (let [books (fp/get-books directory)]
+      (is (= [] books))))
+
+  (testing "one book"
+    (clear-directory)
+    (let [book {:title "Title"
+                 :author "Author"
+                 :publisher "Publisher"
+                 :date "Date"
+                 :description "Description"}]
+      (create-book "b1" book)
+      (is (= [book] (fp/get-books directory)))))
+
   )

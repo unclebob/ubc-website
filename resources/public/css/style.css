@@ -32,6 +32,8 @@ body {
 
 div.product-category {
     margin-top: 10px;
+    height:300px;
+    overflow:auto;
 }
 
 p.product-category {
@@ -105,12 +107,36 @@ div.book {
     border: 1px solid black;
 }
 
-p.book {
-    font-family: Arial, sans-serif;
-    font-size: 14pt;
+p.book-title {
+    font-family: "Times New Roman", serif;
+    font-size: 18pt;
+    font-style: italic;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 2px;
+    margin-left: 5px;
+}
+
+p.book-author {
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+
+p.book-publication {
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+
+div.book-description {
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
+    margin: 0 20px;
+
 }
 
 

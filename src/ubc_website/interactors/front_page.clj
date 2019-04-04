@@ -3,8 +3,7 @@
     [ubc-website.views.front-page :as front-page]
     [me.raynes.fs :as fs]
     [clj-time.core :as t]
-    [clj-time.format :as t-fmt]
-    [clojure.data.json :as json]))
+    [clj-time.format :as t-fmt]))
 
 (defn strip-name [name]
   (let [parts (clojure.string/split (fs/name name) #"_")]
@@ -61,19 +60,23 @@
         events (map event-file->event current-files)]
     events))
 
-(defn get-book-data [isbn]
-  (let [book-url (format "https://openlibrary.org/api/books?bibkeys=ISBN:%s&format=json&jscmd=data" isbn)
-        book-json (json/read-str (slurp book-url))
-        book-json (book-json (first (keys book-json)))]
-    {:title (book-json "title")
-     :by (book-json "by_statement")
-     :publisher ((first (book-json "publishers")) "name")
-     :date (book-json "publish_date")}))
+(defn book-file->book [book-file]
+  (let [book-string (slurp book-file)
+        book (read-string book-string)]
+    book))
+
+
+(defn get-books [directory]
+  (let [book-files (sort (fs/list-dir directory))
+        books (map book-file->book book-files)]
+    books))
 
 (defn exec []
   (let [today (t/today-at-midnight)
         categories (get-categories "resources/public/categories")
         events (get-events "resources/public/events" today (t/months 3))
+        books (get-books "resources/public/books")
         front-page-data {:categories categories
-                         :events events}]
+                         :events events
+                         :books books}]
     (front-page/show front-page-data)))

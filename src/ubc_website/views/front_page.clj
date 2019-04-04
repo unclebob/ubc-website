@@ -7,12 +7,17 @@
 ;link from publish.twitter.com
 (def embedded-twitter-feed "<a class=\"twitter-timeline\" data-width=\"400\" data-height=\"400\" data-theme=\"light\" href=\"https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw\">Tweets by unclebobmartin</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
 
-(defn format-book [book-ref]
-  [[:div.book
-   [:p.book "Book"]]])
+(defn format-book [book]
+  (let [presented-book (p/present-book book)]
+    [:div.book
+     [:p.book-title (:title presented-book)]
+     [:p.book-author (:author presented-book)]
+     [:p.book-publication (str (:publisher presented-book) ", " (:date presented-book))]
+     [:hr]
+     [:div.book-description (:description presented-book)]]))
 
-(defn format-books [book-refs]
-  (vec (map format-book book-refs)))
+(defn format-books [books]
+  (vec (map format-book books)))
 
 (defn show [{:keys [categories events books]}]
   (html5

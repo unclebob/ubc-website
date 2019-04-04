@@ -13,7 +13,7 @@
     (is (all-vectors? presentation))
     (is (= presentation expected-presentation))))
 
-(deftest front-page-presenter
+(deftest front-page-products-presenter
   (testing "no products"
     (check-presentation [] []))
 
@@ -78,5 +78,4 @@
         [:div.product
          [:p.product-name "Product4"]
          [:div.product-description (markdown "Description4")]]]]))
-
   )
