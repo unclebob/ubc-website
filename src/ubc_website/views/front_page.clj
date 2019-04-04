@@ -4,6 +4,23 @@
     [ubc-website.presenters.front-page :as p]
     [ubc-website.presenters.util :refer [add-hiccup]]))
 
+(defn format-product [product]
+  (let [presented-product (p/present-product product)]
+    [:div.product
+     [:p.product-name (:product-name presented-product)]
+     [:div.product-description (:product-description presented-product)]]))
+
+(defn format-product-category [category]
+  (let [product-presentations (map format-product (:products category))]
+    (vec
+      (concat [:div.product-category
+               [:p.product-category (:product-category category)]]
+              (vec product-presentations)))))
+
+(defn format-product-categories [categories]
+  (let [presented-categories (map format-product-category categories)]
+    (vec presented-categories)))
+
 ;link from publish.twitter.com
 (def embedded-twitter-feed "<a class=\"twitter-timeline\" data-width=\"400\" data-height=\"400\" data-theme=\"light\" href=\"https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw\">Tweets by unclebobmartin</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
 
@@ -33,7 +50,7 @@
                         :align "right"}]]
       [:p#ubc "Uncle Bob Martin"]
       [:p#ubc-subtitle "Programmer, Speaker, Teacher"]]
-     (add-hiccup [:div#products] (p/present-product-categories categories))
+     (add-hiccup [:div#products] (format-product-categories categories))
      [:div#sidebar
      (add-hiccup [:p.sidebar-title "Up Comming Events"]
                  (p/present-events events))
