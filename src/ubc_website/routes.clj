@@ -41,5 +41,5 @@
                      (handler request))]
       response)))
 
-(defn app []
+(def app
   (-> app-routes wrap-reload wrap-markdown))

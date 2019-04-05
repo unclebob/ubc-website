@@ -11,8 +11,8 @@
                  [clj-time "0.15.0"]
                  [http-kit "2.3.0"]
                  [org.clojure/data.json "0.2.6"]]
-  :plugins [[lein-ring "0.12.4"]]
-  :ring {:handler ubc-website.handler/app}
+  :plugins [[lein-ring "0.12.5"]]
+  :ring {:handler ubc-website.routes/app}
   :profiles
   {:dev
    [{:plugins [[com.jakemccrary/lein-test-refresh "0.23.0"]]}
