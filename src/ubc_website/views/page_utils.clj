@@ -2,6 +2,8 @@
   (:use [hiccup core page])
   (:require
     [ubc-website.presenters.events :as events]
+    [ubc-website.presenters.articles :as articles]
+
     [ubc-website.presenters.util :refer [add-hiccup]]))
 
 (defn format-event [event]
@@ -19,7 +21,7 @@
    [:p.article-date date]])
 
 (defn format-articles [articles]
-  (map format-article articles))
+  (map format-article (articles/present-articles articles)))
 
 ;link from publish.twitter.com
 (def embedded-twitter-feed "<a class=\"twitter-timeline\" data-width=\"400\" data-height=\"400\" data-theme=\"light\" href=\"https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw\">Tweets by unclebobmartin</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")

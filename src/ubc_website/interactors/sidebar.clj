@@ -1,9 +1,9 @@
 (ns ubc-website.interactors.sidebar
   (:require
-      [me.raynes.fs :as fs]
-      [clj-time.core :as t]
-      [clj-time.format :as t-fmt]
-      [clojure.xml :as xml]))
+    [me.raynes.fs :as fs]
+    [clj-time.core :as t]
+    [clj-time.format :as t-fmt]
+    [clojure.xml :as xml]))
 
 (def event-formatter (t-fmt/formatter "yyyyMMdd"))
 
@@ -35,11 +35,37 @@
         events (map event-file->event current-files)]
     events))
 
+(defn entry->article [entry]
+  (loop [tags entry article {}]
+    (if (empty? tags)
+      article
+      (let [tag (first tags)]
+        (condp = (:tag tag)
+          :title (recur (rest tags) (assoc article :title (first (:content tag))))
+          :id (recur (rest tags) (assoc article :link (first (:content tag))))
+          :updated (recur (rest tags) (assoc article :date (first (:content tag))))
+          (recur (rest tags) article)
+          )))))
+
+(defn add-article [articles entry]
+  (if (= (:tag entry) :entry)
+    (conj articles (entry->article (:content entry)))
+    articles))
+
+(defn parse-feed [feed]
+  (let [bytes (java.io.ByteArrayInputStream. (.getBytes feed))
+        xml (xml/parse bytes)]
+    (loop [entries (:content xml) articles []]
+      (if (empty? entries)
+        articles
+        (recur (rest entries) (add-article articles (first entries))))))
+  )
+
 (defn get-articles []
   ;[{:link "link" :title "title" :date "date"}]
   (let [atom-xml (slurp "http://blog.cleancoder.com/atom.xml")
-        atom-bytes (java.io.ByteArrayInputStream. (.getBytes atom-xml))
-        atom (xml/parse atom-bytes)])
+        feed (parse-feed atom-xml)]
+    (take 5 feed))
   )
 
 (defn get-sidebar-data []

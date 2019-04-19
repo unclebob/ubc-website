@@ -47,3 +47,20 @@
     (let [events (sidebar/get-events directory today future-delta)]
       (is (= events [{:date today :description "t-description"}]))))
   )
+
+(deftest articles
+  (testing "no articles"
+    (is (= [] (sidebar/parse-feed "<feed><title>title</title></feed>"))))
+
+  (testing "one article"
+    (is (= [{:title "title" :link "link" :date "date"}]
+           (sidebar/parse-feed
+             "<feed>
+               <Title>title</Title>
+               <entry>
+               <title><![CDATA[title]]></title>
+               <id>link</id>
+               <updated>date</updated>
+               </entry>
+               </feed>"))))
+  )
