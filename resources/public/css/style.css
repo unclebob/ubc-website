@@ -21,8 +21,21 @@ body {
     text-shadow: 1px 1px #a5a5a5;
     font-style: italic;
 }
+
 #header {
     height: 220px;
+}
+
+div#tabs {
+    height: 30px;
+    background-color: rgba(12, 240, 49, 0.09);
+}
+
+a.tab {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 14pt;
+    color: darkgreen;
 }
 
 #products {
@@ -37,8 +50,8 @@ div.product-category {
 div.product-category-scroll {
     margin-top: 10px;
     margin-left: 20px;
-    height:300px;
-    overflow:auto;
+    height: 300px;
+    overflow: auto;
     border: 1px solid black;
 }
 
