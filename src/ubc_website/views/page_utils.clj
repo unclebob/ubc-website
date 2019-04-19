@@ -1,8 +1,17 @@
 (ns ubc-website.views.page-utils
   (:use [hiccup core page])
   (:require
-    [ubc-website.presenters.product-page :as p]
+    [ubc-website.presenters.events :as events]
     [ubc-website.presenters.util :refer [add-hiccup]]))
+
+(defn format-event [event]
+  (let [presentation (events/present-event event)]
+    [:div.event
+     [:p.event (:date presentation)]
+     [:div.event-description (:description presentation)]]))
+
+(defn format-events [events]
+  (vec (map format-event events)))
 
 ;link from publish.twitter.com
 (def embedded-twitter-feed "<a class=\"twitter-timeline\" data-width=\"400\" data-height=\"400\" data-theme=\"light\" href=\"https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw\">Tweets by unclebobmartin</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
@@ -29,7 +38,7 @@
      content
      [:div#sidebar
       (add-hiccup [:p.sidebar-title "Up Comming Events"]
-                  (p/present-events events))
+                  (format-events events))
       (add-hiccup [:p.sidebar-title "Uncle Bob's Tweets"]
                   embedded-twitter-feed)
 
