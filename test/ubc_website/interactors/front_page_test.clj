@@ -5,7 +5,7 @@
                                   is]]
             [clojure.spec.alpha :as s]
             [ubc-website.entities.products :as products]
-            [ubc-website.interactors.front-page :as fp]
+            [ubc-website.interactors.product-page :as fp]
             [me.raynes.fs :as fs]
             [clj-time.core :as t]
             [clj-time.format :as t-fmt]

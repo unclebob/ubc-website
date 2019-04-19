@@ -1,7 +1,7 @@
-(ns ubc-website.views.front-page
+(ns ubc-website.views.product-page
   (:use [hiccup core page])
   (:require
-    [ubc-website.presenters.front-page :as p]
+    [ubc-website.presenters.product-page :as p]
     [ubc-website.presenters.util :refer [add-hiccup]]
     [ubc-website.views.page-utils :refer [page-template]]))
 

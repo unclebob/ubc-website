@@ -3,12 +3,16 @@
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.middleware.reload :refer [wrap-reload]]
-            [ubc-website.interactors.front-page :as front-page]
+            [ring.util.response :refer [redirect]]
+            [ubc-website.interactors.product-page :as product-page]
+            [ubc-website.interactors.recommended-books :as recommended-books]
             [markdown-to-hiccup.core :as m]))
 
 (defroutes
   app-routes
-  (GET "/" [] (front-page/exec))
+  (GET "/" [] (redirect "/products"))
+  (GET "/products" [] (product-page/exec))
+  (GET "/books" [] (recommended-books/exec))
 
   (route/resources "/")
   (route/not-found "Not Found"))

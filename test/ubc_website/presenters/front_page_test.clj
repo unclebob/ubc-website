@@ -2,7 +2,7 @@
   (:require [clojure.test :refer :all]
             [clojure.spec.alpha :as s]
             [ubc-website.entities.products :as products]
-            [ubc-website.presenters.front-page :as front-page]
+            [ubc-website.presenters.product-page :as front-page]
             [ubc-website.presenters.testutil :refer [all-vectors?]]
             [ubc-website.presenters.util :refer [markdown]]))
 

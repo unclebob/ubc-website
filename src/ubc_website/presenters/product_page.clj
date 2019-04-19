@@ -1,4 +1,4 @@
-(ns ubc-website.presenters.front-page
+(ns ubc-website.presenters.product-page
   (:require
     [ubc-website.presenters.util :refer [markdown]]
     [clj-time.format :as t-fmt]))
@@ -19,7 +19,5 @@
 (defn present-events [events]
   (vec (map present-event events)))
 
-(defn present-book [book]
-  (update book :description markdown))
 
 
