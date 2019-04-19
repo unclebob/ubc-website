@@ -13,10 +13,18 @@
 (defn format-events [events]
   (vec (map format-event events)))
 
+(defn format-article [{:keys [link title date]}]
+  [:div.article
+   [:a.article-title {:href link} title]
+   [:p.article-date date]])
+
+(defn format-articles [articles]
+  (map format-article articles))
+
 ;link from publish.twitter.com
 (def embedded-twitter-feed "<a class=\"twitter-timeline\" data-width=\"400\" data-height=\"400\" data-theme=\"light\" href=\"https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw\">Tweets by unclebobmartin</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
 
-(defn page-template [content {:keys [events]}]
+(defn page-template [content {:keys [events articles]}]
   (html5
     [:head
      [:title "UBC"]
@@ -34,6 +42,7 @@
      [:div#tabs
       [:a.tab {:href "products"} "Classes & Talks"]
       [:a.tab {:href "books"} "Recommended Books"]
+      [:a.tab {:href "http://blog.cleancoder.com"} "Blogs"]
       ]
      content
      [:div#sidebar
@@ -41,5 +50,7 @@
                   (format-events events))
       (add-hiccup [:p.sidebar-title "Uncle Bob's Tweets"]
                   embedded-twitter-feed)
+      (add-hiccup [:p.sidebar-title "Recent Articles"]
+                  (format-articles articles))
 
       ]]))

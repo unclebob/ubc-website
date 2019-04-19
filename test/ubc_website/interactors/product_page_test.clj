@@ -1,4 +1,4 @@
-(ns ubc-website.interactors.front-page-test
+(ns ubc-website.interactors.product-page-test
   (:require [clojure.test :refer [use-fixtures
                                   deftest
                                   testing
@@ -6,17 +6,9 @@
             [clojure.spec.alpha :as s]
             [ubc-website.entities.products :as products]
             [ubc-website.interactors.product-page :as fp]
+            [ubc-website.interactors.test-util :refer [directory clear-directory]]
             [me.raynes.fs :as fs]
-            [clj-time.core :as t]
-            [clj-time.format :as t-fmt]
             ))
-
-(def directory "FrontPageInteractor-Test")
-
-(defn clear-directory []
-  (fs/delete-dir directory)
-  (fs/mkdir directory)
-  )
 
 (defn create-category [category]
   (let [category-directory (str directory "/" category)]
@@ -74,63 +66,5 @@
                                              {:product-name "P3"
                                               :product-description "D3"}]}])))
 
-(def today (t/date-time 2019 3 1))
-(def yesterday (t/minus today (t/days 1)))
-(def future-delta (t/days 3))
 
-(defn create-event [date suffix description]
-  (let [time-format (t-fmt/formatter "yyyyMMdd")
-        event-name (str (t-fmt/unparse time-format date) "_" suffix)]
-    (spit (str directory "/" event-name) description)
-    )
-  )
 
-(deftest testGetEvents
-  (testing "no events"
-    (clear-directory)
-    (let [events (fp/get-events directory today future-delta)]
-      (is (= events [])))
-    )
-
-  (testing "one current event"
-    (clear-directory)
-    (create-event today "suffix" "description")
-    (let [events (fp/get-events directory today future-delta)]
-      (is (= events [{:date today :description "description"}]))))
-
-  (testing "don't get past events"
-    (clear-directory)
-    (create-event yesterday "y-suffix" "y-description")
-    (create-event today "t-suffix" "t-description")
-    (let [events (fp/get-events directory today future-delta)]
-      (is (= events [{:date today :description "t-description"}]))))
-
-  (testing "don't get events too far in future"
-    (clear-directory)
-    (create-event today "t-suffix" "t-description")
-    (create-event (t/plus today future-delta) "f-suffix" "f-description")
-    (let [events (fp/get-events directory today future-delta)]
-      (is (= events [{:date today :description "t-description"}]))))
-  )
-
-(defn create-book [file-name book-data]
-  (spit (str directory "/" file-name) book-data)
-  )
-
-(deftest testGetBooks
-  (testing "no books"
-    (clear-directory)
-    (let [books (fp/get-books directory)]
-      (is (= [] books))))
-
-  (testing "one book"
-    (clear-directory)
-    (let [book {:title "Title"
-                 :author "Author"
-                 :publisher "Publisher"
-                 :date "Date"
-                 :description "Description"}]
-      (create-book "b1" book)
-      (is (= [book] (fp/get-books directory)))))
-
-  )

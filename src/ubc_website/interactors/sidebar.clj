@@ -2,7 +2,8 @@
   (:require
       [me.raynes.fs :as fs]
       [clj-time.core :as t]
-      [clj-time.format :as t-fmt]))
+      [clj-time.format :as t-fmt]
+      [clojure.xml :as xml]))
 
 (def event-formatter (t-fmt/formatter "yyyyMMdd"))
 
@@ -33,3 +34,16 @@
         current-files (filter (partial current? cutoff-date) unexpired-files)
         events (map event-file->event current-files)]
     events))
+
+(defn get-articles []
+  ;[{:link "link" :title "title" :date "date"}]
+  (let [atom-xml (slurp "http://blog.cleancoder.com/atom.xml")
+        atom-bytes (java.io.ByteArrayInputStream. (.getBytes atom-xml))
+        atom (xml/parse atom-bytes)])
+  )
+
+(defn get-sidebar-data []
+  {:events (get-events "resources/public/events"
+                       (t/today-at-midnight)
+                       (t/months 3))
+   :articles (get-articles)})

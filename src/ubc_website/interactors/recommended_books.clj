@@ -1,9 +1,8 @@
 (ns ubc-website.interactors.recommended-books
   (:require
     [ubc-website.views.recommended-books :as recommended-books]
-    [ubc-website.interactors.sidebar :refer [get-events]]
-    [me.raynes.fs :as fs]
-    [clj-time.core :as t]))
+    [ubc-website.interactors.sidebar :refer [get-sidebar-data]]
+    [me.raynes.fs :as fs]))
 
 (defn book-file->book [book-file]
   (let [book-string (slurp book-file)
@@ -16,9 +15,7 @@
     books))
 
 (defn exec []
-  (let [today (t/today-at-midnight)
-        events (get-events "resources/public/events" today (t/months 3))
+  (let [sidebar-data (get-sidebar-data)
         books (get-books "resources/public/books")
-        front-page-data {:events events
-                         :books books}]
+        front-page-data (assoc sidebar-data :books books)]
     (recommended-books/show front-page-data)))

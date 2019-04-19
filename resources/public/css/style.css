@@ -1,5 +1,5 @@
 body {
-    background: rgba(12, 255, 49, 0.09);
+    background: rgba(250, 255, 250, 1);
 }
 
 #ubc {
@@ -28,7 +28,7 @@ body {
 
 div#tabs {
     height: 30px;
-    background-color: rgba(12, 240, 49, 0.09);
+    background-color: rgba(230, 255, 230, 1);
 }
 
 a.tab {
@@ -54,6 +54,7 @@ div.product-category-scroll {
     height: 300px;
     overflow: auto;
     border: 1px solid black;
+    background: rgba(255, 255, 255, 1)
 }
 
 p.product-category {
@@ -103,6 +104,7 @@ div.event {
     margin-bottom: 1px;
     margin-top: 5px;
     border: 1px solid black;
+    background: rgba(255, 255, 255, 1)
 }
 
 p.event {
@@ -125,6 +127,7 @@ div.book {
     margin-bottom: 1px;
     margin-top: 5px;
     border: 1px solid black;
+    background: rgba(255, 255, 255, 1)
 }
 
 p.book-title {
@@ -159,4 +162,24 @@ div.book-description {
 
 }
 
+div.article {
+    margin-bottom: 1px;
+    margin-top: 5px;
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 1)
+}
 
+a.article-title {
+    font-family: "Times New Roman", serif;
+    font-size: 14pt;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+p.article-date {
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
+    margin: 0 0;
+}
