@@ -1,0 +1,17 @@
+{
+:title "Fundamental Algorithms"
+:author "Donald Knuth"
+:publisher "Addison Wesley"
+:date "1973,1968"
+:description "This is Volume I of Knuth's series on _The Art of Computer Programming_.
+
+The book walks through the basics of data structures and computational
+number theory.  Topics covered include stacks, queues, linked lists, doubly linked lists, trees, etc.
+
+These are basics that every programmer needs to know.
+
+The other books in this series include: _Sorting and Searching_ and _Seminumerical Algorithms_.
+Each is fascinating in it's own regard and ought to be part of the repertoire of knowledge
+that every programmer is familiar with.
+"
+}

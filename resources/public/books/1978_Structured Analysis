@@ -1,0 +1,15 @@
+{
+:title "Structured Analysis and System Specification"
+:author "Tom DeMarco"
+:publisher "Yourdon Press"
+:date "1979, 1978"
+:description "
+This is a classic of early software system design.  DeMarco describes
+the top-down approach of _functional decomposition_ and introduces
+the use of _Data Flow Diagrams_ and _Data Dictionaries_ to specify that
+decomposition.
+
+The book is very approachable, and full of deep insights. Every
+programmer ought to be familiar with it.
+"
+}

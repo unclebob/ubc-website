@@ -1,0 +1,29 @@
+{
+:title "Structure and Interpretation of Computer Programs (SICP)"
+:author "Harold Abelson and Gerald Jay Sussman with Julie Sussman"
+:publisher "MIT"
+:date "1996"
+:description "
+This book was life changing.  Or at least it was career modifying. It was
+my first introduction to functional programming; though neither the
+title, nor the first two chapters mentioned the term.
+
+The book is completely unapologetic in it's approach, giving no quarter
+to those who want an easy ride.  It moves at light speed from one topic
+to the next, demonstrating concept after concept with clear, concise,
+and plentiful code.
+
+The language of the book is `Scheme`; but the reader barely notices
+because the language is so lightweight, and because the topics are so intense.
+
+I read this book with a kind of ecstatic energy -- virtually throwing
+the pages from one to the next in my enthusiasm.  And then at page 217 the authors slammed
+on the brakes, apologized profusely for what they were about to do to me,
+and then introduced the first assignment statement.
+
+_I was thunderstruck._  While reading all the previous code I had not
+realized that they had not used assignment.  I had to go back and check.
+
+It was then -- quite late in my career -- that I realized that
+Functional Programming was important for me to learn."
+}
