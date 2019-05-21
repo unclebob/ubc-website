@@ -26,7 +26,7 @@
 ;link from publish.twitter.com
 (def embedded-twitter-feed "<a class=\"twitter-timeline\" data-width=\"400\" data-height=\"400\" data-theme=\"light\" href=\"https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw\">Tweets by unclebobmartin</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
 
-(defn page-template [content {:keys [events articles]}]
+(defn page-template [content {:keys [message events articles]}]
   (html5
     [:head
      [:title "UBC"]
@@ -45,10 +45,12 @@
       [:a.tab {:href "products"} "Classes & Talks"]
       [:a.tab {:href "books"} "Recommended Books"]
       [:a.tab {:href "http://blog.cleancoder.com"} "Blogs"]
+      [:a.tab {:href "register"} "Register for Notifications"]
       ]
+     (when-not (nil? message) [:div#message message])
      content
      [:div#sidebar
-      (add-hiccup [:p.sidebar-title "Up Comming Events"]
+      (add-hiccup [:p.sidebar-title "Upcomming Events"]
                   (format-events events))
       (add-hiccup [:p.sidebar-title "Uncle Bob's Tweets"]
                   embedded-twitter-feed)
