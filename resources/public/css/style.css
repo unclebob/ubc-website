@@ -27,14 +27,14 @@ body {
 }
 
 div#tabs {
-    height: 30px;
+    height: 25px;
     background-color: rgba(230, 255, 230, 1);
 }
 
 a.tab {
     font-family: "Arial", sans-serif;
     font-weight: bold;
-    font-size: 14pt;
+    font-size: 12pt;
     color: darkgreen;
     margin-right: 20px;
 }
