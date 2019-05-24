@@ -39,6 +39,11 @@ a.tab {
     margin-right: 20px;
 }
 
+div#content-area {
+    float: left;
+    width: 70%;
+}
+
 #products {
     float: left;
     width: 70%;
@@ -223,4 +228,9 @@ div#message {
     background: rgba(255, 240, 240, 1);
     font-size: 18pt;
     font-weight: bold;
+}
+
+div.page-content {
+    font-size: 14pt;
+    margin-left: 50px;
 }

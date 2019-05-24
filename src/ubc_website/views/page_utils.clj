@@ -46,9 +46,11 @@
       [:a.tab {:href "books"} "Recommended Books"]
       [:a.tab {:href "http://blog.cleancoder.com"} "Blogs"]
       [:a.tab {:href "register"} "Register for Notifications"]
+      [:a.tab {:href "user-groups"} "User Groups and Meetups"]
       ]
      (when-not (nil? message) [:div#message message])
-     content
+     [:div#content-area
+     content]
      [:div#sidebar
       (add-hiccup [:p.sidebar-title "Upcomming Events"]
                   (format-events events))

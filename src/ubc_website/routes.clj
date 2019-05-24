@@ -9,6 +9,7 @@
             [ubc-website.interactors.product-page :as product-page]
             [ubc-website.interactors.recommended-books :as recommended-books]
             [ubc-website.interactors.notification-registration :as register]
+            [ubc-website.interactors.user-groups :as user-groups]
             [markdown-to-hiccup.core :as m]))
 
 
@@ -20,6 +21,7 @@
   (GET "/register" [:as {session :session} name email]
     (register/registration-page name email session))
   (POST "/postregistration" [name email] (register/exec name email))
+  (GET "/user-groups" [] (user-groups/exec))
 
   (route/resources "/")
   (route/not-found "Not Found"))
