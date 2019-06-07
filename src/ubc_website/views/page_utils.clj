@@ -47,7 +47,7 @@
       [:a.tab {:href "http://blog.cleancoder.com"} "Blogs"]
       [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/home/articles"} "Old Articles"]
       [:a.tab {:href "register"} "Register for Notifications"]
-      [:a.tab {:href "user-groups"} "User Groups and Meetups"]
+      [:a.tab {:href "user-groups"} "User Group Support"]
       [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/home/clean-coder-gear"} "Clean Code Gear"]
       ]
      (when-not (nil? message) [:div#message message])

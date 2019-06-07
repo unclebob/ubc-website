@@ -46,7 +46,7 @@ div#content-area {
 
 #products {
     float: left;
-    width: 70%;
+    width: 97%;
 }
 
 div.product-category {
@@ -58,7 +58,7 @@ div.product-category-scroll {
     margin-left: 20px;
     height: 300px;
     overflow: auto;
-    border: 1px solid black;
+    border: 5px double black;
     background: rgba(255, 255, 255, 1)
 }
 
@@ -129,10 +129,10 @@ div.event-description {
 }
 
 div.book {
-    margin-bottom: 1px;
+    margin-bottom: 20px;
     margin-top: 5px;
     border: 1px solid black;
-    background: rgba(255, 255, 255, 1)
+    background: rgba(255, 255, 255, 1);
 }
 
 p.book-title {
