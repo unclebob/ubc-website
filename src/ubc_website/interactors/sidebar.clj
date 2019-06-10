@@ -32,7 +32,7 @@
         unexpired-files (filter (partial unexpired? date) event-files)
         cutoff-date (t/plus date cutoff)
         current-files (filter (partial current? cutoff-date) unexpired-files)
-        events (map event-file->event current-files)]
+        events (map event-file->event (sort current-files))]
     events))
 
 (defn entry->article [entry]
