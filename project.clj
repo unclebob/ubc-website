@@ -7,6 +7,7 @@
                  [ring "1.7.1"]
                  [hiccup "1.0.5"]
                  [markdown-to-hiccup "0.6.2"]
+                 [markdown-clj "1.10.0"]
                  [me.raynes/fs "1.4.6"]
                  [clj-time "0.15.0"]
                  [http-kit "2.3.0"]
