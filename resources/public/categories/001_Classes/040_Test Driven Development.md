@@ -2,7 +2,7 @@
 <br>
 **Audience:** Programmers of any experience.
 
-In this course Uncle Bob teaches the basics of the discipline of **TDD** (Test Driven Development), 
-an essential discipline for any software craftsman.
+In this course Uncle Bob teaches the fundamental skills of **TDD** (Test Driven Development), 
+and Refactoring; essential disciplines for any software craftsman.
 
 [More Info...](files/tdd.md)
