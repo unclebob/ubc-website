@@ -45,9 +45,11 @@
       [:a.tab {:href "products"} "Classes & Talks"]
       [:a.tab {:href "books"} "Recommended Books"]
       [:a.tab {:href "http://blog.cleancoder.com"} "Blogs"]
+      [:a.tab {:href "http://butunclebob.com"} "Ancient Blogs"]
+      [:br][:br]
       [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/home/articles"} "Old Articles"]
-      [:a.tab {:href "register"} "Register for Notifications"]
-      [:a.tab {:href "user-groups"} "User Group Support"]
+      [:a.tab {:href "register"} "Subscribe"]
+      [:a.tab {:href "user-groups"} "Invite Me!"]
       [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/home/clean-coder-gear"} "Clean Code Gear"]
       ]
      (when-not (nil? message) [:div#message message])
