@@ -6,4 +6,4 @@ This is Agile starting at the 30,000' level, and gradually coming down to beginn
 
 In this course Uncle Bob introduces the basics of Agile to executives, managers, analysts, testers, and programmers alike. 
 
-[More Info...](files/agile-overview.md)
+[More Info...](files/clean-agile.md)

@@ -52,7 +52,7 @@ interplay between components.
  * The TDD Uncertainty Principle
  * Testing across architectural boundaries.
 <p>
-* **Refactoring**
+* **Refactor
  * Code Smells
  * Remedial Refactorings
  * The process of refactoring.
