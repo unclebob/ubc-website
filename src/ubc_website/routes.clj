@@ -15,7 +15,7 @@
 
 (defroutes
   app-routes
-  (GET "/" [] (redirect "/products"))
+  (GET "/" [] (redirect "http://cleancoder.com:3000/products"))
   (GET "/products" [:as {session :session}] (product-page/exec session))
   (GET "/books" [] (recommended-books/exec))
   (GET "/register" [:as {session :session} name email]
