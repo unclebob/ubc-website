@@ -51,6 +51,8 @@
       [:a.tab {:href "register"} "Subscribe"]
       [:a.tab {:href "user-groups"} "Invite Me!"]
       [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/home/clean-coder-gear"} "Clean Code Gear"]
+      [:a.tab {:href "/files/contact.md"} "Contact"]
+
       ]
      (when-not (nil? message) [:div#message message])
      [:div#content-area
