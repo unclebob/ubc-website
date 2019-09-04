@@ -6,6 +6,6 @@
 (defn show []
   [:div
    [:div.page-content
-    (markdown (slurp "resources/public/files/user-groups.md"))
+    (markdown (slurp "resources/files/user-groups.md"))
     ]]
   )
