@@ -58,7 +58,7 @@
      [:div#content-area
      content]
      [:div#sidebar
-      (add-hiccup [:p.sidebar-title "Upcomming Events"]
+      (add-hiccup [:p.sidebar-title "Upcoming Events"]
                   (format-events events))
       (add-hiccup [:p.sidebar-title "Uncle Bob's Tweets"]
                   embedded-twitter-feed)
