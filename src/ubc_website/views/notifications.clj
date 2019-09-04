@@ -7,7 +7,7 @@
 (defn registration-form [name email]
   [:div
    [:div.page-content
-    (markdown (slurp "resources/public/files/register.md"))
+    (markdown (slurp "resources/files/register.md"))
     ]
    [:div.form
     [:h1.form "Register for Notifications"]
