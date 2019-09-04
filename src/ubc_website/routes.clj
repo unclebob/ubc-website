@@ -15,7 +15,7 @@
 
 (defroutes
   app-routes
-  (GET "/" [] (redirect "http://cleancoder.com:3000/products"))
+  (GET "/" [] (redirect "/products"))
   (GET "/products" [:as {session :session}] (product-page/exec session))
   (GET "/books" [] (recommended-books/exec))
   (GET "/register" [:as {session :session} name email]
@@ -36,7 +36,7 @@
       response)))
 
 (defn md-uri->html [uri]
-  (let [markdown (slurp (str "resources/public" uri))
+  (let [markdown (slurp (str "resources" uri))
         hiccup (-> markdown m/md->hiccup m/component)]
     (html5
       [:head
