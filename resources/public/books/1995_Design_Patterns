@@ -1,0 +1,22 @@
+{
+:title "Design Patterns"
+:author "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides"
+:publisher "Addison Wesley"
+:date "1995"
+:description "
+Probably the most important software design book written
+within the last half decade.  This book contains nothing
+new or revolutionary.  Rather it documents a set of tried
+and true techniques for solving common well-known problems
+of software design.
+
+The techniques are given cannonical names and cannonical forms
+so that designers can recognize them and converse about them.
+
+All software developers should know and understand these patterns
+and be able to apply them in their designs, and converse about them
+with other developers.
+
+This is minimum critical knowledge.
+"
+}
