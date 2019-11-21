@@ -1,0 +1,15 @@
+{
+:title "Domain Driven Design"
+:author "Eric Evans"
+:publisher "Addison Wesley"
+:date "2004"
+:description "
+This is the definitive work on domain analysis.  It provides both the motivation for, and the techniques that support,
+the analysis of an automated business domain.  The book is deeply technical, and yet covers the behavior of the
+business and the development team in it's broad scope.  The writing style is engaging, and the information content is
+extremely rich.
+
+This book is an invaluable resource for developers on the path to becoming technical leads and architects.  It's the
+kind of book that you'll come back to over and over as you gain systems experience.
+"
+}

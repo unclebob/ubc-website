@@ -1,0 +1,14 @@
+{
+:title "Analysis Patterns"
+:author "Martin Fowler"
+:publisher "Addison Wesley"
+:date "1997"
+:description "
+An extremely important and vastly under-utilized book.  _Analysis Patterns_ is the harbinger of _Domain Driven Design_
+and provides a deep look into the most common data and behavior models for real business applications.  In this book
+the author draws from decades of experience with real applications. He shows, with his usual clarity and dexterity, the
+traps that you can easily fall into during the exploration of a business domain; and how to avoid them using simple
+models of data and behavior.<br><br>
+This is a _must read_ for any software developer of more than 2 years experience.
+"
+}
