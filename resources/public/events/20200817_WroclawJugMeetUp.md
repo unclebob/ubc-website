@@ -1,4 +1,4 @@
-###Wroclaw Jug - Expecting Professionalism
+###Wroclaw Jug - Expecting Professionalism, <br>1 hour
 **ON-Line Meetup**<br>
 In this talk, Uncle Bob transports you into an alternate reality
 where he is your new CTO. This is what he expects from you.
