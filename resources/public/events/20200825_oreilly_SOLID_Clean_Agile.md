@@ -1,7 +1,7 @@
 ###SOLID: Clean Agile - 3 hours
 **O'Reilly Online Learning**
 <br>Nearly twenty years after the Agile Manifesto was first presented, 
-the legendary Robert C. Martin (“Uncle Bob”) reintroduces Agile 
+the legendary Robert C. Martin ('Uncle Bob') reintroduces Agile 
 values and principles for a new generation—programmers and 
 nonprogrammers alike. Martin, author of Clean Code and other highly 
 influential software development guides, was there at Agile’s 
