@@ -1,4 +1,4 @@
-###SOLID: Clean Code - 3 hours
+###Clean Code - 3 hours
 **O'Reilly Online Learning**
 <br>This new live training session is based on his most popular and 
 best-selling book, Clean Code. If code isn't clean, it can bring a 

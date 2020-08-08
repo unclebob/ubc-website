@@ -1,4 +1,4 @@
-###SOLID: Advanced Test-Driven Development <br>3 hours
+###Advanced Test-Driven Development <br>3 hours
 **O'Reilly Online Learning**
 <br>In this new live training course, Uncle Bob will use his signature 
 presentation style to explain test-driven development (TDD). 

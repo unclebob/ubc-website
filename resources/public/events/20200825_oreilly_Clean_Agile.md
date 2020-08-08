@@ -1,4 +1,4 @@
-###SOLID: Clean Agile - 3 hours
+###Clean Agile - 3 hours
 **O'Reilly Online Learning**
 <br>Nearly twenty years after the Agile Manifesto was first presented, 
 the legendary Robert C. Martin ("Uncle Bob") reintroduces Agile 
