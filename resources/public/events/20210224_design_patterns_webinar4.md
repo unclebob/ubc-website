@@ -1,7 +1,7 @@
 ###Design Patterns 
 ####Week 4: Decorator, Proxy, Observer, Model-View-Controller - 2 hrs
 **ON-Line course**<br>
-For five Wednesdays we’ll spend two hours
+For five Wednesdays we\’ll spend two hours
 per day walking through one of the most important
 software design tools of the last thirty years:
 Design Patterns. All programmers who aspire to
