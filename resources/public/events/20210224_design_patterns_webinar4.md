@@ -1,5 +1,5 @@
 ###Design Patterns 
-#####Week 3: Command, Composite, Visitor, Acyclic Visitor - 2 hrs
+####Week 4: Decorator, Proxy, Observer, Model-View-Controller - 2 hrs
 **ON-Line course**<br>
 For five Wednesdays we’ll spend two hours
 per day walking through one of the most important

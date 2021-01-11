@@ -1,5 +1,5 @@
 ###Design Patterns 
-#####Week 2: State Machines, The State Patters, Singleton & Monostate, Null Object - 2 hrs
+####Week 3: Command, Composite, Visitor, Acyclic Visitor - 2 hrs
 **ON-Line course**<br>
 For five Wednesdays we’ll spend two hours
 per day walking through one of the most important

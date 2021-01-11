@@ -1,5 +1,5 @@
 ###Design Patterns 
-#####Week 4: Decorator, Proxy, Observer, Model-View-Controller - 2 hrs
+####Week 1: Adapter, Strategy & Template Method, Factories - 2 hrs
 **ON-Line course**<br>
 For five Wednesdays we’ll spend two hours
 per day walking through one of the most important

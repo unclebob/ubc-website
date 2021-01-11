@@ -1,5 +1,5 @@
 ###Design Patterns 
-#####Week 5: Mediator, Facade, Bridge, Chain of Responsibility, Patterns in OO vs Functional Language - 2 hrs
+####Week 5: Mediator, Facade, Bridge, Chain of Responsibility, Patterns in OO vs Functional Language - 2 hrs
 **ON-Line course**<br>
 For five Wednesdays we’ll spend two hours
 per day walking through one of the most important
