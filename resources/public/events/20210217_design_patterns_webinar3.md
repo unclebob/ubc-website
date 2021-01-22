@@ -1,6 +1,6 @@
-###Design Patterns 
-####Week 3: Command, Composite, Visitor, Acyclic Visitor - 2 hrs
-**ON-Line course**<br>
+###Design Patterns - Online course - 2 hours 
+***Week 3: Command, Composite, Visitor, Acyclic Visitor - 2 hrs***
+
 For five Wednesdays we'll spend two hours
 per day walking through one of the most important
 software design tools of the last thirty years:
