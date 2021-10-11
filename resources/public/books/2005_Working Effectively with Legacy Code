@@ -1,0 +1,16 @@
+{
+:title "Working Effectively with Legacy Code"
+:author "Michael Feathers"
+:publisher "Prentice Hall"
+:date "2005"
+:description "This is the only book I know of that addresses this topic; and Michael Feathers
+handles it masterfully.  But, be warned, the book does not provide you with a magic wand.
+Don't come here looking for a quick fix.
+
+However the book is jammed with lots of useful and relevant techniques for getting your arms
+around a large and unruly code base.
+
+Perhaps the greatest insight in the book is the definition of legacy code.
+> _Legacy code is code without tests._
+"
+}
