@@ -1,0 +1,21 @@
+{
+:title "Refactoring"
+:author "Martin Fowler"
+:publisher "Addison Wesley"
+:date "1999"
+:description "
+When my son was 11, he was on a hockey team.  As all hockey parents know, your player will be
+on the ice for 5 minutes and then cooling down for 10.  When my son was on the ice I was
+cheering for him.  When he was off the ice I was cheering for what I was reading in this book.
+
+_Refactoring_ is the first book I ever read that presented code as something _malleable_.
+Other books presented code in final form, but this book showed how you could take poorly
+written code and transform it, step by step, into much better code with a much better design.
+
+The book begins as an extremely effective tutorial, and then transitions into an encyclopedia
+of code smells and refactorings.  It is utterly brilliant.
+
+Martin has written a second edition for those who'd rather read javascript than java.
+Either way, the book is a must read.
+"
+}
