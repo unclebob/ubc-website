@@ -1,0 +1,23 @@
+{
+:title "Extreme Programming Explained (1st ed.)"
+:author "Kent Beck"
+:publisher "Addison Wesley"
+:date "1999"
+:description "
+The first edition is better than the second, in my opinion.
+
+This is the book in which Kent Beck introduced Extreme Programming (XP) to the industry.  It is
+simple, direct, and unambiguous.  The writing style is friendly and approachable.  It is a joy
+to read.
+
+This is also the book that kicked the _Agile_ movement into high-gear and eventually enabled
+those of us who favored light-weight software methods to meet in Snowbird to create the
+[Agile Manifesto](https://agilemanifesto.org/).
+
+It is hard to imagine, today, how wildly controversial this book was in 1999.  It challenged
+so many cherished beliefs and ideologies; and despite a huge backlash, it won the day.
+
+XP remains the most complete and well-defined of all the Agile methods.  You cannot truly
+understand Agile without understanding XP.
+"
+}

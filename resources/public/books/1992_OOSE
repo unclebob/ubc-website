@@ -1,0 +1,18 @@
+{
+:title "Object Oriented Software Engineering"
+:author "Ivar Jacboson, et. al."
+:publisher "Addison Wesley"
+:date "1992"
+:description "
+I remember being at a conference in Europe when this book was released.  We had all
+been eagerly waiting for it to arrive.  We lined up at the publisher's booth and bought our
+copies.
+
+This is the book that introduced _Use Cases_ to the industry.  But more than that, this was
+the book that first showed us the linkage between Use Cases, Object Oriented Design, and
+Architecture.
+
+The concepts in this book are timeless; and every aspiring software architect should be
+familiar with them.
+"
+}
