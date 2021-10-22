@@ -1,0 +1,20 @@
+{
+:title "Object Oriented Software Construction"
+:author "Bertrand Meyer"
+:publisher "Prentice Hall"
+:date "1988"
+:description "
+A classic book on Object Oriented Design, written by one of the founding masters of the
+technique.  This is the book that defines the Open-Closed principle, and so much more.
+There is a lot of gold in this book.  Anyone who aspires to be a master of Object Oriented
+software design would benefit from a careful read.
+
+Meyer is the author of the _Eiffel_ language, in which the code examples are all written.
+Eiffel is a beautiful language; which introduced the discipline of _Design By Contract_ to the
+industry.  Sadly the language has passed into obscurity.  The discipline, however, remains;
+and is one that any software craftsman should know.
+
+The second edition, written a decade later, is much larger.  I find the size intimidating so
+I prefer the first edition.  But that's just me.
+"
+}
