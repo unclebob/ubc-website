@@ -29,6 +29,7 @@
 (defn page-template [content {:keys [message events articles]}]
   (html5
     [:head
+     [:meta {:charset "UTF-8"}]
      [:title "UBC"]
      (include-css "/css/style.css")]
     [:body
