@@ -10,6 +10,7 @@
             [ubc-website.interactors.recommended-books :as recommended-books]
             [ubc-website.interactors.notification-registration :as register]
             [ubc-website.interactors.user-groups :as user-groups]
+            [ubc-website.interactors.zorch :as zorch]
             [markdown-to-hiccup.core :as m]))
 
 
@@ -22,6 +23,7 @@
     (register/registration-page name email session))
   (POST "/postregistration" [name email] (register/exec name email))
   (GET "/user-groups" [] (user-groups/exec))
+  (GET "/zorch" [key] (zorch/exec key))
 
   (route/resources "/")
   (route/not-found "Not Found"))
