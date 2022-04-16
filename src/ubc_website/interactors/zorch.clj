@@ -13,7 +13,7 @@
     (= "" key)
     (display-file "badkey")
 
-    (.exists (clojure.java.io/file (str "resources/zorch/" key)))
+    (.exists (clojure.java.io/file (str "resources/zorch/" (.toLowerCase key))))
     (display-file key)
 
     :else
