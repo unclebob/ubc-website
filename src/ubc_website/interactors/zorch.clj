@@ -8,8 +8,11 @@
 (defn exec [key]
   (cond
     (nil? key)
-    (display-file "nilkey"
-                  )
+    (display-file "nilkey")
+
+    (= "" key)
+    (display-file "badkey")
+
     (.exists (clojure.java.io/file (str "resources/zorch/" key)))
     (display-file key)
 
