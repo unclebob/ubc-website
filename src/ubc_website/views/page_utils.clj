@@ -51,8 +51,8 @@
       [:a.tab {:href "books"} "Recommended Books"]
       [:a.tab {:href "http://blog.cleancoder.com"} "Blogs"]
       [:a.tab {:href "http://butunclebob.com"} "Ancient Blogs"]
-      [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/home/articles"} "Old Articles"]
-      [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/home/clean-coder-gear"} "Clean Code Gear"]
+      [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/uncle-bob-consulting-llc/articles"} "Old Articles"]
+      [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/uncle-bob-consulting-llc/clean-coder-gear"} "Clean Code Gear"]
 
       ]
      (when-not (nil? message) [:div#message message])
