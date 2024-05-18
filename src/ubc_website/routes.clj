@@ -13,6 +13,8 @@
             [ubc-website.interactors.zorch :as zorch]
             [markdown-to-hiccup.core :as m]))
 
+(defn serve [file]
+  (slurp file))
 
 (defroutes
   app-routes
@@ -23,6 +25,7 @@
     (register/registration-page name email session))
   (POST "/postregistration" [name email] (register/exec name email))
   (GET "/user-groups" [] (user-groups/exec))
+  (GET "/a-little-clojure" [] (serve "resources/files/aLittleClojure.html"))
   (GET "/zorch" [key] (zorch/exec key))
 
   (route/resources "/")

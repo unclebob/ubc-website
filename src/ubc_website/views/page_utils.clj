@@ -53,6 +53,7 @@
       [:a.tab {:href "http://butunclebob.com"} "Ancient Blogs"]
       [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/uncle-bob-consulting-llc/articles"} "Old Articles"]
       [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/uncle-bob-consulting-llc/clean-coder-gear"} "Clean Code Gear"]
+      [:a.tab {:href "/a-little-clojure"} "A Little Clojure"]
 
       ]
      (when-not (nil? message) [:div#message message])
