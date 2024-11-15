@@ -1,0 +1,20 @@
+{
+:title "Tidy First?"
+:author "Kent Beck"
+:publisher "O;Reilly"
+:date "2023"
+:description "Only Kent Beck could write a book like this.  His style is uniquely brilliant, and the content
+is well worth the read.
+
+_Tidy First?_ describes:
+ * When to tidy messy code before changing what it computes..
+ * How to tidy messy code safely and efficiently.
+ * How to stop tidying messy code.
+ * Why tyding works.
+
+The message is simple:  _Keep things clean_.  Don't add new code to messy code.  Clean up the mess first.
+The author investigates this idea from three different viewpoints.  First he offers a set of code _tidyings_,
+then considers the management implications, and finally the overall theory.
+
+The book is concise, conversational, and deeply insightful."
+}
