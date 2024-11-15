@@ -1,0 +1,18 @@
+{
+:title "A Philosophu of Software Design"
+:author "John Ousterhout"
+:publisher "self"
+:date "2022"
+:description "This is a short book that describes the author's collection of software design principles.
+
+The author worked on a number of software projects, including the Tcl scripting language and the Tk toolkit.
+He is currently a professor at Stanford and the book is based on a series of his lectures.
+
+The style is very approachable, and his arguments are well-reasoned and persuasive.  I especially liked his
+his notion that modules should have narrow interfaces and deep implementations.  There are many good insights
+in this book, and I recommend it to anyone who is interested in software design.
+
+The author has some complaints about _Clean Code_ that he and I have been debating.  He likes his functions
+to be bigger than I do; and he wants to see greater use of comments.  He's also taken
+a position against Test Driven Development; but is a strong proponent of unit testing."
+}
