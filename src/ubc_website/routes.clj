@@ -1,17 +1,17 @@
 (ns ubc-website.routes
-  (:use [hiccup core page])
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
-            [ring.middleware.reload :refer [wrap-reload]]
+            [markdown-to-hiccup.core :as m]
             [ring.middleware.params :refer [wrap-params]]
+            [ring.middleware.reload :refer [wrap-reload]]
             [ring.middleware.session :refer [wrap-session]]
             [ring.util.response :refer [redirect]]
+            [ubc-website.interactors.notification-registration :as register]
             [ubc-website.interactors.product-page :as product-page]
             [ubc-website.interactors.recommended-books :as recommended-books]
-            [ubc-website.interactors.notification-registration :as register]
             [ubc-website.interactors.user-groups :as user-groups]
-            [ubc-website.interactors.zorch :as zorch]
-            [markdown-to-hiccup.core :as m]))
+            [ubc-website.interactors.zorch :as zorch])
+  (:use (hiccup [core] [page])))
 
 (defn serve [file]
   (slurp file))
@@ -26,6 +26,7 @@
   (POST "/postregistration" [name email] (register/exec name email))
   (GET "/user-groups" [] (user-groups/exec))
   (GET "/a-little-clojure" [] (serve "resources/files/aLittleClojure.html"))
+  (GET "/space-war" [] (serve "resources/index.html"))
   (GET "/zorch" [key] (zorch/exec key))
 
   (route/resources "/")
@@ -53,10 +54,17 @@
   (fn [request]
     (let [uri (:uri request)
           isMarkdown? (.endsWith uri ".md")
-          response (if isMarkdown?
+          isJs? (.endsWith uri ".js")
+          response (cond
+                     isMarkdown?
                      {:status 200
                       :body (md-uri->html uri)}
-                     (handler request))]
+
+                      isJs?
+                      {:status 200
+                       :body (slurp (str "resources" uri))}
+
+                     :else (handler request))]
       response)))
 
 (defn app []
