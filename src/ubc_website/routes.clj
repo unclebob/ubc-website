@@ -50,25 +50,35 @@
        (include-css "/css/style.css")]
       hiccup)))
 
-(defn wrap-markdown [handler]
+(defn wrap-special-files [handler]
   (fn [request]
-    (let [uri (:uri request)
+    (let [response (handler request)
+          uri (:uri request)
           isMarkdown? (.endsWith uri ".md")
           isJs? (.endsWith uri ".js")
           response (cond
                      isMarkdown?
-                     {:status 200
-                      :body (md-uri->html uri)}
+                     (assoc response :status 200 :body (md-uri->html uri))
 
-                      isJs?
-                      {:status 200
-                       :body (slurp (str "resources" uri))}
+                     isJs?
+                     (assoc response :status 200 :body (slurp (str "resources" uri)))
 
-                     :else (handler request))]
+                     :else response)]
       response)))
 
+(defn wrap-cache-control [handler]
+  (fn [request]
+    (let [response (handler request)]
+      (assoc-in response [:headers "Cache-Control"]
+                (str "public, max-age=" 86400))))) ; one day.
+
 (defn app []
-  (-> app-routes wrap-reload wrap-markdown wrap-params wrap-session))
+  (-> app-routes
+      wrap-cache-control
+      wrap-reload
+      wrap-special-files
+      wrap-params
+      wrap-session))
 
 
 ;{:remote-addr "0:0:0:0:0:0:0:1",
