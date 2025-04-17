@@ -12,34 +12,34 @@ goog.require('cljs.spec.alpha');
 goog.require('quil.core');
 cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","x","spacewar.game-logic.shots/x",-904470589),new cljs.core.Symbol("cljs.core","number?","cljs.core/number?",-811857295,null),cljs.core.number_QMARK_);
 cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","y","spacewar.game-logic.shots/y",11784026),new cljs.core.Symbol("cljs.core","number?","cljs.core/number?",-811857295,null),cljs.core.number_QMARK_);
-cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","bearing","spacewar.game-logic.shots/bearing",-1778830507),cljs.core.list(new cljs.core.Symbol("cljs.spec.alpha","and","cljs.spec.alpha/and",-2060279705,null),new cljs.core.Symbol("cljs.core","number?","cljs.core/number?",-811857295,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__1614#","p1__1614#",1617844704,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","<=","cljs.core/<=",1677001748,null),(0),new cljs.core.Symbol(null,"p1__1614#","p1__1614#",1617844704,null),(360)))),cljs.spec.alpha.and_spec_impl.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol("cljs.core","number?","cljs.core/number?",-811857295,null),cljs.core.list(new cljs.core.Symbol("cljs.core","fn","cljs.core/fn",-1065745098,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"%","%",-950237169,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","<=","cljs.core/<=",1677001748,null),(0),new cljs.core.Symbol(null,"%","%",-950237169,null),(360)))], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.number_QMARK_,(function (p1__1614_SHARP_){
-return ((((0) <= p1__1614_SHARP_)) && ((p1__1614_SHARP_ <= (360))));
+cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","bearing","spacewar.game-logic.shots/bearing",-1778830507),cljs.core.list(new cljs.core.Symbol("cljs.spec.alpha","and","cljs.spec.alpha/and",-2060279705,null),new cljs.core.Symbol("cljs.core","number?","cljs.core/number?",-811857295,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__750#","p1__750#",87373813,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","<=","cljs.core/<=",1677001748,null),(0),new cljs.core.Symbol(null,"p1__750#","p1__750#",87373813,null),(360)))),cljs.spec.alpha.and_spec_impl.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol("cljs.core","number?","cljs.core/number?",-811857295,null),cljs.core.list(new cljs.core.Symbol("cljs.core","fn","cljs.core/fn",-1065745098,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"%","%",-950237169,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","<=","cljs.core/<=",1677001748,null),(0),new cljs.core.Symbol(null,"%","%",-950237169,null),(360)))], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.number_QMARK_,(function (p1__750_SHARP_){
+return ((((0) <= p1__750_SHARP_)) && ((p1__750_SHARP_ <= (360))));
 })], null),null));
 cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","range","spacewar.game-logic.shots/range",213964564),new cljs.core.Symbol("cljs.core","number?","cljs.core/number?",-811857295,null),cljs.core.number_QMARK_);
 cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","type","spacewar.game-logic.shots/type",-1425726794),new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"klingon-torpedo","klingon-torpedo",-403411893),"null",new cljs.core.Keyword(null,"klingon-kinetic","klingon-kinetic",844180079),"null",new cljs.core.Keyword(null,"romulan-blast","romulan-blast",-2029961488),"null",new cljs.core.Keyword(null,"klingon-phaser","klingon-phaser",-1316039597),"null",new cljs.core.Keyword(null,"torpedo","torpedo",275681140),"null",new cljs.core.Keyword(null,"phaser","phaser",-1448421666),"null",new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),"null"], null), null),new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"klingon-torpedo","klingon-torpedo",-403411893),null,new cljs.core.Keyword(null,"klingon-kinetic","klingon-kinetic",844180079),null,new cljs.core.Keyword(null,"romulan-blast","romulan-blast",-2029961488),null,new cljs.core.Keyword(null,"klingon-phaser","klingon-phaser",-1316039597),null,new cljs.core.Keyword(null,"torpedo","torpedo",275681140),null,new cljs.core.Keyword(null,"phaser","phaser",-1448421666),null,new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),null], null), null));
 cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","corbomite","spacewar.game-logic.shots/corbomite",421301670),new cljs.core.Symbol("cljs.core","boolean?","cljs.core/boolean?",1400713761,null),cljs.core.boolean_QMARK_);
 cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","kamikazee","spacewar.game-logic.shots/kamikazee",-279932266),new cljs.core.Symbol("cljs.core","boolean?","cljs.core/boolean?",1400713761,null),cljs.core.boolean_QMARK_);
-cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","shot","spacewar.game-logic.shots/shot",468758032),cljs.core.list(new cljs.core.Symbol("cljs.spec.alpha","keys","cljs.spec.alpha/keys",1109346032,null),new cljs.core.Keyword(null,"req-un","req-un",1074571008),new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("spacewar.game-logic.shots","x","spacewar.game-logic.shots/x",-904470589),new cljs.core.Keyword("spacewar.game-logic.shots","y","spacewar.game-logic.shots/y",11784026),new cljs.core.Keyword("spacewar.game-logic.shots","bearing","spacewar.game-logic.shots/bearing",-1778830507),new cljs.core.Keyword("spacewar.game-logic.shots","range","spacewar.game-logic.shots/range",213964564),new cljs.core.Keyword("spacewar.game-logic.shots","type","spacewar.game-logic.shots/type",-1425726794),new cljs.core.Keyword("spacewar.game-logic.shots","corbomite","spacewar.game-logic.shots/corbomite",421301670),new cljs.core.Keyword("spacewar.game-logic.shots","kamikazee","spacewar.game-logic.shots/kamikazee",-279932266)], null)),cljs.spec.alpha.map_spec_impl.call(null,cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"req-un","req-un",1074571008),new cljs.core.Keyword(null,"opt-un","opt-un",883442496),new cljs.core.Keyword(null,"gfn","gfn",791517474),new cljs.core.Keyword(null,"pred-exprs","pred-exprs",1792271395),new cljs.core.Keyword(null,"keys-pred","keys-pred",858984739),new cljs.core.Keyword(null,"opt-keys","opt-keys",1262688261),new cljs.core.Keyword(null,"req-specs","req-specs",553962313),new cljs.core.Keyword(null,"req","req",-326448303),new cljs.core.Keyword(null,"req-keys","req-keys",514319221),new cljs.core.Keyword(null,"opt-specs","opt-specs",-384905450),new cljs.core.Keyword(null,"pred-forms","pred-forms",172611832),new cljs.core.Keyword(null,"opt","opt",-794706369)],[new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("spacewar.game-logic.shots","x","spacewar.game-logic.shots/x",-904470589),new cljs.core.Keyword("spacewar.game-logic.shots","y","spacewar.game-logic.shots/y",11784026),new cljs.core.Keyword("spacewar.game-logic.shots","bearing","spacewar.game-logic.shots/bearing",-1778830507),new cljs.core.Keyword("spacewar.game-logic.shots","range","spacewar.game-logic.shots/range",213964564),new cljs.core.Keyword("spacewar.game-logic.shots","type","spacewar.game-logic.shots/type",-1425726794),new cljs.core.Keyword("spacewar.game-logic.shots","corbomite","spacewar.game-logic.shots/corbomite",421301670),new cljs.core.Keyword("spacewar.game-logic.shots","kamikazee","spacewar.game-logic.shots/kamikazee",-279932266)], null),null,null,new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (G__1615){
-return cljs.core.map_QMARK_.call(null,G__1615);
-}),(function (G__1615){
-return cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"x","x",2099068185));
-}),(function (G__1615){
-return cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"y","y",-1757859776));
-}),(function (G__1615){
-return cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"bearing","bearing",-1189702101));
-}),(function (G__1615){
-return cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"range","range",1639692286));
-}),(function (G__1615){
-return cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"type","type",1174270348));
-}),(function (G__1615){
-return cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"corbomite","corbomite",1612720764));
-}),(function (G__1615){
-return cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"kamikazee","kamikazee",1682650476));
-})], null),(function (G__1615){
-return ((cljs.core.map_QMARK_.call(null,G__1615)) && (((cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"x","x",2099068185))) && (((cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"y","y",-1757859776))) && (((cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"bearing","bearing",-1189702101))) && (((cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"range","range",1639692286))) && (((cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"type","type",1174270348))) && (((cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"corbomite","corbomite",1612720764))) && (cljs.core.contains_QMARK_.call(null,G__1615,new cljs.core.Keyword(null,"kamikazee","kamikazee",1682650476))))))))))))))));
+cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","shot","spacewar.game-logic.shots/shot",468758032),cljs.core.list(new cljs.core.Symbol("cljs.spec.alpha","keys","cljs.spec.alpha/keys",1109346032,null),new cljs.core.Keyword(null,"req-un","req-un",1074571008),new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("spacewar.game-logic.shots","x","spacewar.game-logic.shots/x",-904470589),new cljs.core.Keyword("spacewar.game-logic.shots","y","spacewar.game-logic.shots/y",11784026),new cljs.core.Keyword("spacewar.game-logic.shots","bearing","spacewar.game-logic.shots/bearing",-1778830507),new cljs.core.Keyword("spacewar.game-logic.shots","range","spacewar.game-logic.shots/range",213964564),new cljs.core.Keyword("spacewar.game-logic.shots","type","spacewar.game-logic.shots/type",-1425726794),new cljs.core.Keyword("spacewar.game-logic.shots","corbomite","spacewar.game-logic.shots/corbomite",421301670),new cljs.core.Keyword("spacewar.game-logic.shots","kamikazee","spacewar.game-logic.shots/kamikazee",-279932266)], null)),cljs.spec.alpha.map_spec_impl.call(null,cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"req-un","req-un",1074571008),new cljs.core.Keyword(null,"opt-un","opt-un",883442496),new cljs.core.Keyword(null,"gfn","gfn",791517474),new cljs.core.Keyword(null,"pred-exprs","pred-exprs",1792271395),new cljs.core.Keyword(null,"keys-pred","keys-pred",858984739),new cljs.core.Keyword(null,"opt-keys","opt-keys",1262688261),new cljs.core.Keyword(null,"req-specs","req-specs",553962313),new cljs.core.Keyword(null,"req","req",-326448303),new cljs.core.Keyword(null,"req-keys","req-keys",514319221),new cljs.core.Keyword(null,"opt-specs","opt-specs",-384905450),new cljs.core.Keyword(null,"pred-forms","pred-forms",172611832),new cljs.core.Keyword(null,"opt","opt",-794706369)],[new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("spacewar.game-logic.shots","x","spacewar.game-logic.shots/x",-904470589),new cljs.core.Keyword("spacewar.game-logic.shots","y","spacewar.game-logic.shots/y",11784026),new cljs.core.Keyword("spacewar.game-logic.shots","bearing","spacewar.game-logic.shots/bearing",-1778830507),new cljs.core.Keyword("spacewar.game-logic.shots","range","spacewar.game-logic.shots/range",213964564),new cljs.core.Keyword("spacewar.game-logic.shots","type","spacewar.game-logic.shots/type",-1425726794),new cljs.core.Keyword("spacewar.game-logic.shots","corbomite","spacewar.game-logic.shots/corbomite",421301670),new cljs.core.Keyword("spacewar.game-logic.shots","kamikazee","spacewar.game-logic.shots/kamikazee",-279932266)], null),null,null,new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (G__751){
+return cljs.core.map_QMARK_.call(null,G__751);
+}),(function (G__751){
+return cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"x","x",2099068185));
+}),(function (G__751){
+return cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"y","y",-1757859776));
+}),(function (G__751){
+return cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"bearing","bearing",-1189702101));
+}),(function (G__751){
+return cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"range","range",1639692286));
+}),(function (G__751){
+return cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"type","type",1174270348));
+}),(function (G__751){
+return cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"corbomite","corbomite",1612720764));
+}),(function (G__751){
+return cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"kamikazee","kamikazee",1682650476));
+})], null),(function (G__751){
+return ((cljs.core.map_QMARK_.call(null,G__751)) && (((cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"x","x",2099068185))) && (((cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"y","y",-1757859776))) && (((cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"bearing","bearing",-1189702101))) && (((cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"range","range",1639692286))) && (((cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"type","type",1174270348))) && (((cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"corbomite","corbomite",1612720764))) && (cljs.core.contains_QMARK_.call(null,G__751,new cljs.core.Keyword(null,"kamikazee","kamikazee",1682650476))))))))))))))));
 }),cljs.core.PersistentVector.EMPTY,new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("spacewar.game-logic.shots","x","spacewar.game-logic.shots/x",-904470589),new cljs.core.Keyword("spacewar.game-logic.shots","y","spacewar.game-logic.shots/y",11784026),new cljs.core.Keyword("spacewar.game-logic.shots","bearing","spacewar.game-logic.shots/bearing",-1778830507),new cljs.core.Keyword("spacewar.game-logic.shots","range","spacewar.game-logic.shots/range",213964564),new cljs.core.Keyword("spacewar.game-logic.shots","type","spacewar.game-logic.shots/type",-1425726794),new cljs.core.Keyword("spacewar.game-logic.shots","corbomite","spacewar.game-logic.shots/corbomite",421301670),new cljs.core.Keyword("spacewar.game-logic.shots","kamikazee","spacewar.game-logic.shots/kamikazee",-279932266)], null),null,new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"x","x",2099068185),new cljs.core.Keyword(null,"y","y",-1757859776),new cljs.core.Keyword(null,"bearing","bearing",-1189702101),new cljs.core.Keyword(null,"range","range",1639692286),new cljs.core.Keyword(null,"type","type",1174270348),new cljs.core.Keyword(null,"corbomite","corbomite",1612720764),new cljs.core.Keyword(null,"kamikazee","kamikazee",1682650476)], null),cljs.core.PersistentVector.EMPTY,new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.list(new cljs.core.Symbol("cljs.core","fn","cljs.core/fn",-1065745098,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"%","%",-950237169,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","map?","cljs.core/map?",-1390345523,null),new cljs.core.Symbol(null,"%","%",-950237169,null))),cljs.core.list(new cljs.core.Symbol("cljs.core","fn","cljs.core/fn",-1065745098,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"%","%",-950237169,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","contains?","cljs.core/contains?",-976526835,null),new cljs.core.Symbol(null,"%","%",-950237169,null),new cljs.core.Keyword(null,"x","x",2099068185))),cljs.core.list(new cljs.core.Symbol("cljs.core","fn","cljs.core/fn",-1065745098,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"%","%",-950237169,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","contains?","cljs.core/contains?",-976526835,null),new cljs.core.Symbol(null,"%","%",-950237169,null),new cljs.core.Keyword(null,"y","y",-1757859776))),cljs.core.list(new cljs.core.Symbol("cljs.core","fn","cljs.core/fn",-1065745098,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"%","%",-950237169,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","contains?","cljs.core/contains?",-976526835,null),new cljs.core.Symbol(null,"%","%",-950237169,null),new cljs.core.Keyword(null,"bearing","bearing",-1189702101))),cljs.core.list(new cljs.core.Symbol("cljs.core","fn","cljs.core/fn",-1065745098,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"%","%",-950237169,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","contains?","cljs.core/contains?",-976526835,null),new cljs.core.Symbol(null,"%","%",-950237169,null),new cljs.core.Keyword(null,"range","range",1639692286))),cljs.core.list(new cljs.core.Symbol("cljs.core","fn","cljs.core/fn",-1065745098,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"%","%",-950237169,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","contains?","cljs.core/contains?",-976526835,null),new cljs.core.Symbol(null,"%","%",-950237169,null),new cljs.core.Keyword(null,"type","type",1174270348))),cljs.core.list(new cljs.core.Symbol("cljs.core","fn","cljs.core/fn",-1065745098,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"%","%",-950237169,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","contains?","cljs.core/contains?",-976526835,null),new cljs.core.Symbol(null,"%","%",-950237169,null),new cljs.core.Keyword(null,"corbomite","corbomite",1612720764))),cljs.core.list(new cljs.core.Symbol("cljs.core","fn","cljs.core/fn",-1065745098,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"%","%",-950237169,null)], null),cljs.core.list(new cljs.core.Symbol("cljs.core","contains?","cljs.core/contains?",-976526835,null),new cljs.core.Symbol(null,"%","%",-950237169,null),new cljs.core.Keyword(null,"kamikazee","kamikazee",1682650476)))], null),null])));
-cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","shots","spacewar.game-logic.shots/shots",567599081),cljs.core.list(new cljs.core.Symbol("cljs.spec.alpha","coll-of","cljs.spec.alpha/coll-of",1019430407,null),new cljs.core.Keyword("spacewar.game-logic.shots","shot","spacewar.game-logic.shots/shot",468758032)),cljs.spec.alpha.every_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","shot","spacewar.game-logic.shots/shot",468758032),new cljs.core.Keyword("spacewar.game-logic.shots","shot","spacewar.game-logic.shots/shot",468758032),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword("cljs.spec.alpha","conform-all","cljs.spec.alpha/conform-all",45201917),true,new cljs.core.Keyword("cljs.spec.alpha","kind-form","cljs.spec.alpha/kind-form",-1047104697),null,new cljs.core.Keyword("cljs.spec.alpha","describe","cljs.spec.alpha/describe",1883026911),cljs.core.list(new cljs.core.Symbol("cljs.spec.alpha","coll-of","cljs.spec.alpha/coll-of",1019430407,null),new cljs.core.Keyword("spacewar.game-logic.shots","shot","spacewar.game-logic.shots/shot",468758032)),new cljs.core.Keyword("cljs.spec.alpha","cpred","cljs.spec.alpha/cpred",-693471218),(function (G__1616){
-return cljs.core.coll_QMARK_.call(null,G__1616);
+cljs.spec.alpha.def_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","shots","spacewar.game-logic.shots/shots",567599081),cljs.core.list(new cljs.core.Symbol("cljs.spec.alpha","coll-of","cljs.spec.alpha/coll-of",1019430407,null),new cljs.core.Keyword("spacewar.game-logic.shots","shot","spacewar.game-logic.shots/shot",468758032)),cljs.spec.alpha.every_impl.call(null,new cljs.core.Keyword("spacewar.game-logic.shots","shot","spacewar.game-logic.shots/shot",468758032),new cljs.core.Keyword("spacewar.game-logic.shots","shot","spacewar.game-logic.shots/shot",468758032),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword("cljs.spec.alpha","conform-all","cljs.spec.alpha/conform-all",45201917),true,new cljs.core.Keyword("cljs.spec.alpha","kind-form","cljs.spec.alpha/kind-form",-1047104697),null,new cljs.core.Keyword("cljs.spec.alpha","describe","cljs.spec.alpha/describe",1883026911),cljs.core.list(new cljs.core.Symbol("cljs.spec.alpha","coll-of","cljs.spec.alpha/coll-of",1019430407,null),new cljs.core.Keyword("spacewar.game-logic.shots","shot","spacewar.game-logic.shots/shot",468758032)),new cljs.core.Keyword("cljs.spec.alpha","cpred","cljs.spec.alpha/cpred",-693471218),(function (G__752){
+return cljs.core.coll_QMARK_.call(null,G__752);
 })], null),null));
 spacewar.game_logic.shots.__GT_shot = (function spacewar$game_logic$shots$__GT_shot(x,y,bearing,type){
 return new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"x","x",2099068185),x,new cljs.core.Keyword(null,"y","y",-1757859776),y,new cljs.core.Keyword(null,"bearing","bearing",-1189702101),bearing,new cljs.core.Keyword(null,"range","range",1639692286),(0),new cljs.core.Keyword(null,"type","type",1174270348),type,new cljs.core.Keyword(null,"corbomite","corbomite",1612720764),false,new cljs.core.Keyword(null,"kamikazee","kamikazee",1682650476),false], null);
@@ -54,58 +54,58 @@ while(true){
 if((number__$1 === (0))){
 return shots;
 } else {
-var G__1617 = cljs.core.conj.call(null,shots,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"x","x",2099068185),cljs.core.first.call(null,pos),new cljs.core.Keyword(null,"y","y",-1757859776),cljs.core.second.call(null,pos),new cljs.core.Keyword(null,"bearing","bearing",-1189702101),cljs.core.mod.call(null,bearing__$1,(360)),new cljs.core.Keyword(null,"range","range",1639692286),(0),new cljs.core.Keyword(null,"corbomite","corbomite",1612720764),corbomite], null));
-var G__1618 = (bearing__$1 + bearing_inc);
-var G__1619 = (number__$1 - (1));
-shots = G__1617;
-bearing__$1 = G__1618;
-number__$1 = G__1619;
+var G__753 = cljs.core.conj.call(null,shots,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"x","x",2099068185),cljs.core.first.call(null,pos),new cljs.core.Keyword(null,"y","y",-1757859776),cljs.core.second.call(null,pos),new cljs.core.Keyword(null,"bearing","bearing",-1189702101),cljs.core.mod.call(null,bearing__$1,(360)),new cljs.core.Keyword(null,"range","range",1639692286),(0),new cljs.core.Keyword(null,"corbomite","corbomite",1612720764),corbomite], null));
+var G__754 = (bearing__$1 + bearing_inc);
+var G__755 = (number__$1 - (1));
+shots = G__753;
+bearing__$1 = G__754;
+number__$1 = G__755;
 continue;
 }
 break;
 }
 });
 spacewar.game_logic.shots.power_required = (function spacewar$game_logic$shots$power_required(weapon){
-var pred__1620 = cljs.core._EQ_;
-var expr__1621 = weapon;
-if(cljs.core.truth_(pred__1620.call(null,new cljs.core.Keyword(null,"phaser","phaser",-1448421666),expr__1621))){
+var pred__756 = cljs.core._EQ_;
+var expr__757 = weapon;
+if(cljs.core.truth_(pred__756.call(null,new cljs.core.Keyword(null,"phaser","phaser",-1448421666),expr__757))){
 return spacewar.game_logic.config.phaser_power;
 } else {
-if(cljs.core.truth_(pred__1620.call(null,new cljs.core.Keyword(null,"torpedo","torpedo",275681140),expr__1621))){
+if(cljs.core.truth_(pred__756.call(null,new cljs.core.Keyword(null,"torpedo","torpedo",275681140),expr__757))){
 return spacewar.game_logic.config.torpedo_power;
 } else {
-if(cljs.core.truth_(pred__1620.call(null,new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),expr__1621))){
+if(cljs.core.truth_(pred__756.call(null,new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),expr__757))){
 return spacewar.game_logic.config.kinetic_power;
 } else {
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__1621)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__757)].join('')));
 }
 }
 }
 });
 spacewar.game_logic.shots.decrement_inventory = (function spacewar$game_logic$shots$decrement_inventory(ship){
-var map__1623 = ship;
-var map__1623__$1 = cljs.core.__destructure_map.call(null,map__1623);
-var weapon_number_setting = cljs.core.get.call(null,map__1623__$1,new cljs.core.Keyword(null,"weapon-number-setting","weapon-number-setting",261885890));
-var selected_weapon = cljs.core.get.call(null,map__1623__$1,new cljs.core.Keyword(null,"selected-weapon","selected-weapon",1106774428));
-var kinetics = cljs.core.get.call(null,map__1623__$1,new cljs.core.Keyword(null,"kinetics","kinetics",-707133266));
-var torpedos = cljs.core.get.call(null,map__1623__$1,new cljs.core.Keyword(null,"torpedos","torpedos",344905121));
+var map__759 = ship;
+var map__759__$1 = cljs.core.__destructure_map.call(null,map__759);
+var weapon_number_setting = cljs.core.get.call(null,map__759__$1,new cljs.core.Keyword(null,"weapon-number-setting","weapon-number-setting",261885890));
+var selected_weapon = cljs.core.get.call(null,map__759__$1,new cljs.core.Keyword(null,"selected-weapon","selected-weapon",1106774428));
+var kinetics = cljs.core.get.call(null,map__759__$1,new cljs.core.Keyword(null,"kinetics","kinetics",-707133266));
+var torpedos = cljs.core.get.call(null,map__759__$1,new cljs.core.Keyword(null,"torpedos","torpedos",344905121));
 var kinetics__$1 = ((cljs.core._EQ_.call(null,selected_weapon,new cljs.core.Keyword(null,"kinetic","kinetic",-451191810)))?(kinetics - weapon_number_setting):kinetics);
 var torpedos__$1 = ((cljs.core._EQ_.call(null,selected_weapon,new cljs.core.Keyword(null,"torpedo","torpedo",275681140)))?(torpedos - weapon_number_setting):torpedos);
 return cljs.core.assoc.call(null,ship,new cljs.core.Keyword(null,"kinetics","kinetics",-707133266),kinetics__$1,new cljs.core.Keyword(null,"torpedos","torpedos",344905121),torpedos__$1);
 });
 spacewar.game_logic.shots.sufficient_inventory = (function spacewar$game_logic$shots$sufficient_inventory(ship){
-var map__1624 = ship;
-var map__1624__$1 = cljs.core.__destructure_map.call(null,map__1624);
-var weapon_number_setting = cljs.core.get.call(null,map__1624__$1,new cljs.core.Keyword(null,"weapon-number-setting","weapon-number-setting",261885890));
-var selected_weapon = cljs.core.get.call(null,map__1624__$1,new cljs.core.Keyword(null,"selected-weapon","selected-weapon",1106774428));
-var kinetics = cljs.core.get.call(null,map__1624__$1,new cljs.core.Keyword(null,"kinetics","kinetics",-707133266));
-var torpedos = cljs.core.get.call(null,map__1624__$1,new cljs.core.Keyword(null,"torpedos","torpedos",344905121));
-var pred__1625 = cljs.core._EQ_;
-var expr__1626 = selected_weapon;
-if(cljs.core.truth_(pred__1625.call(null,new cljs.core.Keyword(null,"torpedo","torpedo",275681140),expr__1626))){
+var map__760 = ship;
+var map__760__$1 = cljs.core.__destructure_map.call(null,map__760);
+var weapon_number_setting = cljs.core.get.call(null,map__760__$1,new cljs.core.Keyword(null,"weapon-number-setting","weapon-number-setting",261885890));
+var selected_weapon = cljs.core.get.call(null,map__760__$1,new cljs.core.Keyword(null,"selected-weapon","selected-weapon",1106774428));
+var kinetics = cljs.core.get.call(null,map__760__$1,new cljs.core.Keyword(null,"kinetics","kinetics",-707133266));
+var torpedos = cljs.core.get.call(null,map__760__$1,new cljs.core.Keyword(null,"torpedos","torpedos",344905121));
+var pred__761 = cljs.core._EQ_;
+var expr__762 = selected_weapon;
+if(cljs.core.truth_(pred__761.call(null,new cljs.core.Keyword(null,"torpedo","torpedo",275681140),expr__762))){
 return (torpedos >= weapon_number_setting);
 } else {
-if(cljs.core.truth_(pred__1625.call(null,new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),expr__1626))){
+if(cljs.core.truth_(pred__761.call(null,new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),expr__762))){
 return (kinetics >= weapon_number_setting);
 } else {
 return true;
@@ -134,8 +134,8 @@ return cljs.core.assoc.call(null,shot,new cljs.core.Keyword(null,"bearing","bear
 spacewar.game_logic.shots.corrupt_shots_by_damage = (function spacewar$game_logic$shots$corrupt_shots_by_damage(damage,shots){
 var shots_and_failure = cljs.core.partition.call(null,(2),cljs.core.interleave.call(null,spacewar.game_logic.shots.weapon_failure_dice.call(null,cljs.core.count.call(null,shots),damage),shots));
 var final_shots = cljs.core.map.call(null,cljs.core.second,cljs.core.remove.call(null,cljs.core.first,shots_and_failure));
-return cljs.core.map.call(null,(function (p1__1628_SHARP_,p2__1629_SHARP_){
-return spacewar.game_logic.shots.corrupt_shot.call(null,p1__1628_SHARP_,p2__1629_SHARP_);
+return cljs.core.map.call(null,(function (p1__764_SHARP_,p2__765_SHARP_){
+return spacewar.game_logic.shots.corrupt_shot.call(null,p1__764_SHARP_,p2__765_SHARP_);
 }),final_shots,spacewar.game_logic.shots.weapon_bearing_deviation.call(null,cljs.core.count.call(null,final_shots),damage));
 });
 spacewar.game_logic.shots.warp_bearing_deviation = (function spacewar$game_logic$shots$warp_bearing_deviation(){
@@ -155,27 +155,27 @@ return cljs.core.map.call(null,spacewar.game_logic.shots.corrupt_shot_bearing,sh
 }
 });
 spacewar.game_logic.shots.weapon_fire_handler = (function spacewar$game_logic$shots$weapon_fire_handler(_,world){
-var map__1631 = world;
-var map__1631__$1 = cljs.core.__destructure_map.call(null,map__1631);
-var ship = cljs.core.get.call(null,map__1631__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
-var map__1632 = ship;
-var map__1632__$1 = cljs.core.__destructure_map.call(null,map__1632);
-var destroyed = cljs.core.get.call(null,map__1632__$1,new cljs.core.Keyword(null,"destroyed","destroyed",-427566535));
-var x = cljs.core.get.call(null,map__1632__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var corbomite_device_installed = cljs.core.get.call(null,map__1632__$1,new cljs.core.Keyword(null,"corbomite-device-installed","corbomite-device-installed",-2093492516));
-var selected_weapon = cljs.core.get.call(null,map__1632__$1,new cljs.core.Keyword(null,"selected-weapon","selected-weapon",1106774428));
-var y = cljs.core.get.call(null,map__1632__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var weapon_number_setting = cljs.core.get.call(null,map__1632__$1,new cljs.core.Keyword(null,"weapon-number-setting","weapon-number-setting",261885890));
-var weapon_spread_setting = cljs.core.get.call(null,map__1632__$1,new cljs.core.Keyword(null,"weapon-spread-setting","weapon-spread-setting",286464677));
-var target_bearing = cljs.core.get.call(null,map__1632__$1,new cljs.core.Keyword(null,"target-bearing","target-bearing",-1661786546));
-var antimatter = cljs.core.get.call(null,map__1632__$1,new cljs.core.Keyword(null,"antimatter","antimatter",-1151201000));
+var map__767 = world;
+var map__767__$1 = cljs.core.__destructure_map.call(null,map__767);
+var ship = cljs.core.get.call(null,map__767__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
+var map__768 = ship;
+var map__768__$1 = cljs.core.__destructure_map.call(null,map__768);
+var destroyed = cljs.core.get.call(null,map__768__$1,new cljs.core.Keyword(null,"destroyed","destroyed",-427566535));
+var x = cljs.core.get.call(null,map__768__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var corbomite_device_installed = cljs.core.get.call(null,map__768__$1,new cljs.core.Keyword(null,"corbomite-device-installed","corbomite-device-installed",-2093492516));
+var selected_weapon = cljs.core.get.call(null,map__768__$1,new cljs.core.Keyword(null,"selected-weapon","selected-weapon",1106774428));
+var y = cljs.core.get.call(null,map__768__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var weapon_number_setting = cljs.core.get.call(null,map__768__$1,new cljs.core.Keyword(null,"weapon-number-setting","weapon-number-setting",261885890));
+var weapon_spread_setting = cljs.core.get.call(null,map__768__$1,new cljs.core.Keyword(null,"weapon-spread-setting","weapon-spread-setting",286464677));
+var target_bearing = cljs.core.get.call(null,map__768__$1,new cljs.core.Keyword(null,"target-bearing","target-bearing",-1661786546));
+var antimatter = cljs.core.get.call(null,map__768__$1,new cljs.core.Keyword(null,"antimatter","antimatter",-1151201000));
 var required_power = (weapon_number_setting * spacewar.game_logic.shots.power_required.call(null,selected_weapon));
 var can_shoot_QMARK_ = (((required_power < antimatter)) && (((spacewar.game_logic.shots.sufficient_inventory.call(null,ship)) && (cljs.core.not.call(null,destroyed)))));
 var antimatter__$1 = ((can_shoot_QMARK_)?(antimatter - required_power):antimatter);
 var shots = ((can_shoot_QMARK_)?spacewar.game_logic.shots.fire_weapon.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null),target_bearing,weapon_number_setting,weapon_spread_setting,corbomite_device_installed):cljs.core.PersistentVector.EMPTY);
 var ship__$1 = ((can_shoot_QMARK_)?spacewar.game_logic.ship.heat_core.call(null,required_power,spacewar.game_logic.shots.decrement_inventory.call(null,ship)):ship);
-var shots__$1 = cljs.core.map.call(null,(function (p1__1630_SHARP_){
-return cljs.core.assoc.call(null,p1__1630_SHARP_,new cljs.core.Keyword(null,"type","type",1174270348),selected_weapon);
+var shots__$1 = cljs.core.map.call(null,(function (p1__766_SHARP_){
+return cljs.core.assoc.call(null,p1__766_SHARP_,new cljs.core.Keyword(null,"type","type",1174270348),selected_weapon);
 }),shots);
 var shots__$2 = spacewar.game_logic.shots.corrupt_shots_by_damage.call(null,new cljs.core.Keyword(null,"weapons-damage","weapons-damage",1275474500).cljs$core$IFn$_invoke$arity$1(ship__$1),shots__$1);
 var shots__$3 = spacewar.game_logic.shots.warp_corruption.call(null,new cljs.core.Keyword(null,"warp","warp",-931589598).cljs$core$IFn$_invoke$arity$1(ship__$1),shots__$2);
@@ -183,27 +183,27 @@ var ship__$2 = cljs.core.assoc.call(null,ship__$1,new cljs.core.Keyword(null,"an
 return cljs.core.assoc.call(null,world,new cljs.core.Keyword(null,"shots","shots",-1155689265),cljs.core.concat.call(null,new cljs.core.Keyword(null,"shots","shots",-1155689265).cljs$core$IFn$_invoke$arity$1(world),shots__$3),new cljs.core.Keyword(null,"ship","ship",197863473),ship__$2);
 });
 spacewar.game_logic.shots.process_events = (function spacewar$game_logic$shots$process_events(events,world){
-var vec__1633 = spacewar.util.handle_event.call(null,new cljs.core.Keyword(null,"weapon-fire","weapon-fire",1702391188),spacewar.game_logic.shots.weapon_fire_handler,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [events,world], null));
-var _ = cljs.core.nth.call(null,vec__1633,(0),null);
-var world__$1 = cljs.core.nth.call(null,vec__1633,(1),null);
+var vec__769 = spacewar.util.handle_event.call(null,new cljs.core.Keyword(null,"weapon-fire","weapon-fire",1702391188),spacewar.game_logic.shots.weapon_fire_handler,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [events,world], null));
+var _ = cljs.core.nth.call(null,vec__769,(0),null);
+var world__$1 = cljs.core.nth.call(null,vec__769,(1),null);
 return world__$1;
 });
 spacewar.game_logic.shots.update_shot = (function spacewar$game_logic$shots$update_shot(shot,distance,range_limit){
-var map__1636 = shot;
-var map__1636__$1 = cljs.core.__destructure_map.call(null,map__1636);
-var x = cljs.core.get.call(null,map__1636__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__1636__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var bearing = cljs.core.get.call(null,map__1636__$1,new cljs.core.Keyword(null,"bearing","bearing",-1189702101));
-var range = cljs.core.get.call(null,map__1636__$1,new cljs.core.Keyword(null,"range","range",1639692286));
-var corbomite = cljs.core.get.call(null,map__1636__$1,new cljs.core.Keyword(null,"corbomite","corbomite",1612720764));
-var kamikazee = cljs.core.get.call(null,map__1636__$1,new cljs.core.Keyword(null,"kamikazee","kamikazee",1682650476));
+var map__772 = shot;
+var map__772__$1 = cljs.core.__destructure_map.call(null,map__772);
+var x = cljs.core.get.call(null,map__772__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__772__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var bearing = cljs.core.get.call(null,map__772__$1,new cljs.core.Keyword(null,"bearing","bearing",-1189702101));
+var range = cljs.core.get.call(null,map__772__$1,new cljs.core.Keyword(null,"range","range",1639692286));
+var corbomite = cljs.core.get.call(null,map__772__$1,new cljs.core.Keyword(null,"corbomite","corbomite",1612720764));
+var kamikazee = cljs.core.get.call(null,map__772__$1,new cljs.core.Keyword(null,"kamikazee","kamikazee",1682650476));
 var distance__$1 = (cljs.core.truth_(corbomite)?((2) * distance):distance);
 var distance__$2 = (cljs.core.truth_(kamikazee)?(spacewar.game_logic.config.kamikazee_shot_velocity_factor * distance__$1):distance__$1);
 var radians = spacewar.geometry.__GT_radians.call(null,bearing);
 var delta = spacewar.vector.from_angular.call(null,distance__$2,radians);
-var vec__1637 = spacewar.vector.add.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null),delta);
-var sx = cljs.core.nth.call(null,vec__1637,(0),null);
-var sy = cljs.core.nth.call(null,vec__1637,(1),null);
+var vec__773 = spacewar.vector.add.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null),delta);
+var sx = cljs.core.nth.call(null,vec__773,(0),null);
+var sy = cljs.core.nth.call(null,vec__773,(1),null);
 var range__$1 = (range + distance__$2);
 if((range__$1 > range_limit)){
 return null;
@@ -216,30 +216,30 @@ spacewar.game_logic.shots.shot_distance = (function spacewar$game_logic$shots$sh
 return (ms * new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(shot).call(null,spacewar.game_logic.shots.shot_velocity));
 });
 spacewar.game_logic.shots.shot_range_limit = (function spacewar$game_logic$shots$shot_range_limit(shot){
-var pred__1640 = cljs.core._EQ_;
-var expr__1641 = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(shot);
-if(cljs.core.truth_(pred__1640.call(null,new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),expr__1641))){
+var pred__776 = cljs.core._EQ_;
+var expr__777 = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(shot);
+if(cljs.core.truth_(pred__776.call(null,new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),expr__777))){
 return spacewar.game_logic.config.kinetic_range;
 } else {
-if(cljs.core.truth_(pred__1640.call(null,new cljs.core.Keyword(null,"torpedo","torpedo",275681140),expr__1641))){
+if(cljs.core.truth_(pred__776.call(null,new cljs.core.Keyword(null,"torpedo","torpedo",275681140),expr__777))){
 return spacewar.game_logic.config.torpedo_range;
 } else {
-if(cljs.core.truth_(pred__1640.call(null,new cljs.core.Keyword(null,"phaser","phaser",-1448421666),expr__1641))){
+if(cljs.core.truth_(pred__776.call(null,new cljs.core.Keyword(null,"phaser","phaser",-1448421666),expr__777))){
 return spacewar.game_logic.config.phaser_range;
 } else {
-if(cljs.core.truth_(pred__1640.call(null,new cljs.core.Keyword(null,"klingon-kinetic","klingon-kinetic",844180079),expr__1641))){
+if(cljs.core.truth_(pred__776.call(null,new cljs.core.Keyword(null,"klingon-kinetic","klingon-kinetic",844180079),expr__777))){
 return spacewar.game_logic.config.klingon_kinetic_range;
 } else {
-if(cljs.core.truth_(pred__1640.call(null,new cljs.core.Keyword(null,"klingon-phaser","klingon-phaser",-1316039597),expr__1641))){
+if(cljs.core.truth_(pred__776.call(null,new cljs.core.Keyword(null,"klingon-phaser","klingon-phaser",-1316039597),expr__777))){
 return spacewar.game_logic.config.klingon_phaser_range;
 } else {
-if(cljs.core.truth_(pred__1640.call(null,new cljs.core.Keyword(null,"klingon-torpedo","klingon-torpedo",-403411893),expr__1641))){
+if(cljs.core.truth_(pred__776.call(null,new cljs.core.Keyword(null,"klingon-torpedo","klingon-torpedo",-403411893),expr__777))){
 return spacewar.game_logic.config.klingon_torpedo_range;
 } else {
-if(cljs.core.truth_(pred__1640.call(null,new cljs.core.Keyword(null,"romulan-blast","romulan-blast",-2029961488),expr__1641))){
+if(cljs.core.truth_(pred__776.call(null,new cljs.core.Keyword(null,"romulan-blast","romulan-blast",-2029961488),expr__777))){
 return spacewar.game_logic.config.romulan_blast_range;
 } else {
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__1641)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__777)].join('')));
 }
 }
 }
@@ -249,11 +249,11 @@ throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$ari
 }
 });
 spacewar.game_logic.shots.update_shot_positions = (function spacewar$game_logic$shots$update_shot_positions(ms,world){
-var map__1644 = world;
-var map__1644__$1 = cljs.core.__destructure_map.call(null,map__1644);
-var shots = cljs.core.get.call(null,map__1644__$1,new cljs.core.Keyword(null,"shots","shots",-1155689265));
-return cljs.core.assoc.call(null,world,new cljs.core.Keyword(null,"shots","shots",-1155689265),cljs.core.doall.call(null,cljs.core.filter.call(null,cljs.core.some_QMARK_,cljs.core.map.call(null,(function (p1__1643_SHARP_){
-return spacewar.game_logic.shots.update_shot.call(null,p1__1643_SHARP_,spacewar.game_logic.shots.shot_distance.call(null,ms,p1__1643_SHARP_),spacewar.game_logic.shots.shot_range_limit.call(null,p1__1643_SHARP_));
+var map__780 = world;
+var map__780__$1 = cljs.core.__destructure_map.call(null,map__780);
+var shots = cljs.core.get.call(null,map__780__$1,new cljs.core.Keyword(null,"shots","shots",-1155689265));
+return cljs.core.assoc.call(null,world,new cljs.core.Keyword(null,"shots","shots",-1155689265),cljs.core.doall.call(null,cljs.core.filter.call(null,cljs.core.some_QMARK_,cljs.core.map.call(null,(function (p1__779_SHARP_){
+return spacewar.game_logic.shots.update_shot.call(null,p1__779_SHARP_,spacewar.game_logic.shots.shot_distance.call(null,ms,p1__779_SHARP_),spacewar.game_logic.shots.shot_range_limit.call(null,p1__779_SHARP_));
 }),shots))));
 });
 spacewar.game_logic.shots.hit_proximity = new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"phaser","phaser",-1448421666),spacewar.game_logic.config.phaser_proximity,new cljs.core.Keyword(null,"torpedo","torpedo",275681140),spacewar.game_logic.config.torpedo_proximity,new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),spacewar.game_logic.config.kinetic_proximity], null);
@@ -262,15 +262,15 @@ var type = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_i
 return type.call(null,spacewar.game_logic.shots.hit_proximity);
 });
 spacewar.game_logic.shots.hit_by_kinetic = (function spacewar$game_logic$shots$hit_by_kinetic(hit_pairs,target){
-var hit_shots = cljs.core.map.call(null,new cljs.core.Keyword(null,"shot","shot",1961298790),cljs.core.filter.call(null,(function (p1__1645_SHARP_){
-return cljs.core._EQ_.call(null,target,new cljs.core.Keyword(null,"target","target",253001721).cljs$core$IFn$_invoke$arity$1(p1__1645_SHARP_));
+var hit_shots = cljs.core.map.call(null,new cljs.core.Keyword(null,"shot","shot",1961298790),cljs.core.filter.call(null,(function (p1__781_SHARP_){
+return cljs.core._EQ_.call(null,target,new cljs.core.Keyword(null,"target","target",253001721).cljs$core$IFn$_invoke$arity$1(p1__781_SHARP_));
 }),hit_pairs));
 var corbomite = new cljs.core.Keyword(null,"corbomite","corbomite",1612720764).cljs$core$IFn$_invoke$arity$1(cljs.core.first.call(null,hit_shots));
 return cljs.core.assoc.call(null,target,new cljs.core.Keyword(null,"hit","hit",1909257382),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"weapon","weapon",-504830232),new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),new cljs.core.Keyword(null,"damage","damage",970520018),((spacewar.game_logic.config.kinetic_damage * cljs.core.count.call(null,hit_shots)) * (cljs.core.truth_(corbomite)?(3):(1)))], null));
 });
 spacewar.game_logic.shots.hit_by_phaser = (function spacewar$game_logic$shots$hit_by_phaser(hit_pairs,target){
-var hit_shots = cljs.core.map.call(null,new cljs.core.Keyword(null,"shot","shot",1961298790),cljs.core.filter.call(null,(function (p1__1646_SHARP_){
-return cljs.core._EQ_.call(null,target,new cljs.core.Keyword(null,"target","target",253001721).cljs$core$IFn$_invoke$arity$1(p1__1646_SHARP_));
+var hit_shots = cljs.core.map.call(null,new cljs.core.Keyword(null,"shot","shot",1961298790),cljs.core.filter.call(null,(function (p1__782_SHARP_){
+return cljs.core._EQ_.call(null,target,new cljs.core.Keyword(null,"target","target",253001721).cljs$core$IFn$_invoke$arity$1(p1__782_SHARP_));
 }),hit_pairs));
 var ranges = cljs.core.map.call(null,new cljs.core.Keyword(null,"range","range",1639692286),hit_shots);
 var corbomite = new cljs.core.Keyword(null,"corbomite","corbomite",1612720764).cljs$core$IFn$_invoke$arity$1(cljs.core.first.call(null,hit_shots));
@@ -281,8 +281,8 @@ return cljs.core.assoc.call(null,target,new cljs.core.Keyword(null,"hit","hit",1
 }
 });
 spacewar.game_logic.shots.hit_by_torpedo = (function spacewar$game_logic$shots$hit_by_torpedo(hit_pairs,target){
-var hit_shots = cljs.core.map.call(null,new cljs.core.Keyword(null,"shot","shot",1961298790),cljs.core.filter.call(null,(function (p1__1647_SHARP_){
-return cljs.core._EQ_.call(null,target,new cljs.core.Keyword(null,"target","target",253001721).cljs$core$IFn$_invoke$arity$1(p1__1647_SHARP_));
+var hit_shots = cljs.core.map.call(null,new cljs.core.Keyword(null,"shot","shot",1961298790),cljs.core.filter.call(null,(function (p1__783_SHARP_){
+return cljs.core._EQ_.call(null,target,new cljs.core.Keyword(null,"target","target",253001721).cljs$core$IFn$_invoke$arity$1(p1__783_SHARP_));
 }),hit_pairs));
 var corbomite = new cljs.core.Keyword(null,"corbomite","corbomite",1612720764).cljs$core$IFn$_invoke$arity$1(cljs.core.first.call(null,hit_shots));
 return cljs.core.assoc.call(null,target,new cljs.core.Keyword(null,"hit","hit",1909257382),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"weapon","weapon",-504830232),new cljs.core.Keyword(null,"torpedo","torpedo",275681140),new cljs.core.Keyword(null,"damage","damage",970520018),((spacewar.game_logic.config.torpedo_damage * cljs.core.count.call(null,hit_shots)) * (cljs.core.truth_(corbomite)?(3):(1)))], null));
@@ -295,43 +295,43 @@ var hit_by = type.call(null,spacewar.game_logic.shots.hit_processors);
 return hit_by.call(null,hits,target);
 });
 spacewar.game_logic.shots.update_hits = (function spacewar$game_logic$shots$update_hits(target_tag,world){
-var map__1652 = world;
-var map__1652__$1 = cljs.core.__destructure_map.call(null,map__1652);
-var shots = cljs.core.get.call(null,map__1652__$1,new cljs.core.Keyword(null,"shots","shots",-1155689265));
-var explosions = cljs.core.get.call(null,map__1652__$1,new cljs.core.Keyword(null,"explosions","explosions",-1941460974));
-var relevant_shots = cljs.core.filter.call(null,(function (p1__1648_SHARP_){
-return new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"torpedo","torpedo",275681140),null,new cljs.core.Keyword(null,"phaser","phaser",-1448421666),null,new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),null], null), null).call(null,new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(p1__1648_SHARP_));
+var map__788 = world;
+var map__788__$1 = cljs.core.__destructure_map.call(null,map__788);
+var shots = cljs.core.get.call(null,map__788__$1,new cljs.core.Keyword(null,"shots","shots",-1155689265));
+var explosions = cljs.core.get.call(null,map__788__$1,new cljs.core.Keyword(null,"explosions","explosions",-1941460974));
+var relevant_shots = cljs.core.filter.call(null,(function (p1__784_SHARP_){
+return new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"torpedo","torpedo",275681140),null,new cljs.core.Keyword(null,"phaser","phaser",-1448421666),null,new cljs.core.Keyword(null,"kinetic","kinetic",-451191810),null], null), null).call(null,new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(p1__784_SHARP_));
 }),shots);
 var targets = target_tag.call(null,world);
-var pairs = (function (){var iter__5480__auto__ = (function spacewar$game_logic$shots$update_hits_$_iter__1653(s__1654){
+var pairs = (function (){var iter__5480__auto__ = (function spacewar$game_logic$shots$update_hits_$_iter__789(s__790){
 return (new cljs.core.LazySeq(null,(function (){
-var s__1654__$1 = s__1654;
+var s__790__$1 = s__790;
 while(true){
-var temp__5804__auto__ = cljs.core.seq.call(null,s__1654__$1);
+var temp__5804__auto__ = cljs.core.seq.call(null,s__790__$1);
 if(temp__5804__auto__){
 var xs__6360__auto__ = temp__5804__auto__;
 var t = cljs.core.first.call(null,xs__6360__auto__);
-var iterys__5476__auto__ = ((function (s__1654__$1,t,xs__6360__auto__,temp__5804__auto__,map__1652,map__1652__$1,shots,explosions,relevant_shots,targets){
-return (function spacewar$game_logic$shots$update_hits_$_iter__1653_$_iter__1655(s__1656){
-return (new cljs.core.LazySeq(null,((function (s__1654__$1,t,xs__6360__auto__,temp__5804__auto__,map__1652,map__1652__$1,shots,explosions,relevant_shots,targets){
+var iterys__5476__auto__ = ((function (s__790__$1,t,xs__6360__auto__,temp__5804__auto__,map__788,map__788__$1,shots,explosions,relevant_shots,targets){
+return (function spacewar$game_logic$shots$update_hits_$_iter__789_$_iter__791(s__792){
+return (new cljs.core.LazySeq(null,((function (s__790__$1,t,xs__6360__auto__,temp__5804__auto__,map__788,map__788__$1,shots,explosions,relevant_shots,targets){
 return (function (){
-var s__1656__$1 = s__1656;
+var s__792__$1 = s__792;
 while(true){
-var temp__5804__auto____$1 = cljs.core.seq.call(null,s__1656__$1);
+var temp__5804__auto____$1 = cljs.core.seq.call(null,s__792__$1);
 if(temp__5804__auto____$1){
-var s__1656__$2 = temp__5804__auto____$1;
-if(cljs.core.chunked_seq_QMARK_.call(null,s__1656__$2)){
-var c__5478__auto__ = cljs.core.chunk_first.call(null,s__1656__$2);
+var s__792__$2 = temp__5804__auto____$1;
+if(cljs.core.chunked_seq_QMARK_.call(null,s__792__$2)){
+var c__5478__auto__ = cljs.core.chunk_first.call(null,s__792__$2);
 var size__5479__auto__ = cljs.core.count.call(null,c__5478__auto__);
-var b__1658 = cljs.core.chunk_buffer.call(null,size__5479__auto__);
-if((function (){var i__1657 = (0);
+var b__794 = cljs.core.chunk_buffer.call(null,size__5479__auto__);
+if((function (){var i__793 = (0);
 while(true){
-if((i__1657 < size__5479__auto__)){
-var s = cljs.core._nth.call(null,c__5478__auto__,i__1657);
-cljs.core.chunk_append.call(null,b__1658,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"target","target",253001721),t,new cljs.core.Keyword(null,"shot","shot",1961298790),s,new cljs.core.Keyword(null,"distance","distance",-1671893894),spacewar.geometry.distance.call(null,spacewar.util.pos.call(null,s),spacewar.util.pos.call(null,t))], null));
+if((i__793 < size__5479__auto__)){
+var s = cljs.core._nth.call(null,c__5478__auto__,i__793);
+cljs.core.chunk_append.call(null,b__794,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"target","target",253001721),t,new cljs.core.Keyword(null,"shot","shot",1961298790),s,new cljs.core.Keyword(null,"distance","distance",-1671893894),spacewar.geometry.distance.call(null,spacewar.util.pos.call(null,s),spacewar.util.pos.call(null,t))], null));
 
-var G__1659 = (i__1657 + (1));
-i__1657 = G__1659;
+var G__795 = (i__793 + (1));
+i__793 = G__795;
 continue;
 } else {
 return true;
@@ -339,29 +339,29 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__1658),spacewar$game_logic$shots$update_hits_$_iter__1653_$_iter__1655.call(null,cljs.core.chunk_rest.call(null,s__1656__$2)));
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__794),spacewar$game_logic$shots$update_hits_$_iter__789_$_iter__791.call(null,cljs.core.chunk_rest.call(null,s__792__$2)));
 } else {
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__1658),null);
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__794),null);
 }
 } else {
-var s = cljs.core.first.call(null,s__1656__$2);
-return cljs.core.cons.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"target","target",253001721),t,new cljs.core.Keyword(null,"shot","shot",1961298790),s,new cljs.core.Keyword(null,"distance","distance",-1671893894),spacewar.geometry.distance.call(null,spacewar.util.pos.call(null,s),spacewar.util.pos.call(null,t))], null),spacewar$game_logic$shots$update_hits_$_iter__1653_$_iter__1655.call(null,cljs.core.rest.call(null,s__1656__$2)));
+var s = cljs.core.first.call(null,s__792__$2);
+return cljs.core.cons.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"target","target",253001721),t,new cljs.core.Keyword(null,"shot","shot",1961298790),s,new cljs.core.Keyword(null,"distance","distance",-1671893894),spacewar.geometry.distance.call(null,spacewar.util.pos.call(null,s),spacewar.util.pos.call(null,t))], null),spacewar$game_logic$shots$update_hits_$_iter__789_$_iter__791.call(null,cljs.core.rest.call(null,s__792__$2)));
 }
 } else {
 return null;
 }
 break;
 }
-});})(s__1654__$1,t,xs__6360__auto__,temp__5804__auto__,map__1652,map__1652__$1,shots,explosions,relevant_shots,targets))
+});})(s__790__$1,t,xs__6360__auto__,temp__5804__auto__,map__788,map__788__$1,shots,explosions,relevant_shots,targets))
 ,null,null));
-});})(s__1654__$1,t,xs__6360__auto__,temp__5804__auto__,map__1652,map__1652__$1,shots,explosions,relevant_shots,targets))
+});})(s__790__$1,t,xs__6360__auto__,temp__5804__auto__,map__788,map__788__$1,shots,explosions,relevant_shots,targets))
 ;
 var fs__5477__auto__ = cljs.core.seq.call(null,iterys__5476__auto__.call(null,relevant_shots));
 if(fs__5477__auto__){
-return cljs.core.concat.call(null,fs__5477__auto__,spacewar$game_logic$shots$update_hits_$_iter__1653.call(null,cljs.core.rest.call(null,s__1654__$1)));
+return cljs.core.concat.call(null,fs__5477__auto__,spacewar$game_logic$shots$update_hits_$_iter__789.call(null,cljs.core.rest.call(null,s__790__$1)));
 } else {
-var G__1660 = cljs.core.rest.call(null,s__1654__$1);
-s__1654__$1 = G__1660;
+var G__796 = cljs.core.rest.call(null,s__790__$1);
+s__790__$1 = G__796;
 continue;
 }
 } else {
@@ -373,18 +373,18 @@ break;
 });
 return iter__5480__auto__.call(null,targets);
 })();
-var hits = cljs.core.filter.call(null,(function (p1__1649_SHARP_){
-return (spacewar.game_logic.shots.shot_proximity.call(null,new cljs.core.Keyword(null,"shot","shot",1961298790).cljs$core$IFn$_invoke$arity$1(p1__1649_SHARP_)) >= new cljs.core.Keyword(null,"distance","distance",-1671893894).cljs$core$IFn$_invoke$arity$1(p1__1649_SHARP_));
+var hits = cljs.core.filter.call(null,(function (p1__785_SHARP_){
+return (spacewar.game_logic.shots.shot_proximity.call(null,new cljs.core.Keyword(null,"shot","shot",1961298790).cljs$core$IFn$_invoke$arity$1(p1__785_SHARP_)) >= new cljs.core.Keyword(null,"distance","distance",-1671893894).cljs$core$IFn$_invoke$arity$1(p1__785_SHARP_));
 }),pairs);
 var hit_targets = cljs.core.set.call(null,cljs.core.map.call(null,new cljs.core.Keyword(null,"target","target",253001721),hits));
 var hit_shots = cljs.core.set.call(null,cljs.core.map.call(null,new cljs.core.Keyword(null,"shot","shot",1961298790),hits));
 var un_hit_targets = clojure.set.difference.call(null,cljs.core.set.call(null,targets),hit_targets);
 var un_hit_shots = clojure.set.difference.call(null,cljs.core.set.call(null,shots),hit_shots);
-var hit_targets__$1 = cljs.core.map.call(null,(function (p1__1650_SHARP_){
-return spacewar.game_logic.shots.process_hit.call(null,hits,p1__1650_SHARP_);
+var hit_targets__$1 = cljs.core.map.call(null,(function (p1__786_SHARP_){
+return spacewar.game_logic.shots.process_hit.call(null,hits,p1__786_SHARP_);
 }),hit_targets);
-var explosions__$1 = cljs.core.concat.call(null,explosions,cljs.core.map.call(null,(function (p1__1651_SHARP_){
-return spacewar.game_logic.explosions.shot__GT_explosion.call(null,p1__1651_SHARP_);
+var explosions__$1 = cljs.core.concat.call(null,explosions,cljs.core.map.call(null,(function (p1__787_SHARP_){
+return spacewar.game_logic.explosions.shot__GT_explosion.call(null,p1__787_SHARP_);
 }),hit_shots));
 return cljs.core.assoc.call(null,world,target_tag,cljs.core.doall.call(null,cljs.core.concat.call(null,un_hit_targets,hit_targets__$1)),new cljs.core.Keyword(null,"shots","shots",-1155689265),cljs.core.doall.call(null,cljs.core.concat.call(null,un_hit_shots)),new cljs.core.Keyword(null,"explosions","explosions",-1941460974),cljs.core.doall.call(null,explosions__$1));
 });
@@ -396,21 +396,21 @@ return new cljs.core.Keyword(null,"friend","friend",-286879240);
 }
 });
 spacewar.game_logic.shots.foe_weapon_proximity = (function spacewar$game_logic$shots$foe_weapon_proximity(type){
-var pred__1661 = cljs.core._EQ_;
-var expr__1662 = type;
-if(cljs.core.truth_(pred__1661.call(null,new cljs.core.Keyword(null,"klingon-kinetic","klingon-kinetic",844180079),expr__1662))){
+var pred__797 = cljs.core._EQ_;
+var expr__798 = type;
+if(cljs.core.truth_(pred__797.call(null,new cljs.core.Keyword(null,"klingon-kinetic","klingon-kinetic",844180079),expr__798))){
 return spacewar.game_logic.config.klingon_kinetic_proximity;
 } else {
-if(cljs.core.truth_(pred__1661.call(null,new cljs.core.Keyword(null,"klingon-phaser","klingon-phaser",-1316039597),expr__1662))){
+if(cljs.core.truth_(pred__797.call(null,new cljs.core.Keyword(null,"klingon-phaser","klingon-phaser",-1316039597),expr__798))){
 return spacewar.game_logic.config.klingon_phaser_proximity;
 } else {
-if(cljs.core.truth_(pred__1661.call(null,new cljs.core.Keyword(null,"klingon-torpedo","klingon-torpedo",-403411893),expr__1662))){
+if(cljs.core.truth_(pred__797.call(null,new cljs.core.Keyword(null,"klingon-torpedo","klingon-torpedo",-403411893),expr__798))){
 return spacewar.game_logic.config.klingon_torpedo_proximity;
 } else {
-if(cljs.core.truth_(pred__1661.call(null,new cljs.core.Keyword(null,"romulan-blast","romulan-blast",-2029961488),expr__1662))){
+if(cljs.core.truth_(pred__797.call(null,new cljs.core.Keyword(null,"romulan-blast","romulan-blast",-2029961488),expr__798))){
 return null;
 } else {
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__1662)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__798)].join('')));
 }
 }
 }
@@ -421,31 +421,31 @@ var factor = ((1) - (range / spacewar.game_logic.config.romulan_blast_range));
 return (factor * spacewar.game_logic.config.romulan_blast_damage);
 });
 spacewar.game_logic.shots.ship_hit_damage = (function spacewar$game_logic$shots$ship_hit_damage(shot){
-var pred__1664 = cljs.core._EQ_;
-var expr__1665 = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(shot);
-if(cljs.core.truth_(pred__1664.call(null,new cljs.core.Keyword(null,"klingon-kinetic","klingon-kinetic",844180079),expr__1665))){
+var pred__800 = cljs.core._EQ_;
+var expr__801 = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(shot);
+if(cljs.core.truth_(pred__800.call(null,new cljs.core.Keyword(null,"klingon-kinetic","klingon-kinetic",844180079),expr__801))){
 return spacewar.game_logic.config.klingon_kinetic_damage;
 } else {
-if(cljs.core.truth_(pred__1664.call(null,new cljs.core.Keyword(null,"klingon-phaser","klingon-phaser",-1316039597),expr__1665))){
+if(cljs.core.truth_(pred__800.call(null,new cljs.core.Keyword(null,"klingon-phaser","klingon-phaser",-1316039597),expr__801))){
 return spacewar.game_logic.config.klingon_phaser_damage;
 } else {
-if(cljs.core.truth_(pred__1664.call(null,new cljs.core.Keyword(null,"klingon-torpedo","klingon-torpedo",-403411893),expr__1665))){
+if(cljs.core.truth_(pred__800.call(null,new cljs.core.Keyword(null,"klingon-torpedo","klingon-torpedo",-403411893),expr__801))){
 return spacewar.game_logic.config.klingon_torpedo_damage;
 } else {
-if(cljs.core.truth_(pred__1664.call(null,new cljs.core.Keyword(null,"romulan-blast","romulan-blast",-2029961488),expr__1665))){
+if(cljs.core.truth_(pred__800.call(null,new cljs.core.Keyword(null,"romulan-blast","romulan-blast",-2029961488),expr__801))){
 return spacewar.game_logic.shots.romulan_blast_damage_by.call(null,new cljs.core.Keyword(null,"range","range",1639692286).cljs$core$IFn$_invoke$arity$1(shot));
 } else {
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__1665)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__801)].join('')));
 }
 }
 }
 }
 });
 spacewar.game_logic.shots.klingon_blast_hits_ship_QMARK_ = (function spacewar$game_logic$shots$klingon_blast_hits_ship_QMARK_(shot,ship){
-var map__1667 = shot;
-var map__1667__$1 = cljs.core.__destructure_map.call(null,map__1667);
-var bearing = cljs.core.get.call(null,map__1667__$1,new cljs.core.Keyword(null,"bearing","bearing",-1189702101));
-var range = cljs.core.get.call(null,map__1667__$1,new cljs.core.Keyword(null,"range","range",1639692286));
+var map__803 = shot;
+var map__803__$1 = cljs.core.__destructure_map.call(null,map__803);
+var bearing = cljs.core.get.call(null,map__803__$1,new cljs.core.Keyword(null,"bearing","bearing",-1189702101));
+var range = cljs.core.get.call(null,map__803__$1,new cljs.core.Keyword(null,"range","range",1639692286));
 var angle_to_origin = (bearing + (180));
 var radians_to_origin = spacewar.geometry.__GT_radians.call(null,angle_to_origin);
 var origin = spacewar.vector.add.call(null,spacewar.util.pos.call(null,shot),spacewar.vector.from_angular.call(null,range,radians_to_origin));
@@ -453,9 +453,9 @@ var dist_origin_ship = spacewar.geometry.distance.call(null,origin,spacewar.util
 return (range > dist_origin_ship);
 });
 spacewar.game_logic.shots.hits_ship_QMARK_ = (function spacewar$game_logic$shots$hits_ship_QMARK_(shot,ship,dist,proximity){
-var pred__1668 = cljs.core._EQ_;
-var expr__1669 = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(shot);
-if(cljs.core.truth_(pred__1668.call(null,new cljs.core.Keyword(null,"romulan-blast","romulan-blast",-2029961488),expr__1669))){
+var pred__804 = cljs.core._EQ_;
+var expr__805 = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(shot);
+if(cljs.core.truth_(pred__804.call(null,new cljs.core.Keyword(null,"romulan-blast","romulan-blast",-2029961488),expr__805))){
 return spacewar.game_logic.shots.klingon_blast_hits_ship_QMARK_.call(null,shot,ship);
 } else {
 return (dist <= proximity);
@@ -471,9 +471,8 @@ return new cljs.core.Keyword(null,"miss","miss",1465931270);
 }
 });
 spacewar.game_logic.shots.calc_damage = (function spacewar$game_logic$shots$calc_damage(shields,damage){
-var shield_threshold = (spacewar.game_logic.config.ship_shields / (2));
 var damage_absorbed = (function (){var x__5087__auto__ = (0);
-var y__5088__auto__ = (shields - shield_threshold);
+var y__5088__auto__ = (shields - spacewar.game_logic.config.ship_shields_threshold);
 return ((x__5087__auto__ > y__5088__auto__) ? x__5087__auto__ : y__5088__auto__);
 })();
 var residual_damage = (function (){var x__5087__auto__ = (0);
@@ -508,8 +507,8 @@ var ship = new cljs.core.Keyword(null,"ship","ship",197863473).cljs$core$IFn$_in
 var shot_groups = cljs.core.group_by.call(null,spacewar.game_logic.shots.friend_or_foe,new cljs.core.Keyword(null,"shots","shots",-1155689265).cljs$core$IFn$_invoke$arity$1(world));
 var foe_shots = new cljs.core.Keyword(null,"foe","foe",-1673450881).cljs$core$IFn$_invoke$arity$1(shot_groups);
 var friend_shots = new cljs.core.Keyword(null,"friend","friend",-286879240).cljs$core$IFn$_invoke$arity$1(shot_groups);
-var hit_miss_groups = cljs.core.group_by.call(null,(function (p1__1671_SHARP_){
-return spacewar.game_logic.shots.hit_miss_ship.call(null,ship,p1__1671_SHARP_);
+var hit_miss_groups = cljs.core.group_by.call(null,(function (p1__807_SHARP_){
+return spacewar.game_logic.shots.hit_miss_ship.call(null,ship,p1__807_SHARP_);
 }),foe_shots);
 var hits = new cljs.core.Keyword(null,"hit","hit",1909257382).cljs$core$IFn$_invoke$arity$1(hit_miss_groups);
 var misses = new cljs.core.Keyword(null,"miss","miss",1465931270).cljs$core$IFn$_invoke$arity$1(hit_miss_groups);

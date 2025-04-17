@@ -4,8 +4,9 @@
     [clojure.spec.alpha :as s]
     [spacewar.game-logic.bases :as bases]
     [spacewar.game-logic.config :as glc]
-    [spacewar.game-logic.world :as world]
     [spacewar.geometry :as geo]
+    [spacewar.ui.view-frame :as view-frame]
+    [spacewar.ui.messages :as messages]
     [spacewar.util :as util :refer [handle-event]]
     [spacewar.vector :as vector]))
 
@@ -166,6 +167,9 @@
           antimatter (- antimatter power-used)
           actual-warp (* warp (/ power-used power-required))
           warp-charge-increment (* ms (calc-warp-charge actual-warp) glc/warp-charge-rate)
+          warp-charge-increment (if (:corbomite-device-installed ship)
+                                  (* warp-charge-increment glc/corbomite-warp-factor-boost)
+                                  warp-charge-increment)
           warp-efficiency (/ (- 100 (:warp-damage ship)) 100)
           warp-charge-increment (* warp-charge-increment warp-efficiency)
           warp-charge (+ warp-charge-increment warp-charge)
@@ -258,6 +262,12 @@
       (assoc ship :destroyed true)
       ship)))
 
+(defn constrain-ship [{:keys [x y velocity] :as ship}]
+  (let [nx (min (max x 0) glc/known-space-x)
+        ny (min (max y 0) glc/known-space-y)
+        nv (if (and (= x nx) (= y ny)) velocity [0.0 0.0])]
+    (assoc ship :x nx :y ny :velocity nv)))
+
 (defn update-ship [ms world]
   (let [ship (:ship world)
         ship (update-destruction ship)
@@ -266,6 +276,7 @@
                (->> ship
                     (warp-ship ms)
                     (impulse-ship ms)
+                    (constrain-ship)
                     (rotate-ship ms)
                     (charge-shields ms)
                     (repair-ship ms)
@@ -433,12 +444,16 @@
 (defn deploy-base [type world]
   (let [{:keys [ship stars bases]} world
         deployable-star (find-deployable-star type ship stars)]
-    (if (not deployable-star)
-      (world/add-message world "No star nearby sir." 2000)
-      (if (base-already-deployed? deployable-star bases)
-        (world/add-message world "Base already deployed, sir." 2000)
-        (if (not (sufficient-resources-for-deployment? ship))
-          (world/add-message world "Insufficient resources sir." 2000)
+    (cond (not deployable-star)
+          (do (messages/send-message :no-star) world)
+
+          (base-already-deployed? deployable-star bases)
+          (do (messages/send-message :already-deployed) world)
+
+          (not (sufficient-resources-for-deployment? ship))
+          (do (messages/send-message :insufficient-resources) world)
+
+          :else
           (let [{:keys [x y]} ship
                 bases (:bases world)
                 base (bases/make-base [x y] type)
@@ -446,8 +461,10 @@
                 ship (-> ship
                          (update :antimatter - glc/base-deployment-antimatter)
                          (update :dilithium - glc/base-deployment-dilithium))
-                world (add-transport-routes-to world base)]
-            (assoc world :bases bases :ship ship)))))))
+                world (-> world
+                          (add-transport-routes-to base)
+                          (assoc :bases bases :ship ship))]
+            world))))
 
 (defn- deploy-antimatter-factory [_ world]
   (deploy-base :antimatter-factory world))

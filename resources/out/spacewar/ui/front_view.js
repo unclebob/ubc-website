@@ -20,12 +20,12 @@ spacewar.ui.front_view.move_stars = (function spacewar$ui$front_view$move_stars(
 return cljs.core.filter.call(null,cljs.core.some_QMARK_,cljs.core.map.call(null,spacewar.ui.front_view.move_star,stars));
 });
 spacewar.ui.front_view.star_in_frame = (function spacewar$ui$front_view$star_in_frame(state,sx,sy){
-var map__970 = state;
-var map__970__$1 = cljs.core.__destructure_map.call(null,map__970);
-var x = cljs.core.get.call(null,map__970__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__970__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var w = cljs.core.get.call(null,map__970__$1,new cljs.core.Keyword(null,"w","w",354169001));
-var h = cljs.core.get.call(null,map__970__$1,new cljs.core.Keyword(null,"h","h",1109658740));
+var map__984 = state;
+var map__984__$1 = cljs.core.__destructure_map.call(null,map__984);
+var x = cljs.core.get.call(null,map__984__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__984__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var w = cljs.core.get.call(null,map__984__$1,new cljs.core.Keyword(null,"w","w",354169001));
+var h = cljs.core.get.call(null,map__984__$1,new cljs.core.Keyword(null,"h","h",1109658740));
 var margin = (10);
 var xmin = (x + margin);
 var ymin = (y + margin);
@@ -95,104 +95,104 @@ this.state = state;
 (spacewar.ui.front_view.front_view.prototype.spacewar$ui$protocols$Drawable$draw$arity$1 = (function (_){
 var self__ = this;
 var ___$1 = this;
-var map__971 = self__.state;
-var map__971__$1 = cljs.core.__destructure_map.call(null,map__971);
-var x = cljs.core.get.call(null,map__971__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__971__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var h = cljs.core.get.call(null,map__971__$1,new cljs.core.Keyword(null,"h","h",1109658740));
-var w = cljs.core.get.call(null,map__971__$1,new cljs.core.Keyword(null,"w","w",354169001));
-var stars = cljs.core.get.call(null,map__971__$1,new cljs.core.Keyword(null,"stars","stars",-556837771));
+var map__985 = self__.state;
+var map__985__$1 = cljs.core.__destructure_map.call(null,map__985);
+var x = cljs.core.get.call(null,map__985__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__985__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var h = cljs.core.get.call(null,map__985__$1,new cljs.core.Keyword(null,"h","h",1109658740));
+var w = cljs.core.get.call(null,map__985__$1,new cljs.core.Keyword(null,"w","w",354169001));
+var stars = cljs.core.get.call(null,map__985__$1,new cljs.core.Keyword(null,"stars","stars",-556837771));
 quil.core.no_stroke.call(null);
 
-var seq__972 = cljs.core.seq.call(null,stars);
-var chunk__973 = null;
-var count__974 = (0);
-var i__975 = (0);
+var seq__986 = cljs.core.seq.call(null,stars);
+var chunk__987 = null;
+var count__988 = (0);
+var i__989 = (0);
 while(true){
-if((i__975 < count__974)){
-var star = cljs.core._nth.call(null,chunk__973,i__975);
-var map__984_992 = star;
-var map__984_993__$1 = cljs.core.__destructure_map.call(null,map__984_992);
-var h_distance_994 = cljs.core.get.call(null,map__984_993__$1,new cljs.core.Keyword(null,"h-distance","h-distance",-309556309));
-var v_distance_995 = cljs.core.get.call(null,map__984_993__$1,new cljs.core.Keyword(null,"v-distance","v-distance",489555828));
-var luminosity_996 = cljs.core.get.call(null,map__984_993__$1,new cljs.core.Keyword(null,"luminosity","luminosity",-483901643));
-var angle_997 = cljs.core.get.call(null,map__984_993__$1,new cljs.core.Keyword(null,"angle","angle",1622094254));
-var rd_998 = (h * (v_distance_995 / h_distance_994));
-var vec__985_999 = spacewar.vector.from_angular.call(null,rd_998,angle_997);
-var rx_1000 = cljs.core.nth.call(null,vec__985_999,(0),null);
-var ry_1001 = cljs.core.nth.call(null,vec__985_999,(1),null);
-var sx_1002 = ((rx_1000 + x) + (w / (2)));
-var sy_1003 = ((ry_1001 + y) + (h / (2)));
-var m_1004 = (luminosity_996 / Math.sqrt(((h_distance_994 * h_distance_994) + (v_distance_995 * v_distance_995))));
-var sz_1005 = spacewar.ui.front_view.star_size.call(null,m_1004);
-if(spacewar.ui.front_view.star_in_frame.call(null,self__.state,sx_1002,sy_1003)){
-cljs.core.apply.call(null,quil.core.fill,spacewar.ui.front_view.star_color.call(null,m_1004));
+if((i__989 < count__988)){
+var star = cljs.core._nth.call(null,chunk__987,i__989);
+var map__998_1006 = star;
+var map__998_1007__$1 = cljs.core.__destructure_map.call(null,map__998_1006);
+var h_distance_1008 = cljs.core.get.call(null,map__998_1007__$1,new cljs.core.Keyword(null,"h-distance","h-distance",-309556309));
+var v_distance_1009 = cljs.core.get.call(null,map__998_1007__$1,new cljs.core.Keyword(null,"v-distance","v-distance",489555828));
+var luminosity_1010 = cljs.core.get.call(null,map__998_1007__$1,new cljs.core.Keyword(null,"luminosity","luminosity",-483901643));
+var angle_1011 = cljs.core.get.call(null,map__998_1007__$1,new cljs.core.Keyword(null,"angle","angle",1622094254));
+var rd_1012 = (h * (v_distance_1009 / h_distance_1008));
+var vec__999_1013 = spacewar.vector.from_angular.call(null,rd_1012,angle_1011);
+var rx_1014 = cljs.core.nth.call(null,vec__999_1013,(0),null);
+var ry_1015 = cljs.core.nth.call(null,vec__999_1013,(1),null);
+var sx_1016 = ((rx_1014 + x) + (w / (2)));
+var sy_1017 = ((ry_1015 + y) + (h / (2)));
+var m_1018 = (luminosity_1010 / Math.sqrt(((h_distance_1008 * h_distance_1008) + (v_distance_1009 * v_distance_1009))));
+var sz_1019 = spacewar.ui.front_view.star_size.call(null,m_1018);
+if(spacewar.ui.front_view.star_in_frame.call(null,self__.state,sx_1016,sy_1017)){
+cljs.core.apply.call(null,quil.core.fill,spacewar.ui.front_view.star_color.call(null,m_1018));
 
 quil.core.ellipse_mode.call(null,new cljs.core.Keyword(null,"corner","corner",1296717125));
 
-quil.core.ellipse.call(null,sx_1002,sy_1003,sz_1005,sz_1005);
+quil.core.ellipse.call(null,sx_1016,sy_1017,sz_1019,sz_1019);
 } else {
 }
 
 
-var G__1006 = seq__972;
-var G__1007 = chunk__973;
-var G__1008 = count__974;
-var G__1009 = (i__975 + (1));
-seq__972 = G__1006;
-chunk__973 = G__1007;
-count__974 = G__1008;
-i__975 = G__1009;
+var G__1020 = seq__986;
+var G__1021 = chunk__987;
+var G__1022 = count__988;
+var G__1023 = (i__989 + (1));
+seq__986 = G__1020;
+chunk__987 = G__1021;
+count__988 = G__1022;
+i__989 = G__1023;
 continue;
 } else {
-var temp__5804__auto__ = cljs.core.seq.call(null,seq__972);
+var temp__5804__auto__ = cljs.core.seq.call(null,seq__986);
 if(temp__5804__auto__){
-var seq__972__$1 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__972__$1)){
-var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__972__$1);
-var G__1010 = cljs.core.chunk_rest.call(null,seq__972__$1);
-var G__1011 = c__5525__auto__;
-var G__1012 = cljs.core.count.call(null,c__5525__auto__);
-var G__1013 = (0);
-seq__972 = G__1010;
-chunk__973 = G__1011;
-count__974 = G__1012;
-i__975 = G__1013;
+var seq__986__$1 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__986__$1)){
+var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__986__$1);
+var G__1024 = cljs.core.chunk_rest.call(null,seq__986__$1);
+var G__1025 = c__5525__auto__;
+var G__1026 = cljs.core.count.call(null,c__5525__auto__);
+var G__1027 = (0);
+seq__986 = G__1024;
+chunk__987 = G__1025;
+count__988 = G__1026;
+i__989 = G__1027;
 continue;
 } else {
-var star = cljs.core.first.call(null,seq__972__$1);
-var map__988_1014 = star;
-var map__988_1015__$1 = cljs.core.__destructure_map.call(null,map__988_1014);
-var h_distance_1016 = cljs.core.get.call(null,map__988_1015__$1,new cljs.core.Keyword(null,"h-distance","h-distance",-309556309));
-var v_distance_1017 = cljs.core.get.call(null,map__988_1015__$1,new cljs.core.Keyword(null,"v-distance","v-distance",489555828));
-var luminosity_1018 = cljs.core.get.call(null,map__988_1015__$1,new cljs.core.Keyword(null,"luminosity","luminosity",-483901643));
-var angle_1019 = cljs.core.get.call(null,map__988_1015__$1,new cljs.core.Keyword(null,"angle","angle",1622094254));
-var rd_1020 = (h * (v_distance_1017 / h_distance_1016));
-var vec__989_1021 = spacewar.vector.from_angular.call(null,rd_1020,angle_1019);
-var rx_1022 = cljs.core.nth.call(null,vec__989_1021,(0),null);
-var ry_1023 = cljs.core.nth.call(null,vec__989_1021,(1),null);
-var sx_1024 = ((rx_1022 + x) + (w / (2)));
-var sy_1025 = ((ry_1023 + y) + (h / (2)));
-var m_1026 = (luminosity_1018 / Math.sqrt(((h_distance_1016 * h_distance_1016) + (v_distance_1017 * v_distance_1017))));
-var sz_1027 = spacewar.ui.front_view.star_size.call(null,m_1026);
-if(spacewar.ui.front_view.star_in_frame.call(null,self__.state,sx_1024,sy_1025)){
-cljs.core.apply.call(null,quil.core.fill,spacewar.ui.front_view.star_color.call(null,m_1026));
+var star = cljs.core.first.call(null,seq__986__$1);
+var map__1002_1028 = star;
+var map__1002_1029__$1 = cljs.core.__destructure_map.call(null,map__1002_1028);
+var h_distance_1030 = cljs.core.get.call(null,map__1002_1029__$1,new cljs.core.Keyword(null,"h-distance","h-distance",-309556309));
+var v_distance_1031 = cljs.core.get.call(null,map__1002_1029__$1,new cljs.core.Keyword(null,"v-distance","v-distance",489555828));
+var luminosity_1032 = cljs.core.get.call(null,map__1002_1029__$1,new cljs.core.Keyword(null,"luminosity","luminosity",-483901643));
+var angle_1033 = cljs.core.get.call(null,map__1002_1029__$1,new cljs.core.Keyword(null,"angle","angle",1622094254));
+var rd_1034 = (h * (v_distance_1031 / h_distance_1030));
+var vec__1003_1035 = spacewar.vector.from_angular.call(null,rd_1034,angle_1033);
+var rx_1036 = cljs.core.nth.call(null,vec__1003_1035,(0),null);
+var ry_1037 = cljs.core.nth.call(null,vec__1003_1035,(1),null);
+var sx_1038 = ((rx_1036 + x) + (w / (2)));
+var sy_1039 = ((ry_1037 + y) + (h / (2)));
+var m_1040 = (luminosity_1032 / Math.sqrt(((h_distance_1030 * h_distance_1030) + (v_distance_1031 * v_distance_1031))));
+var sz_1041 = spacewar.ui.front_view.star_size.call(null,m_1040);
+if(spacewar.ui.front_view.star_in_frame.call(null,self__.state,sx_1038,sy_1039)){
+cljs.core.apply.call(null,quil.core.fill,spacewar.ui.front_view.star_color.call(null,m_1040));
 
 quil.core.ellipse_mode.call(null,new cljs.core.Keyword(null,"corner","corner",1296717125));
 
-quil.core.ellipse.call(null,sx_1024,sy_1025,sz_1027,sz_1027);
+quil.core.ellipse.call(null,sx_1038,sy_1039,sz_1041,sz_1041);
 } else {
 }
 
 
-var G__1028 = cljs.core.next.call(null,seq__972__$1);
-var G__1029 = null;
-var G__1030 = (0);
-var G__1031 = (0);
-seq__972 = G__1028;
-chunk__973 = G__1029;
-count__974 = G__1030;
-i__975 = G__1031;
+var G__1042 = cljs.core.next.call(null,seq__986__$1);
+var G__1043 = null;
+var G__1044 = (0);
+var G__1045 = (0);
+seq__986 = G__1042;
+chunk__987 = G__1043;
+count__988 = G__1044;
+i__989 = G__1045;
 continue;
 }
 } else {

@@ -4,8 +4,8 @@
             [spacewar.ui.complex :as main-viewer]
             [spacewar.ui.view-frame :as view-frame]
             [spacewar.ui.protocols :as p]
+            [spacewar.ui.messages :as messages]
             [spacewar.game-logic.config :as glc]
-            [spacewar.game-logic.world :as world]
             [spacewar.game-logic.ship :as ship]
             [spacewar.game-logic.stars :as stars]
             [spacewar.game-logic.klingons :as klingons]
@@ -16,6 +16,7 @@
             [spacewar.game-logic.romulans :as romulans]
             [spacewar.util :as util]
             [clojure.spec.alpha :as s]
+            #?(:clj [clojure.java.io :as io])
             #?(:clj [clojure.java.io :as io])
             #?(:cljs [clojure.edn :as edn])))
 
@@ -30,7 +31,6 @@
 (s/def ::text string?)
 (s/def ::duration int?)
 (s/def ::message (s/keys :req-un [::text ::duration]))
-(s/def ::messages (s/coll-of ::message))
 (s/def ::game-over-timer int?)
 (s/def ::minutes integer?)
 (s/def ::version string?)
@@ -51,7 +51,6 @@
                                 ::update-time
                                 ::transport-check-time
                                 ::ms
-                                ::messages
                                 ::game-over-timer
                                 ::minutes
                                 ::version
@@ -80,10 +79,6 @@
                :explosions []
                :shots []
                :ms 0
-               :messages [{:text "Welcome to Space War!"
-                           :duration 5000}
-                          {:text "Save the Federation!"
-                           :duration 10000}]
                :game-over-timer 0
                :minutes 0
                :version version
@@ -92,6 +87,9 @@
                :romulans-killed 0
                :transport-routes #{}}
         world (reduce #(add-base %1 %2) world bases)]
+    (view-frame/clear-messages!)
+    (messages/send-message :welcome)
+    (messages/send-message :save-federation)
     world))
 
 
@@ -101,7 +99,6 @@
                 (.getItem js/localStorage "spacewar.world"))))
 
 (defn setup []
-  (prn 'setup)
   (let [vmargin 30
         hmargin 5
         saved? (game-saved?)
@@ -110,8 +107,8 @@
                    :cljs (edn/read-string (.getItem js/localStorage "spacewar.world")))
                 (make-initial-world))
         world (if (and saved? (= version (:version world)))
-                (world/add-message world "Saved game loaded." 10000)
-                (world/add-message (make-initial-world) "Saved game ignored, old version." 10000))]
+                (do (messages/send-message :old-game) world)
+                (do (messages/send-message :new-version) (make-initial-world)))]
     (q/frame-rate glc/frame-rate)
     (q/color-mode :rgb)
     (q/background 200 200 200)
@@ -126,7 +123,7 @@
      :base-time (:update-time world)
      :fonts #?(:clj  {:lcars (q/create-font "Helvetica-Bold" 24)
                       :lcars-small (q/create-font "Arial" 18)
-                      :messages (q/create-font "Bank Gothic" 24)}
+                      :messages (q/create-font "Bank Gothic" 30)}
                :cljs {:lcars "Helvetica-Bold"               ;; Font names only for JS
                       :lcars-small "Helvetica"
                       :messages "Bank Gothic"})
@@ -197,7 +194,6 @@
     (assoc world :romulans romulans)))
 
 (defn- new-game [event world]
-  (println "New Game!")
   (make-initial-world))
 
 (defn- debug-corbomite-device-installed [event world]
@@ -221,6 +217,10 @@
     (assoc world :stars stars))
   )
 
+(defn- debug-klingon-stats [_event world]
+  (swap! glc/klingon-stats not)
+  world)
+
 (defn- process-game-events [events world]
   (let [[_ world] (->> [events world]
                        (util/handle-event :debug-position-ship debug-position-ship-handler)
@@ -233,6 +233,7 @@
                        (util/handle-event :debug-corbomite-device-installed debug-corbomite-device-installed)
                        (util/handle-event :debug-explosion debug-explosion)
                        (util/handle-event :debug-add-pulsar debug-add-pulsar)
+                       (util/handle-event :debug-klingon-stats debug-klingon-stats)
                        (util/handle-event :new-game new-game)
                        )]
     world))
@@ -246,23 +247,18 @@
 (defn- ship-explosion [ship]
   (explosions/->explosion :ship ship))
 
-(defn- game-won [ms world]
-  (let [klingons (:klingons world)
-        messages (:messages world)
-        messages (if (zero? (count klingons))
-                   (conj messages {:text "The Federation is safe!  You win!"
-                                   :duration 1000000})
-                   messages)]
-    (assoc world :messages messages)))
+(defn- game-won [_ms world]
+  (when (zero? (count (:klingons world)))
+    (messages/send-message :you-win))
+  world)
 
-(defn- game-over [ms {:keys [ship game-over-timer explosions messages deaths] :as world}]
+(defn- game-over [_ms {:keys [ship game-over-timer explosions deaths] :as world}]
   (if (:destroyed ship)
     (let [explosions (if (zero? game-over-timer)
                        (conj explosions (ship-explosion ship))
                        explosions)
-          messages (if (zero? game-over-timer)
-                     (conj messages {:text "You Died!" :duration 10000})
-                     messages)
+          _ (when (zero? game-over-timer)
+              (messages/send-message :you-died))
           done? (and
                   (pos? game-over-timer)
                   (empty? explosions))
@@ -272,7 +268,6 @@
           ]
       (assoc world :game-over-timer game-over-timer
                    :explosions explosions
-                   :messages messages
                    :ship ship
                    :deaths deaths))
     world))
@@ -282,25 +277,6 @@
     (when (not valid)
       (println (s/explain-str ::world world)))
     valid))
-
-(defn- msg [world text]
-  (world/add-message world text 5000))
-
-(defn- shield-message [world]
-  (let [ship (:ship world)
-        shields (:shields ship)]
-    (cond
-      (< shields (/ glc/ship-shields 5)) (msg world "Captain! Shields are buckling!")
-      (< shields (/ glc/ship-shields 2)) (msg world "Taking Damage sir!")
-      (< shields glc/ship-shields) (msg world "Shields Holding sir!")
-      :else world)))
-
-(defn- add-messages [world]
-  (let [message-time (and (not (->> world :ship :destroyed))
-                          (> 1 (rand 200)))]
-    (if message-time
-      (->> world (shield-message))
-      world)))
 
 (defn update-world [ms world]
   ;{:pre [(valid-world? world)]
@@ -316,10 +292,10 @@
        (bases/update-bases ms)
        (romulans/update-romulans ms)
        (view-frame/update-messages ms)
-       (add-messages)
        ))
 
 (defn update-world-per-second [world]
+  (messages/add-messages! world)
   (->> world
        (klingons/update-klingons-per-second)
        (romulans/update-romulans-per-second)))
@@ -400,34 +376,6 @@
   (q/rect 0 0 (q/width) (q/height))
   (p/draw state)
   )
-
-(defn simple-setup []
-  (q/background 0)
-  (q/no-stroke)
-  (q/fill 255 255 255)
-  (q/rect-mode :corner)
-  (q/rect 0 0 (q/width) (q/height))
-  )
-
-(defn simple-setup []
-  (q/frame-rate 30)
-  (q/color-mode :hsb)
-  {:color 0
-   :angle 0})
-
-(defn simple-update [state]
-  {:color (mod (+ (:color state) 0.7) 255)
-   :angle (+ (:angle state) 0.1)})
-
-(defn simple-draw [state]
-  (q/background 240)
-  (q/fill (:color state) 255 255)
-  (let [angle (:angle state)
-        x (* 150 (q/cos angle))
-        y (* 150 (q/sin angle))]
-    (q/with-translation [(/ (q/width) 2)
-                         (/ (q/height) 2)]
-      (q/ellipse x y 100 100))))
 
 #?(:clj
    (defn ^:export -main [& args]

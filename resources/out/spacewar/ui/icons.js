@@ -8,15 +8,15 @@ goog.require('spacewar.geometry');
 goog.require('spacewar.vector');
 goog.require('spacewar.util');
 spacewar.ui.icons.transport_color = (function spacewar$ui$icons$transport_color(commodity){
-var pred__528 = cljs.core._EQ_;
-var expr__529 = commodity;
-if(cljs.core.truth_(pred__528.call(null,new cljs.core.Keyword(null,"antimatter","antimatter",-1151201000),expr__529))){
+var pred__530 = cljs.core._EQ_;
+var expr__531 = commodity;
+if(cljs.core.truth_(pred__530.call(null,new cljs.core.Keyword(null,"antimatter","antimatter",-1151201000),expr__531))){
 return spacewar.ui.config.orange;
 } else {
-if(cljs.core.truth_(pred__528.call(null,new cljs.core.Keyword(null,"dilithium","dilithium",1152933090),expr__529))){
+if(cljs.core.truth_(pred__530.call(null,new cljs.core.Keyword(null,"dilithium","dilithium",1152933090),expr__531))){
 return spacewar.ui.config.yellow;
 } else {
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__529)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__531)].join('')));
 }
 }
 });
@@ -28,15 +28,15 @@ quil.core.no_stroke.call(null);
 
 cljs.core.apply.call(null,quil.core.fill,spacewar.ui.icons.transport_color.call(null,commodity));
 
-var pred__531 = cljs.core._EQ_;
-var expr__532 = commodity;
-if(cljs.core.truth_(pred__531.call(null,new cljs.core.Keyword(null,"dilithium","dilithium",1152933090),expr__532))){
+var pred__533 = cljs.core._EQ_;
+var expr__534 = commodity;
+if(cljs.core.truth_(pred__533.call(null,new cljs.core.Keyword(null,"dilithium","dilithium",1152933090),expr__534))){
 return quil.core.triangle.call(null,(0),(-8),(-6),(6),(6),(6));
 } else {
-if(cljs.core.truth_(pred__531.call(null,new cljs.core.Keyword(null,"antimatter","antimatter",-1151201000),expr__532))){
+if(cljs.core.truth_(pred__533.call(null,new cljs.core.Keyword(null,"antimatter","antimatter",-1151201000),expr__534))){
 return quil.core.triangle.call(null,(0),(8),(-6),(-6),(6),(-6));
 } else {
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__532)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__534)].join('')));
 }
 }
 });
@@ -182,53 +182,53 @@ var y__5091__auto__ = (new cljs.core.Keyword(null,"age","age",-604307804).cljs$c
 return ((x__5090__auto__ < y__5091__auto__) ? x__5090__auto__ : y__5091__auto__);
 })()));
 
-var seq__534_538 = cljs.core.seq.call(null,cljs.core.range.call(null,(10)));
-var chunk__535_539 = null;
-var count__536_540 = (0);
-var i__537_541 = (0);
+var seq__536_540 = cljs.core.seq.call(null,cljs.core.range.call(null,(10)));
+var chunk__537_541 = null;
+var count__538_542 = (0);
+var i__539_543 = (0);
 while(true){
-if((i__537_541 < count__536_540)){
-var __542 = cljs.core._nth.call(null,chunk__535_539,i__537_541);
+if((i__539_543 < count__538_542)){
+var __544 = cljs.core._nth.call(null,chunk__537_541,i__539_543);
 quil.core.line.call(null,(0),(0),((30) - cljs.core.rand.call(null,(60))),((30) - cljs.core.rand.call(null,(60))));
 
 
-var G__543 = seq__534_538;
-var G__544 = chunk__535_539;
-var G__545 = count__536_540;
-var G__546 = (i__537_541 + (1));
-seq__534_538 = G__543;
-chunk__535_539 = G__544;
-count__536_540 = G__545;
-i__537_541 = G__546;
+var G__545 = seq__536_540;
+var G__546 = chunk__537_541;
+var G__547 = count__538_542;
+var G__548 = (i__539_543 + (1));
+seq__536_540 = G__545;
+chunk__537_541 = G__546;
+count__538_542 = G__547;
+i__539_543 = G__548;
 continue;
 } else {
-var temp__5804__auto___547 = cljs.core.seq.call(null,seq__534_538);
-if(temp__5804__auto___547){
-var seq__534_548__$1 = temp__5804__auto___547;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__534_548__$1)){
-var c__5525__auto___549 = cljs.core.chunk_first.call(null,seq__534_548__$1);
-var G__550 = cljs.core.chunk_rest.call(null,seq__534_548__$1);
-var G__551 = c__5525__auto___549;
-var G__552 = cljs.core.count.call(null,c__5525__auto___549);
-var G__553 = (0);
-seq__534_538 = G__550;
-chunk__535_539 = G__551;
-count__536_540 = G__552;
-i__537_541 = G__553;
+var temp__5804__auto___549 = cljs.core.seq.call(null,seq__536_540);
+if(temp__5804__auto___549){
+var seq__536_550__$1 = temp__5804__auto___549;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__536_550__$1)){
+var c__5525__auto___551 = cljs.core.chunk_first.call(null,seq__536_550__$1);
+var G__552 = cljs.core.chunk_rest.call(null,seq__536_550__$1);
+var G__553 = c__5525__auto___551;
+var G__554 = cljs.core.count.call(null,c__5525__auto___551);
+var G__555 = (0);
+seq__536_540 = G__552;
+chunk__537_541 = G__553;
+count__538_542 = G__554;
+i__539_543 = G__555;
 continue;
 } else {
-var __554 = cljs.core.first.call(null,seq__534_548__$1);
+var __556 = cljs.core.first.call(null,seq__536_550__$1);
 quil.core.line.call(null,(0),(0),((30) - cljs.core.rand.call(null,(60))),((30) - cljs.core.rand.call(null,(60))));
 
 
-var G__555 = cljs.core.next.call(null,seq__534_548__$1);
-var G__556 = null;
-var G__557 = (0);
-var G__558 = (0);
-seq__534_538 = G__555;
-chunk__535_539 = G__556;
-count__536_540 = G__557;
-i__537_541 = G__558;
+var G__557 = cljs.core.next.call(null,seq__536_550__$1);
+var G__558 = null;
+var G__559 = (0);
+var G__560 = (0);
+seq__536_540 = G__557;
+chunk__537_541 = G__558;
+count__538_542 = G__559;
+i__539_543 = G__560;
 continue;
 }
 } else {
@@ -382,24 +382,24 @@ cljs.core.apply.call(null,quil.core.fill,((((200) < cljs.core.mod.call(null,quil
 
 return quil.core.ellipse.call(null,(0),(0),(10),(10));
 }));
-spacewar.ui.icons.klingon_state = (function spacewar$ui$icons$klingon_state(p__559){
-var map__560 = p__559;
-var map__560__$1 = cljs.core.__destructure_map.call(null,map__560);
-var cruise_state = cljs.core.get.call(null,map__560__$1,new cljs.core.Keyword(null,"cruise-state","cruise-state",-1815030882));
-var battle_state = cljs.core.get.call(null,map__560__$1,new cljs.core.Keyword(null,"battle-state","battle-state",186465083));
-var mission = cljs.core.get.call(null,map__560__$1,new cljs.core.Keyword(null,"mission","mission",1740288522));
-var cruise_state__$1 = (function (){var pred__561 = cljs.core._EQ_;
-var expr__562 = cruise_state;
-if(cljs.core.truth_(pred__561.call(null,new cljs.core.Keyword(null,"patrol","patrol",-1378804753),expr__562))){
+spacewar.ui.icons.klingon_state = (function spacewar$ui$icons$klingon_state(p__561){
+var map__562 = p__561;
+var map__562__$1 = cljs.core.__destructure_map.call(null,map__562);
+var cruise_state = cljs.core.get.call(null,map__562__$1,new cljs.core.Keyword(null,"cruise-state","cruise-state",-1815030882));
+var battle_state = cljs.core.get.call(null,map__562__$1,new cljs.core.Keyword(null,"battle-state","battle-state",186465083));
+var mission = cljs.core.get.call(null,map__562__$1,new cljs.core.Keyword(null,"mission","mission",1740288522));
+var cruise_state__$1 = (function (){var pred__563 = cljs.core._EQ_;
+var expr__564 = cruise_state;
+if(cljs.core.truth_(pred__563.call(null,new cljs.core.Keyword(null,"patrol","patrol",-1378804753),expr__564))){
 return "P";
 } else {
-if(cljs.core.truth_(pred__561.call(null,new cljs.core.Keyword(null,"refuel","refuel",184033462),expr__562))){
+if(cljs.core.truth_(pred__563.call(null,new cljs.core.Keyword(null,"refuel","refuel",184033462),expr__564))){
 return "R";
 } else {
-if(cljs.core.truth_(pred__561.call(null,new cljs.core.Keyword(null,"guard","guard",-873147811),expr__562))){
+if(cljs.core.truth_(pred__563.call(null,new cljs.core.Keyword(null,"guard","guard",-873147811),expr__564))){
 return "G";
 } else {
-if(cljs.core.truth_(pred__561.call(null,new cljs.core.Keyword(null,"mission","mission",1740288522),expr__562))){
+if(cljs.core.truth_(pred__563.call(null,new cljs.core.Keyword(null,"mission","mission",1740288522),expr__564))){
 return "M";
 } else {
 return "X";
@@ -408,15 +408,15 @@ return "X";
 }
 }
 })();
-var mission__$1 = (function (){var pred__564 = cljs.core._EQ_;
-var expr__565 = mission;
-if(cljs.core.truth_(pred__564.call(null,new cljs.core.Keyword(null,"blockade","blockade",-469589591),expr__565))){
+var mission__$1 = (function (){var pred__566 = cljs.core._EQ_;
+var expr__567 = mission;
+if(cljs.core.truth_(pred__566.call(null,new cljs.core.Keyword(null,"blockade","blockade",-469589591),expr__567))){
 return "B";
 } else {
-if(cljs.core.truth_(pred__564.call(null,new cljs.core.Keyword(null,"seek-and-destroy","seek-and-destroy",-1082537405),expr__565))){
+if(cljs.core.truth_(pred__566.call(null,new cljs.core.Keyword(null,"seek-and-destroy","seek-and-destroy",-1082537405),expr__567))){
 return "A";
 } else {
-if(cljs.core.truth_(pred__564.call(null,new cljs.core.Keyword(null,"escape-corbomite","escape-corbomite",-646606924),expr__565))){
+if(cljs.core.truth_(pred__566.call(null,new cljs.core.Keyword(null,"escape-corbomite","escape-corbomite",-646606924),expr__567))){
 return "E";
 } else {
 return "-";
@@ -424,27 +424,27 @@ return "-";
 }
 }
 })();
-var battle_state__$1 = (function (){var pred__567 = cljs.core._EQ_;
-var expr__568 = battle_state;
-if(cljs.core.truth_(pred__567.call(null,new cljs.core.Keyword(null,"no-battle","no-battle",-1425286057),expr__568))){
+var battle_state__$1 = (function (){var pred__569 = cljs.core._EQ_;
+var expr__570 = battle_state;
+if(cljs.core.truth_(pred__569.call(null,new cljs.core.Keyword(null,"no-battle","no-battle",-1425286057),expr__570))){
 return "n";
 } else {
-if(cljs.core.truth_(pred__567.call(null,new cljs.core.Keyword(null,"flank-right","flank-right",-2113025306),expr__568))){
+if(cljs.core.truth_(pred__569.call(null,new cljs.core.Keyword(null,"flank-right","flank-right",-2113025306),expr__570))){
 return "fr";
 } else {
-if(cljs.core.truth_(pred__567.call(null,new cljs.core.Keyword(null,"flank-left","flank-left",-1509458594),expr__568))){
+if(cljs.core.truth_(pred__569.call(null,new cljs.core.Keyword(null,"flank-left","flank-left",-1509458594),expr__570))){
 return "fl";
 } else {
-if(cljs.core.truth_(pred__567.call(null,new cljs.core.Keyword(null,"retreating","retreating",939624530),expr__568))){
+if(cljs.core.truth_(pred__569.call(null,new cljs.core.Keyword(null,"retreating","retreating",939624530),expr__570))){
 return "r";
 } else {
-if(cljs.core.truth_(pred__567.call(null,new cljs.core.Keyword(null,"advancing","advancing",21793874),expr__568))){
+if(cljs.core.truth_(pred__569.call(null,new cljs.core.Keyword(null,"advancing","advancing",21793874),expr__570))){
 return "a";
 } else {
-if(cljs.core.truth_(pred__567.call(null,new cljs.core.Keyword(null,"kamikazee","kamikazee",1682650476),expr__568))){
+if(cljs.core.truth_(pred__569.call(null,new cljs.core.Keyword(null,"kamikazee","kamikazee",1682650476),expr__570))){
 return "K";
 } else {
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__568)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__570)].join('')));
 }
 }
 }
@@ -455,14 +455,19 @@ throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$ari
 return [mission__$1,":",cruise_state__$1,"-",battle_state__$1].join('');
 });
 spacewar.ui.icons.draw_klingon_counts = (function spacewar$ui$icons$draw_klingon_counts(klingon){
-if(spacewar.game_logic.config.klingon_stats){
+var shields = (new cljs.core.Keyword(null,"shields","shields",-295786721).cljs$core$IFn$_invoke$arity$1(klingon) | (0));
+if(cljs.core.truth_(cljs.core.deref.call(null,spacewar.game_logic.config.klingon_stats))){
 cljs.core.apply.call(null,quil.core.fill,spacewar.ui.config.white);
+
+cljs.core.apply.call(null,quil.core.stroke,spacewar.ui.config.white);
+
+quil.core.stroke_weight.call(null,(1));
 
 quil.core.text_align.call(null,new cljs.core.Keyword(null,"right","right",-452581833),new cljs.core.Keyword(null,"center","center",-748944368));
 
 quil.core.text_font.call(null,new cljs.core.Keyword(null,"lcars-small","lcars-small",620623076).cljs$core$IFn$_invoke$arity$1(quil.core.state.call(null,new cljs.core.Keyword(null,"fonts","fonts",1683167295))),(12));
 
-quil.core.text.call(null,["T-",cljs.core.str.cljs$core$IFn$_invoke$arity$1((((new cljs.core.Keyword(null,"torpedos","torpedos",344905121).cljs$core$IFn$_invoke$arity$1(klingon) / spacewar.game_logic.config.klingon_torpedos) / 0.01) | (0))),"%"].join(''),(-30),(0));
+quil.core.text.call(null,["T-",cljs.core.str.cljs$core$IFn$_invoke$arity$1((new cljs.core.Keyword(null,"torpedos","torpedos",344905121).cljs$core$IFn$_invoke$arity$1(klingon) | (0)))].join(''),(-30),(0));
 
 quil.core.text_align.call(null,new cljs.core.Keyword(null,"left","left",-399115937),new cljs.core.Keyword(null,"center","center",-748944368));
 
@@ -470,7 +475,7 @@ quil.core.text.call(null,["A-",cljs.core.str.cljs$core$IFn$_invoke$arity$1((((ne
 
 quil.core.text_align.call(null,new cljs.core.Keyword(null,"center","center",-748944368),new cljs.core.Keyword(null,"bottom","bottom",-1550509018));
 
-quil.core.text.call(null,spacewar.ui.icons.klingon_state.call(null,klingon),(0),(-30));
+quil.core.text.call(null,[spacewar.ui.icons.klingon_state.call(null,klingon),"[",cljs.core.str.cljs$core$IFn$_invoke$arity$1(shields),"]"].join(''),(0),(-30));
 
 quil.core.text_align.call(null,new cljs.core.Keyword(null,"center","center",-748944368),new cljs.core.Keyword(null,"top","top",-1856271961));
 
@@ -515,10 +520,10 @@ return quil.core.ellipse.call(null,(0),(0),radius,radius);
 return null;
 }
 });
-spacewar.ui.icons.draw_ship_icon = (function spacewar$ui$icons$draw_ship_icon(p__570,radians,ship){
-var vec__571 = p__570;
-var vx = cljs.core.nth.call(null,vec__571,(0),null);
-var vy = cljs.core.nth.call(null,vec__571,(1),null);
+spacewar.ui.icons.draw_ship_icon = (function spacewar$ui$icons$draw_ship_icon(p__572,radians,ship){
+var vec__573 = p__572;
+var vx = cljs.core.nth.call(null,vec__573,(0),null);
+var vy = cljs.core.nth.call(null,vec__573,(1),null);
 cljs.core.apply.call(null,quil.core.stroke,spacewar.ui.config.enterprise_vector_color);
 
 quil.core.stroke_weight.call(null,(2));
@@ -592,53 +597,53 @@ quil.core.no_stroke.call(null);
 
 quil.core.ellipse_mode.call(null,new cljs.core.Keyword(null,"center","center",-748944368));
 
-var seq__574_582 = cljs.core.seq.call(null,cljs.core.range.call(null,(10)));
-var chunk__575_583 = null;
-var count__576_584 = (0);
-var i__577_585 = (0);
+var seq__576_584 = cljs.core.seq.call(null,cljs.core.range.call(null,(10)));
+var chunk__577_585 = null;
+var count__578_586 = (0);
+var i__579_587 = (0);
 while(true){
-if((i__577_585 < count__576_584)){
-var __586 = cljs.core._nth.call(null,chunk__575_583,i__577_585);
+if((i__579_587 < count__578_586)){
+var __588 = cljs.core._nth.call(null,chunk__577_585,i__579_587);
 spacewar.ui.icons.draw_blob.call(null,jitter,half_jitter,(diameter * (0.5 - cljs.core.rand.call(null,(1)))));
 
 
-var G__587 = seq__574_582;
-var G__588 = chunk__575_583;
-var G__589 = count__576_584;
-var G__590 = (i__577_585 + (1));
-seq__574_582 = G__587;
-chunk__575_583 = G__588;
-count__576_584 = G__589;
-i__577_585 = G__590;
+var G__589 = seq__576_584;
+var G__590 = chunk__577_585;
+var G__591 = count__578_586;
+var G__592 = (i__579_587 + (1));
+seq__576_584 = G__589;
+chunk__577_585 = G__590;
+count__578_586 = G__591;
+i__579_587 = G__592;
 continue;
 } else {
-var temp__5804__auto___591 = cljs.core.seq.call(null,seq__574_582);
-if(temp__5804__auto___591){
-var seq__574_592__$1 = temp__5804__auto___591;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__574_592__$1)){
-var c__5525__auto___593 = cljs.core.chunk_first.call(null,seq__574_592__$1);
-var G__594 = cljs.core.chunk_rest.call(null,seq__574_592__$1);
-var G__595 = c__5525__auto___593;
-var G__596 = cljs.core.count.call(null,c__5525__auto___593);
-var G__597 = (0);
-seq__574_582 = G__594;
-chunk__575_583 = G__595;
-count__576_584 = G__596;
-i__577_585 = G__597;
+var temp__5804__auto___593 = cljs.core.seq.call(null,seq__576_584);
+if(temp__5804__auto___593){
+var seq__576_594__$1 = temp__5804__auto___593;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__576_594__$1)){
+var c__5525__auto___595 = cljs.core.chunk_first.call(null,seq__576_594__$1);
+var G__596 = cljs.core.chunk_rest.call(null,seq__576_594__$1);
+var G__597 = c__5525__auto___595;
+var G__598 = cljs.core.count.call(null,c__5525__auto___595);
+var G__599 = (0);
+seq__576_584 = G__596;
+chunk__577_585 = G__597;
+count__578_586 = G__598;
+i__579_587 = G__599;
 continue;
 } else {
-var __598 = cljs.core.first.call(null,seq__574_592__$1);
+var __600 = cljs.core.first.call(null,seq__576_594__$1);
 spacewar.ui.icons.draw_blob.call(null,jitter,half_jitter,(diameter * (0.5 - cljs.core.rand.call(null,(1)))));
 
 
-var G__599 = cljs.core.next.call(null,seq__574_592__$1);
-var G__600 = null;
-var G__601 = (0);
-var G__602 = (0);
-seq__574_582 = G__599;
-chunk__575_583 = G__600;
-count__576_584 = G__601;
-i__577_585 = G__602;
+var G__601 = cljs.core.next.call(null,seq__576_594__$1);
+var G__602 = null;
+var G__603 = (0);
+var G__604 = (0);
+seq__576_584 = G__601;
+chunk__577_585 = G__602;
+count__578_586 = G__603;
+i__579_587 = G__604;
 continue;
 }
 } else {
@@ -647,65 +652,65 @@ continue;
 break;
 }
 
-var seq__578 = cljs.core.seq.call(null,cljs.core.range.call(null,(20)));
-var chunk__579 = null;
-var count__580 = (0);
-var i__581 = (0);
+var seq__580 = cljs.core.seq.call(null,cljs.core.range.call(null,(20)));
+var chunk__581 = null;
+var count__582 = (0);
+var i__583 = (0);
 while(true){
-if((i__581 < count__580)){
-var _ = cljs.core._nth.call(null,chunk__579,i__581);
-var r_603 = cljs.core.rand.call(null,(diameter / (4)));
-var x_604 = ((2) + cljs.core.rand.call(null,r_603));
-var x_sqr_605 = (x_604 * x_604);
-var y_606 = Math.sqrt(((r_603 * r_603) - x_sqr_605));
-var x_607__$1 = (spacewar.ui.icons.rand_sign.call(null) * x_604);
-var y_608__$1 = (spacewar.ui.icons.rand_sign.call(null) * y_606);
-spacewar.ui.icons.draw_spark.call(null,x_607__$1,y_608__$1);
+if((i__583 < count__582)){
+var _ = cljs.core._nth.call(null,chunk__581,i__583);
+var r_605 = cljs.core.rand.call(null,(diameter / (4)));
+var x_606 = ((2) + cljs.core.rand.call(null,r_605));
+var x_sqr_607 = (x_606 * x_606);
+var y_608 = Math.sqrt(((r_605 * r_605) - x_sqr_607));
+var x_609__$1 = (spacewar.ui.icons.rand_sign.call(null) * x_606);
+var y_610__$1 = (spacewar.ui.icons.rand_sign.call(null) * y_608);
+spacewar.ui.icons.draw_spark.call(null,x_609__$1,y_610__$1);
 
 
-var G__609 = seq__578;
-var G__610 = chunk__579;
-var G__611 = count__580;
-var G__612 = (i__581 + (1));
-seq__578 = G__609;
-chunk__579 = G__610;
-count__580 = G__611;
-i__581 = G__612;
+var G__611 = seq__580;
+var G__612 = chunk__581;
+var G__613 = count__582;
+var G__614 = (i__583 + (1));
+seq__580 = G__611;
+chunk__581 = G__612;
+count__582 = G__613;
+i__583 = G__614;
 continue;
 } else {
-var temp__5804__auto__ = cljs.core.seq.call(null,seq__578);
+var temp__5804__auto__ = cljs.core.seq.call(null,seq__580);
 if(temp__5804__auto__){
-var seq__578__$1 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__578__$1)){
-var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__578__$1);
-var G__613 = cljs.core.chunk_rest.call(null,seq__578__$1);
-var G__614 = c__5525__auto__;
-var G__615 = cljs.core.count.call(null,c__5525__auto__);
-var G__616 = (0);
-seq__578 = G__613;
-chunk__579 = G__614;
-count__580 = G__615;
-i__581 = G__616;
+var seq__580__$1 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__580__$1)){
+var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__580__$1);
+var G__615 = cljs.core.chunk_rest.call(null,seq__580__$1);
+var G__616 = c__5525__auto__;
+var G__617 = cljs.core.count.call(null,c__5525__auto__);
+var G__618 = (0);
+seq__580 = G__615;
+chunk__581 = G__616;
+count__582 = G__617;
+i__583 = G__618;
 continue;
 } else {
-var _ = cljs.core.first.call(null,seq__578__$1);
-var r_617 = cljs.core.rand.call(null,(diameter / (4)));
-var x_618 = ((2) + cljs.core.rand.call(null,r_617));
-var x_sqr_619 = (x_618 * x_618);
-var y_620 = Math.sqrt(((r_617 * r_617) - x_sqr_619));
-var x_621__$1 = (spacewar.ui.icons.rand_sign.call(null) * x_618);
-var y_622__$1 = (spacewar.ui.icons.rand_sign.call(null) * y_620);
-spacewar.ui.icons.draw_spark.call(null,x_621__$1,y_622__$1);
+var _ = cljs.core.first.call(null,seq__580__$1);
+var r_619 = cljs.core.rand.call(null,(diameter / (4)));
+var x_620 = ((2) + cljs.core.rand.call(null,r_619));
+var x_sqr_621 = (x_620 * x_620);
+var y_622 = Math.sqrt(((r_619 * r_619) - x_sqr_621));
+var x_623__$1 = (spacewar.ui.icons.rand_sign.call(null) * x_620);
+var y_624__$1 = (spacewar.ui.icons.rand_sign.call(null) * y_622);
+spacewar.ui.icons.draw_spark.call(null,x_623__$1,y_624__$1);
 
 
-var G__623 = cljs.core.next.call(null,seq__578__$1);
-var G__624 = null;
-var G__625 = (0);
-var G__626 = (0);
-seq__578 = G__623;
-chunk__579 = G__624;
-count__580 = G__625;
-i__581 = G__626;
+var G__625 = cljs.core.next.call(null,seq__580__$1);
+var G__626 = null;
+var G__627 = (0);
+var G__628 = (0);
+seq__580 = G__625;
+chunk__581 = G__626;
+count__582 = G__627;
+i__583 = G__628;
 continue;
 }
 } else {
@@ -726,10 +731,10 @@ spacewar.ui.icons.romulan_blast_color = (function spacewar$ui$icons$romulan_blas
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [(255),cljs.core.rand.call(null,(255)),cljs.core.rand.call(null,(50))], null);
 });
 spacewar.ui.icons.draw_romulan_shot = (function spacewar$ui$icons$draw_romulan_shot(scale,shot){
-var map__627 = shot;
-var map__627__$1 = cljs.core.__destructure_map.call(null,map__627);
-var range = cljs.core.get.call(null,map__627__$1,new cljs.core.Keyword(null,"range","range",1639692286));
-var bearing = cljs.core.get.call(null,map__627__$1,new cljs.core.Keyword(null,"bearing","bearing",-1189702101));
+var map__629 = shot;
+var map__629__$1 = cljs.core.__destructure_map.call(null,map__629);
+var range = cljs.core.get.call(null,map__629__$1,new cljs.core.Keyword(null,"range","range",1639692286));
+var bearing = cljs.core.get.call(null,map__629__$1,new cljs.core.Keyword(null,"bearing","bearing",-1189702101));
 var scaled_range = (range * scale);
 var radians = spacewar.geometry.__GT_radians.call(null,bearing);
 var radians_to_origin = (radians + Math.PI);

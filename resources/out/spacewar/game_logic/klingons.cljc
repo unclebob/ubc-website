@@ -52,7 +52,7 @@
                          :well-supplied :mission}
                  :mission {:low-antimatter :refuel
                            :low-torpedo :guard
-                           :capable :refuel
+                           :capable :mission
                            :well-supplied :mission}
                  })
 
@@ -101,9 +101,9 @@
 (defn new-klingon-from-praxis [world]
   (let [klingons (:klingons world)
         klingon (make-klingon (rand-int glc/known-space-x) 0)
-        klingon (assoc klingon :mission (random-mission)
+        klingon (assoc klingon :mission :seek-and-destroy
                                :cruise-state :mission
-                               :thrust [0 glc/klingon-cruise-thrust]
+                               :thrust [0 0]
                                :velocity [0 -1]
                                :antimatter glc/klingon-antimatter
                                :torpedos glc/klingon-torpedos
@@ -166,12 +166,13 @@
     klingon))
 
 (defn destroyed-klingon? [klingon]
-  (<= (:shields klingon) 0))
+  (neg? (:shields klingon)))
 
 (defn update-klingon-defense [ms {:keys [klingons klingons-killed explosions clouds] :as world}]
   (let [klingons (map hit-klingon klingons)
         klingons (map #(update-kamikazee ms %) klingons)
-        [dead alive] (split-with destroyed-klingon? klingons)
+        dead (filter destroyed-klingon? klingons)
+        alive (remove destroyed-klingon? klingons)
         klingons-killed (+ klingons-killed (count dead))
         klingons (recharge-shields ms alive)]
     (assoc world :klingons klingons :klingons-killed klingons-killed
@@ -342,27 +343,30 @@
       (assoc world :klingons klingons
                    :shots (concat shots new-shots)))))
 
-(defn- thrust-if-battle [ship klingon]
-  (let [battle-state (:battle-state klingon)
-        ship-pos (util/pos ship)
+(defn- battle? [ship klingon]
+  (let [ship-pos (util/pos ship)
         klingon-pos (util/pos klingon)
-        dist (geo/distance ship-pos klingon-pos)
-        degrees (if (= ship-pos klingon-pos)
-                  0
-                  (geo/angle-degrees klingon-pos ship-pos))
-        degrees (+ degrees (battle-state glc/klingon-evasion-trajectories))
-        radians (geo/->radians degrees)
-        efficiency (/ (:shields klingon) glc/klingon-shields)
-        efficiency (+ (/ 2 3) (/ efficiency 3))
-        effective-thrust (min (klingon :antimatter)
-                              (* glc/klingon-tactical-thrust efficiency))
-        thrust (vector/from-angular effective-thrust radians)
-        thrust (if (= :kamikazee (:battle-state klingon))
-                 (vector/scale glc/klingon-kamikazee-thrust-factor thrust)
-                 thrust)]
-    (if (< glc/klingon-tactical-range dist)
-      klingon
-      (assoc klingon :thrust thrust))))
+        dist (geo/distance ship-pos klingon-pos)]
+    (> glc/klingon-tactical-range dist)))
+
+(defn- thrust-if-battle [ship klingon]
+  (if (battle? ship klingon)
+    (let [battle-state (:battle-state klingon)
+          ship-pos (util/pos ship)
+          klingon-pos (util/pos klingon)
+          degrees (geo/angle-degrees klingon-pos ship-pos)
+          degrees (+ degrees (battle-state glc/klingon-evasion-trajectories))
+          radians (geo/->radians degrees)
+          efficiency (/ (:shields klingon) glc/klingon-shields)
+          efficiency (+ (/ 2 3) (/ efficiency 3))
+          effective-thrust (min (klingon :antimatter)
+                                (* glc/klingon-tactical-thrust efficiency))
+          thrust (vector/from-angular effective-thrust radians)
+          thrust (if (= :kamikazee (:battle-state klingon))
+                   (vector/scale glc/klingon-kamikazee-thrust-factor thrust)
+                   thrust)]
+      (assoc klingon :thrust thrust))
+    klingon))
 
 (defn- accelerate-klingon [ms klingon]
   (let [{:keys [thrust velocity antimatter]} klingon]
@@ -464,22 +468,30 @@
       (random-battle-state)
       battle-state)))
 
+(defn determine-battle-state [klingon ship]
+  (let [dist (geo/distance (util/pos klingon) (util/pos ship))
+        antimatter (:antimatter klingon)
+        new-battle-state (condp <= dist
+                           glc/klingon-tactical-range :no-battle
+                           glc/klingon-evasion-limit :advancing
+                           (change-expired-battle-state klingon))
+        should-retreat? (and
+                          (<= antimatter glc/klingon-antimatter-runaway-threshold)
+                          (<= dist glc/klingon-tactical-range))
+        should-kamikazee? (and (> glc/klingon-kamikazee-probability (rand))
+                               (< antimatter glc/klingon-antimatter-kamikazee-threshold))
+        new-battle-state (if should-retreat?
+                           (if should-kamikazee?
+                             :kamikazee
+                             :retreating)
+                           new-battle-state)]
+    new-battle-state))
+
 (defn- update-klingon-state [ms ship klingon]
   (if (= :kamikazee (:battle-state klingon))
     klingon
-    (let [{:keys [antimatter battle-state-age]} klingon
-          dist (geo/distance (util/pos klingon) (util/pos ship))
-          new-battle-state (condp <= dist
-                             glc/klingon-tactical-range :no-battle
-                             glc/klingon-evasion-limit :advancing
-                             (change-expired-battle-state klingon))
-          new-battle-state (if (and
-                                 (<= antimatter glc/klingon-antimatter-runaway-threshold)
-                                 (<= dist glc/klingon-tactical-range))
-                             (if (< glc/klingon-kamikazee-probability (rand))
-                               :retreating
-                               :kamikazee)
-                             new-battle-state)
+    (let [{:keys [battle-state-age]} klingon
+          new-battle-state (determine-battle-state klingon ship)
           age (if (>= battle-state-age glc/klingon-battle-state-transition-age)
                 0
                 (+ battle-state-age ms))]
@@ -513,7 +525,7 @@
 
 (defn remove-klingons-out-of-range [_ms world]
   (let [klingons (:klingons world)
-        klingons (remove #(< (:y %) -10000) klingons)]
+        klingons (remove #(< (:y %) (- glc/klingon-tactical-range)) klingons)]
     (assoc world :klingons klingons))
   )
 
@@ -559,8 +571,8 @@
   (if (= (:battle-state klingon) :no-battle)
     (let [fraction-fuel-remaining (/ (:antimatter klingon) glc/klingon-antimatter)
           target-classes (condp <= fraction-fuel-remaining
-                           0.5 #{:o :b}
-                           0.3 #{:o :b :a :f}
+                           0.3 #{:o :b}
+                           0.1 #{:o :b :a :f}
                            #{:o :b :a :f :g :k :m})
           antimatter-stars (filter #(target-classes (:class %)) stars)
           antimatter-bases (filter #(= :antimatter-factory (:type %)) bases)
@@ -578,8 +590,8 @@
                                                 (apply min (keys base-distance-map)))
           nearest-antimatter-star (star-distance-map distance-to-nearest-antimatter-star)
           nearest-antimatter-base (base-distance-map distance-to-nearest-antimatter-base)
-          angle-to-target (if (< distance-to-nearest-antimatter-base
-                                 glc/klingon-antimatter-base-in-range)
+          angle-to-target (if (< (* 0.7 distance-to-nearest-antimatter-base)
+                                 distance-to-nearest-antimatter-star)
                             (geo/angle-degrees (util/pos klingon) (util/pos nearest-antimatter-base))
                             (geo/angle-degrees (util/pos klingon) (util/pos nearest-antimatter-star)))
           thrust (vector/from-angular glc/klingon-cruise-thrust (geo/->radians angle-to-target))]
@@ -631,7 +643,7 @@
     (cond
       (<= antimatter 40) :low-antimatter
       (<= torpedos 40) :low-torpedo
-      (and (> antimatter 40) (> torpedos 60)) :well-supplied
+      (and (> antimatter 60) (> torpedos 80)) :well-supplied
       :else :capable
       ))
   )
@@ -641,7 +653,7 @@
         transition (cruise-transition klingon)
         cruise-state (:cruise-state klingon)
         new-state (if (and (= :refuel cruise-state)
-                           (< antimatter glc/klingon-antimatter))
+                           (< antimatter (* glc/klingon-pct-refueling-target glc/klingon-antimatter)))
                     :refuel
                     (-> cruise-fsm cruise-state transition))]
     (assoc klingon :cruise-state new-state)))
@@ -701,36 +713,51 @@
 
 (defn- add-klingons-from-praxis [world]
   (let [minutes (get world :minutes 0)
-        probability (/ minutes glc/minutes-till-full-klingon-invasion)]
-    (if (< (rand) probability)
+        probability (/ minutes glc/minutes-till-full-klingon-invasion)
+        klingon-count (count (:klingons world))
+        ship (:ship world)
+        corbomite? (:corbomite-device-installed ship)]
+    (if (and (< (rand) probability)
+             (<= klingon-count (* 1.5 glc/number-of-klingons))
+             (not corbomite?))
       (new-klingon-from-praxis world)
       world)))
 
-(defn- try-change-to-seek-and-destroy [klingon]
-  (if (< (rand) glc/klingon-odds-to-become-destroyer)
-    (assoc klingon :mission :seek-and-destroy)
-    klingon))
+(defn- try-change-mission [klingon]
+  (let [mission (:mission klingon)
+        new-mission (condp = mission
+                      :blockade :seek-and-destroy
+                      :seek-and-destroy :blockade
+                      :escape-corbomite :escape-corbomite)]
+    (if (< (rand) glc/klingon-odds-to-change-mission)
+      (assoc klingon :mission new-mission)
+      klingon)))
 
-(defn change-blockade-to-seek-and-destroy [{:keys [klingons] :as world}]
-  (let [klingons (map try-change-to-seek-and-destroy klingons)]
+(defn try-change-missions [{:keys [klingons] :as world}]
+  (let [klingons (map try-change-mission klingons)]
     (assoc world :klingons klingons))
   )
 
 (defn- change-mission-to-escape [klingon]
   (assoc klingon :mission :escape-corbomite :cruise-state :mission))
 
-(defn- check-escape-corbomite [{:keys [klingons ship] :as world}]
+(defn- change-escapees-to-attackers [klingon]
+  (if (= :escape-corbomite (:mission klingon))
+    (assoc klingon :mission :seek-and-destroy :cruise-state :mission)
+    klingon))
+
+(defn- check-corbomite [{:keys [klingons ship] :as world}]
   (let [corbomite (:corbomite-device-installed ship)
         klingons (if corbomite
                    (map change-mission-to-escape klingons)
-                   klingons)]
+                   (map change-escapees-to-attackers klingons))]
     (assoc world :klingons klingons)))
 
 (defn update-klingons-per-minute [world]
   (-> world
       (change-patrol-direction)
       (change-all-cruise-states)
-      (change-blockade-to-seek-and-destroy)
-      (check-escape-corbomite)
+      (try-change-missions)
+      (check-corbomite)
       (add-klingons-from-praxis)))
 

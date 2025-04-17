@@ -33,12 +33,12 @@ return spacewar.ui.protocols.draw_elements.call(null,self__.state);
 (spacewar.ui.control_panels.deploy_panel.deploy_panel.prototype.spacewar$ui$protocols$Drawable$setup$arity$1 = (function (_){
 var self__ = this;
 var ___$1 = this;
-var map__1562 = self__.state;
-var map__1562__$1 = cljs.core.__destructure_map.call(null,map__1562);
-var x = cljs.core.get.call(null,map__1562__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__1562__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var w = cljs.core.get.call(null,map__1562__$1,new cljs.core.Keyword(null,"w","w",354169001));
-var button_color = cljs.core.get.call(null,map__1562__$1,new cljs.core.Keyword(null,"button-color","button-color",371849340));
+var map__834 = self__.state;
+var map__834__$1 = cljs.core.__destructure_map.call(null,map__834);
+var x = cljs.core.get.call(null,map__834__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__834__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var w = cljs.core.get.call(null,map__834__$1,new cljs.core.Keyword(null,"w","w",354169001));
+var button_color = cljs.core.get.call(null,map__834__$1,new cljs.core.Keyword(null,"button-color","button-color",371849340));
 var button_w = ((w - spacewar.ui.config.stringer_width) - (10));
 var am_x = ((x + spacewar.ui.config.stringer_width) + (10));
 var am_y = ((y + spacewar.ui.config.banner_width) + spacewar.ui.config.button_gap);
@@ -55,18 +55,18 @@ return (new spacewar.ui.control_panels.deploy_panel.deploy_panel(cljs.core.assoc
 (spacewar.ui.control_panels.deploy_panel.deploy_panel.prototype.spacewar$ui$protocols$Drawable$update_state$arity$2 = (function (_,world){
 var self__ = this;
 var ___$1 = this;
-var map__1563 = world;
-var map__1563__$1 = cljs.core.__destructure_map.call(null,map__1563);
-var ship = cljs.core.get.call(null,map__1563__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
-var stars = cljs.core.get.call(null,map__1563__$1,new cljs.core.Keyword(null,"stars","stars",-556837771));
+var map__835 = world;
+var map__835__$1 = cljs.core.__destructure_map.call(null,map__835);
+var ship = cljs.core.get.call(null,map__835__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
+var stars = cljs.core.get.call(null,map__835__$1,new cljs.core.Keyword(null,"stars","stars",-556837771));
 var am_deployable = spacewar.game_logic.ship.deployable_QMARK_.call(null,new cljs.core.Keyword(null,"antimatter-factory","antimatter-factory",218121254),ship,stars);
 var dl_deployable = spacewar.game_logic.ship.deployable_QMARK_.call(null,new cljs.core.Keyword(null,"dilithium-factory","dilithium-factory",1437622905),ship,stars);
 var wpn_deployable = spacewar.game_logic.ship.deployable_QMARK_.call(null,new cljs.core.Keyword(null,"weapon-factory","weapon-factory",-475320995),ship,stars);
 var corb_deployable = spacewar.game_logic.ship.deployable_QMARK_.call(null,new cljs.core.Keyword(null,"corbomite-factory","corbomite-factory",339807181),ship,stars);
 var state__$1 = spacewar.ui.protocols.change_elements.call(null,self__.state,new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"antimatter-factory","antimatter-factory",218121254),new cljs.core.Keyword(null,"disabled","disabled",-1529784218),(!(am_deployable))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"dilithium-factory","dilithium-factory",1437622905),new cljs.core.Keyword(null,"disabled","disabled",-1529784218),(!(dl_deployable))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"weapon-factory","weapon-factory",-475320995),new cljs.core.Keyword(null,"disabled","disabled",-1529784218),(!(wpn_deployable))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"corbomite-factory","corbomite-factory",339807181),new cljs.core.Keyword(null,"disabled","disabled",-1529784218),(!(corb_deployable))], null)], null));
-var vec__1564 = spacewar.ui.protocols.update_elements.call(null,state__$1,world);
-var state__$2 = cljs.core.nth.call(null,vec__1564,(0),null);
-var events = cljs.core.nth.call(null,vec__1564,(1),null);
+var vec__836 = spacewar.ui.protocols.update_elements.call(null,state__$1,world);
+var state__$2 = cljs.core.nth.call(null,vec__836,(0),null);
+var events = cljs.core.nth.call(null,vec__836,(1),null);
 return spacewar.ui.protocols.pack_update.call(null,(new spacewar.ui.control_panels.deploy_panel.deploy_panel(state__$2)),events);
 }));
 

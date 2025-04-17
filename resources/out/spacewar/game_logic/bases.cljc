@@ -2,6 +2,7 @@
   (:require [clojure.spec.alpha :as s]
             [spacewar.game-logic.config :as glc]
             [spacewar.game-logic.explosions :as explosions]
+            [spacewar.ui.messages :as messages]
             [spacewar.geometry :as geo]
             [spacewar.util :as util]
             [spacewar.vector :as vector]))
@@ -224,27 +225,54 @@
         transports (filter #(= [(:x dest) (:y dest)] (:destination %)) transports)]
     (reduce + (map :amount transports))))
 
-(defn should-transport-antimatter? [source dest transports]
+(defn- sufficient-commodity [commodity base-type]
+  (condp = commodity
+    :antimatter (sufficient-antimatter base-type)
+    :dilithium (sufficient-dilithium base-type)
+    nil))
+
+(defn- commodity-cargo-size [commodity]
+  (condp = commodity
+    :antimatter glc/antimatter-cargo-size
+    :dilithium glc/dilithium-cargo-size
+    nil))
+
+(defn- commodity-reserve [commodity base-type]
+  (condp = commodity
+    :antimatter (antimatter-reserve base-type)
+    :dilithium (dilithium-reserve base-type)
+    nil))
+
+(defn should-transport-commodity? [commodity source dest transports]
   (let [source-type (:type source)
         dest-type (:type dest)
-        source-antimatter (:antimatter source)
-        dest-antimatter (:antimatter dest)
-        promised-antimatter (get-promised-commodity :antimatter dest transports)]
-    (and
-      (not= :corbomite-device dest-type)
-      (<= (+ promised-antimatter dest-antimatter) (sufficient-antimatter dest-type))
-      (>= source-antimatter (+ glc/antimatter-cargo-size (antimatter-reserve source-type))))))
+        source-commodity (commodity source)
+        dest-commodity (commodity dest)
+        promised-commodity (get-promised-commodity commodity dest transports)
+        sufficient (sufficient-commodity commodity dest-type)
+        cargo-size (commodity-cargo-size commodity)
+        reserve (commodity-reserve commodity source-type)
+        he-needs-it? (<= (+ promised-commodity dest-commodity) sufficient)
+        ill-still-have-more-than-him? (> (- source-commodity cargo-size) dest-commodity)
+        ill-still-have-my-reserve? (>= source-commodity (+ cargo-size reserve))]
+    (or
+      (and
+        (not= :corbomite-device dest-type)
+        he-needs-it?
+        ill-still-have-more-than-him?
+        ill-still-have-my-reserve?)
+      (and
+        (or (= :corbomite-factory dest-type)
+            (= :weapon-factory dest-type))
+        he-needs-it?
+        (> source-commodity cargo-size))
+      )))
+
+(defn should-transport-antimatter? [source dest transports]
+  (should-transport-commodity? :antimatter source dest transports))
 
 (defn should-transport-dilithium? [source dest transports]
-  (let [source-type (:type source)
-        dest-type (:type dest)
-        source-dilithium (:dilithium source)
-        dest-dilithium (:dilithium dest)
-        promised-dilithium (get-promised-commodity :dilithium dest transports)]
-    (and
-      (not= :corbomite-device dest-type)
-      (< (+ promised-dilithium dest-dilithium) (sufficient-dilithium dest-type))
-      (>= source-dilithium (+ glc/dilithium-cargo-size (dilithium-reserve source-type))))))
+  (should-transport-commodity? :dilithium source dest transports))
 
 (defn- cargo-size [commodity]
   (condp = commodity
@@ -390,6 +418,10 @@
       (not= :corbomite-device (:type base))
       (not (empty? delivery-transports)))))
 
+(def max-commodity
+  {:antimatter glc/base-antimatter-maximum
+   :dilithium glc/base-dilithium-maximum})
+
 (defn receive-transports [world]
   (let [transports (:transports world)
         bases (:bases world)
@@ -405,7 +437,11 @@
           (assoc world :transports in-transit :bases new-bases))
         (let [base (first accepting)
               transport (first (filter #(transport-going-to base %) delivering))
-              base (update base (:commodity transport) + (:amount transport))]
+              commodity (:commodity transport)
+              new-total (min
+                          (max-commodity commodity)
+                          (+ (:amount transport) (get base commodity)))
+              base (assoc base commodity new-total)]
           (recur (rest accepting) delivering (conj adjusted-bases base)))))))
 
 (defn remove-routes-to-base [world base]
@@ -434,7 +470,8 @@
         world (if corbomite-incomplete?
                 world
                 (remove-routes-to-base world corbomite-base))]
-
+    (when (not corbomite-incomplete?)
+      (messages/send-message :corbomite-device))
     (assoc world :bases bases :explosions explosions)))
 
 (defn update-bases [ms world]

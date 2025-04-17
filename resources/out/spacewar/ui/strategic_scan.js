@@ -9,10 +9,10 @@ goog.require('spacewar.game_logic.config');
 goog.require('spacewar.ui.protocols');
 goog.require('spacewar.vector');
 spacewar.ui.strategic_scan.draw_background = (function spacewar$ui$strategic_scan$draw_background(state){
-var map__764 = state;
-var map__764__$1 = cljs.core.__destructure_map.call(null,map__764);
-var w = cljs.core.get.call(null,map__764__$1,new cljs.core.Keyword(null,"w","w",354169001));
-var h = cljs.core.get.call(null,map__764__$1,new cljs.core.Keyword(null,"h","h",1109658740));
+var map__766 = state;
+var map__766__$1 = cljs.core.__destructure_map.call(null,map__766);
+var w = cljs.core.get.call(null,map__766__$1,new cljs.core.Keyword(null,"w","w",354169001));
+var h = cljs.core.get.call(null,map__766__$1,new cljs.core.Keyword(null,"h","h",1109658740));
 quil.core.fill.call(null,(0),(0),(0));
 
 quil.core.rect_mode.call(null,new cljs.core.Keyword(null,"corner","corner",1296717125));
@@ -20,11 +20,11 @@ quil.core.rect_mode.call(null,new cljs.core.Keyword(null,"corner","corner",12967
 return quil.core.rect.call(null,(0),(0),w,h);
 });
 spacewar.ui.strategic_scan.draw_stars = (function spacewar$ui$strategic_scan$draw_stars(state){
-var map__765 = state;
-var map__765__$1 = cljs.core.__destructure_map.call(null,map__765);
-var stars = cljs.core.get.call(null,map__765__$1,new cljs.core.Keyword(null,"stars","stars",-556837771));
-var pixel_width = cljs.core.get.call(null,map__765__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
-var ship = cljs.core.get.call(null,map__765__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
+var map__767 = state;
+var map__767__$1 = cljs.core.__destructure_map.call(null,map__767);
+var stars = cljs.core.get.call(null,map__767__$1,new cljs.core.Keyword(null,"stars","stars",-556837771));
+var pixel_width = cljs.core.get.call(null,map__767__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
+var ship = cljs.core.get.call(null,map__767__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
 var sx = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(ship);
 var sy = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(ship);
 if(cljs.core.truth_(stars)){
@@ -32,73 +32,73 @@ quil.core.no_stroke.call(null);
 
 quil.core.ellipse_mode.call(null,new cljs.core.Keyword(null,"center","center",-748944368));
 
-var seq__766 = cljs.core.seq.call(null,stars);
-var chunk__767 = null;
-var count__768 = (0);
-var i__769 = (0);
+var seq__768 = cljs.core.seq.call(null,stars);
+var chunk__769 = null;
+var count__770 = (0);
+var i__771 = (0);
 while(true){
-if((i__769 < count__768)){
-var map__772 = cljs.core._nth.call(null,chunk__767,i__769);
-var map__772__$1 = cljs.core.__destructure_map.call(null,map__772);
-var star = map__772__$1;
-var x = cljs.core.get.call(null,map__772__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__772__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var tr__794__auto___774 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
+if((i__771 < count__770)){
+var map__774 = cljs.core._nth.call(null,chunk__769,i__771);
+var map__774__$1 = cljs.core.__destructure_map.call(null,map__774);
+var star = map__774__$1;
+var x = cljs.core.get.call(null,map__774__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__774__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var tr__794__auto___776 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
 quil.core.push_matrix.call(null);
 
-try{quil.core.translate.call(null,tr__794__auto___774);
+try{quil.core.translate.call(null,tr__794__auto___776);
 
 spacewar.ui.icons.draw_star_icon.call(null,star);
 }finally {quil.core.pop_matrix.call(null);
 }
 
-var G__775 = seq__766;
-var G__776 = chunk__767;
-var G__777 = count__768;
-var G__778 = (i__769 + (1));
-seq__766 = G__775;
-chunk__767 = G__776;
-count__768 = G__777;
-i__769 = G__778;
+var G__777 = seq__768;
+var G__778 = chunk__769;
+var G__779 = count__770;
+var G__780 = (i__771 + (1));
+seq__768 = G__777;
+chunk__769 = G__778;
+count__770 = G__779;
+i__771 = G__780;
 continue;
 } else {
-var temp__5804__auto__ = cljs.core.seq.call(null,seq__766);
+var temp__5804__auto__ = cljs.core.seq.call(null,seq__768);
 if(temp__5804__auto__){
-var seq__766__$1 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__766__$1)){
-var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__766__$1);
-var G__779 = cljs.core.chunk_rest.call(null,seq__766__$1);
-var G__780 = c__5525__auto__;
-var G__781 = cljs.core.count.call(null,c__5525__auto__);
-var G__782 = (0);
-seq__766 = G__779;
-chunk__767 = G__780;
-count__768 = G__781;
-i__769 = G__782;
+var seq__768__$1 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__768__$1)){
+var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__768__$1);
+var G__781 = cljs.core.chunk_rest.call(null,seq__768__$1);
+var G__782 = c__5525__auto__;
+var G__783 = cljs.core.count.call(null,c__5525__auto__);
+var G__784 = (0);
+seq__768 = G__781;
+chunk__769 = G__782;
+count__770 = G__783;
+i__771 = G__784;
 continue;
 } else {
-var map__773 = cljs.core.first.call(null,seq__766__$1);
-var map__773__$1 = cljs.core.__destructure_map.call(null,map__773);
-var star = map__773__$1;
-var x = cljs.core.get.call(null,map__773__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__773__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var tr__794__auto___783 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
+var map__775 = cljs.core.first.call(null,seq__768__$1);
+var map__775__$1 = cljs.core.__destructure_map.call(null,map__775);
+var star = map__775__$1;
+var x = cljs.core.get.call(null,map__775__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__775__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var tr__794__auto___785 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
 quil.core.push_matrix.call(null);
 
-try{quil.core.translate.call(null,tr__794__auto___783);
+try{quil.core.translate.call(null,tr__794__auto___785);
 
 spacewar.ui.icons.draw_star_icon.call(null,star);
 }finally {quil.core.pop_matrix.call(null);
 }
 
-var G__784 = cljs.core.next.call(null,seq__766__$1);
-var G__785 = null;
-var G__786 = (0);
-var G__787 = (0);
-seq__766 = G__784;
-chunk__767 = G__785;
-count__768 = G__786;
-i__769 = G__787;
+var G__786 = cljs.core.next.call(null,seq__768__$1);
+var G__787 = null;
+var G__788 = (0);
+var G__789 = (0);
+seq__768 = G__786;
+chunk__769 = G__787;
+count__770 = G__788;
+i__771 = G__789;
 continue;
 }
 } else {
@@ -112,29 +112,29 @@ return null;
 }
 });
 spacewar.ui.strategic_scan.draw_klingons = (function spacewar$ui$strategic_scan$draw_klingons(state){
-var map__788 = state;
-var map__788__$1 = cljs.core.__destructure_map.call(null,map__788);
-var klingons = cljs.core.get.call(null,map__788__$1,new cljs.core.Keyword(null,"klingons","klingons",-1228954811));
-var pixel_width = cljs.core.get.call(null,map__788__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
-var ship = cljs.core.get.call(null,map__788__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
+var map__790 = state;
+var map__790__$1 = cljs.core.__destructure_map.call(null,map__790);
+var klingons = cljs.core.get.call(null,map__790__$1,new cljs.core.Keyword(null,"klingons","klingons",-1228954811));
+var pixel_width = cljs.core.get.call(null,map__790__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
+var ship = cljs.core.get.call(null,map__790__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
 var sx = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(ship);
 var sy = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(ship);
 if(cljs.core.truth_(klingons)){
-var seq__789 = cljs.core.seq.call(null,klingons);
-var chunk__790 = null;
-var count__791 = (0);
-var i__792 = (0);
+var seq__791 = cljs.core.seq.call(null,klingons);
+var chunk__792 = null;
+var count__793 = (0);
+var i__794 = (0);
 while(true){
-if((i__792 < count__791)){
-var map__795 = cljs.core._nth.call(null,chunk__790,i__792);
-var map__795__$1 = cljs.core.__destructure_map.call(null,map__795);
-var klingon = map__795__$1;
-var x = cljs.core.get.call(null,map__795__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__795__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var tr__794__auto___797 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
+if((i__794 < count__793)){
+var map__797 = cljs.core._nth.call(null,chunk__792,i__794);
+var map__797__$1 = cljs.core.__destructure_map.call(null,map__797);
+var klingon = map__797__$1;
+var x = cljs.core.get.call(null,map__797__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__797__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var tr__794__auto___799 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
 quil.core.push_matrix.call(null);
 
-try{quil.core.translate.call(null,tr__794__auto___797);
+try{quil.core.translate.call(null,tr__794__auto___799);
 
 spacewar.ui.icons.draw_klingon_icon.call(null,klingon);
 
@@ -142,40 +142,40 @@ spacewar.ui.icons.draw_klingon_counts.call(null,klingon);
 }finally {quil.core.pop_matrix.call(null);
 }
 
-var G__798 = seq__789;
-var G__799 = chunk__790;
-var G__800 = count__791;
-var G__801 = (i__792 + (1));
-seq__789 = G__798;
-chunk__790 = G__799;
-count__791 = G__800;
-i__792 = G__801;
+var G__800 = seq__791;
+var G__801 = chunk__792;
+var G__802 = count__793;
+var G__803 = (i__794 + (1));
+seq__791 = G__800;
+chunk__792 = G__801;
+count__793 = G__802;
+i__794 = G__803;
 continue;
 } else {
-var temp__5804__auto__ = cljs.core.seq.call(null,seq__789);
+var temp__5804__auto__ = cljs.core.seq.call(null,seq__791);
 if(temp__5804__auto__){
-var seq__789__$1 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__789__$1)){
-var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__789__$1);
-var G__802 = cljs.core.chunk_rest.call(null,seq__789__$1);
-var G__803 = c__5525__auto__;
-var G__804 = cljs.core.count.call(null,c__5525__auto__);
-var G__805 = (0);
-seq__789 = G__802;
-chunk__790 = G__803;
-count__791 = G__804;
-i__792 = G__805;
+var seq__791__$1 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__791__$1)){
+var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__791__$1);
+var G__804 = cljs.core.chunk_rest.call(null,seq__791__$1);
+var G__805 = c__5525__auto__;
+var G__806 = cljs.core.count.call(null,c__5525__auto__);
+var G__807 = (0);
+seq__791 = G__804;
+chunk__792 = G__805;
+count__793 = G__806;
+i__794 = G__807;
 continue;
 } else {
-var map__796 = cljs.core.first.call(null,seq__789__$1);
-var map__796__$1 = cljs.core.__destructure_map.call(null,map__796);
-var klingon = map__796__$1;
-var x = cljs.core.get.call(null,map__796__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__796__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var tr__794__auto___806 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
+var map__798 = cljs.core.first.call(null,seq__791__$1);
+var map__798__$1 = cljs.core.__destructure_map.call(null,map__798);
+var klingon = map__798__$1;
+var x = cljs.core.get.call(null,map__798__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__798__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var tr__794__auto___808 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
 quil.core.push_matrix.call(null);
 
-try{quil.core.translate.call(null,tr__794__auto___806);
+try{quil.core.translate.call(null,tr__794__auto___808);
 
 spacewar.ui.icons.draw_klingon_icon.call(null,klingon);
 
@@ -183,14 +183,14 @@ spacewar.ui.icons.draw_klingon_counts.call(null,klingon);
 }finally {quil.core.pop_matrix.call(null);
 }
 
-var G__807 = cljs.core.next.call(null,seq__789__$1);
-var G__808 = null;
-var G__809 = (0);
-var G__810 = (0);
-seq__789 = G__807;
-chunk__790 = G__808;
-count__791 = G__809;
-i__792 = G__810;
+var G__809 = cljs.core.next.call(null,seq__791__$1);
+var G__810 = null;
+var G__811 = (0);
+var G__812 = (0);
+seq__791 = G__809;
+chunk__792 = G__810;
+count__793 = G__811;
+i__794 = G__812;
 continue;
 }
 } else {
@@ -204,79 +204,79 @@ return null;
 }
 });
 spacewar.ui.strategic_scan.draw_romulans = (function spacewar$ui$strategic_scan$draw_romulans(state){
-var map__811 = state;
-var map__811__$1 = cljs.core.__destructure_map.call(null,map__811);
-var romulans = cljs.core.get.call(null,map__811__$1,new cljs.core.Keyword(null,"romulans","romulans",1249513588));
-var pixel_width = cljs.core.get.call(null,map__811__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
-var ship = cljs.core.get.call(null,map__811__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
+var map__813 = state;
+var map__813__$1 = cljs.core.__destructure_map.call(null,map__813);
+var romulans = cljs.core.get.call(null,map__813__$1,new cljs.core.Keyword(null,"romulans","romulans",1249513588));
+var pixel_width = cljs.core.get.call(null,map__813__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
+var ship = cljs.core.get.call(null,map__813__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
 var sx = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(ship);
 var sy = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(ship);
 if(cljs.core.truth_(romulans)){
-var seq__812 = cljs.core.seq.call(null,romulans);
-var chunk__813 = null;
-var count__814 = (0);
-var i__815 = (0);
+var seq__814 = cljs.core.seq.call(null,romulans);
+var chunk__815 = null;
+var count__816 = (0);
+var i__817 = (0);
 while(true){
-if((i__815 < count__814)){
-var map__818 = cljs.core._nth.call(null,chunk__813,i__815);
-var map__818__$1 = cljs.core.__destructure_map.call(null,map__818);
-var x = cljs.core.get.call(null,map__818__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__818__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var tr__794__auto___820 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
+if((i__817 < count__816)){
+var map__820 = cljs.core._nth.call(null,chunk__815,i__817);
+var map__820__$1 = cljs.core.__destructure_map.call(null,map__820);
+var x = cljs.core.get.call(null,map__820__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__820__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var tr__794__auto___822 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
 quil.core.push_matrix.call(null);
 
-try{quil.core.translate.call(null,tr__794__auto___820);
+try{quil.core.translate.call(null,tr__794__auto___822);
 
 spacewar.ui.icons.draw_strategic_romulan.call(null);
 }finally {quil.core.pop_matrix.call(null);
 }
 
-var G__821 = seq__812;
-var G__822 = chunk__813;
-var G__823 = count__814;
-var G__824 = (i__815 + (1));
-seq__812 = G__821;
-chunk__813 = G__822;
-count__814 = G__823;
-i__815 = G__824;
+var G__823 = seq__814;
+var G__824 = chunk__815;
+var G__825 = count__816;
+var G__826 = (i__817 + (1));
+seq__814 = G__823;
+chunk__815 = G__824;
+count__816 = G__825;
+i__817 = G__826;
 continue;
 } else {
-var temp__5804__auto__ = cljs.core.seq.call(null,seq__812);
+var temp__5804__auto__ = cljs.core.seq.call(null,seq__814);
 if(temp__5804__auto__){
-var seq__812__$1 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__812__$1)){
-var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__812__$1);
-var G__825 = cljs.core.chunk_rest.call(null,seq__812__$1);
-var G__826 = c__5525__auto__;
-var G__827 = cljs.core.count.call(null,c__5525__auto__);
-var G__828 = (0);
-seq__812 = G__825;
-chunk__813 = G__826;
-count__814 = G__827;
-i__815 = G__828;
+var seq__814__$1 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__814__$1)){
+var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__814__$1);
+var G__827 = cljs.core.chunk_rest.call(null,seq__814__$1);
+var G__828 = c__5525__auto__;
+var G__829 = cljs.core.count.call(null,c__5525__auto__);
+var G__830 = (0);
+seq__814 = G__827;
+chunk__815 = G__828;
+count__816 = G__829;
+i__817 = G__830;
 continue;
 } else {
-var map__819 = cljs.core.first.call(null,seq__812__$1);
-var map__819__$1 = cljs.core.__destructure_map.call(null,map__819);
-var x = cljs.core.get.call(null,map__819__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__819__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var tr__794__auto___829 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
+var map__821 = cljs.core.first.call(null,seq__814__$1);
+var map__821__$1 = cljs.core.__destructure_map.call(null,map__821);
+var x = cljs.core.get.call(null,map__821__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__821__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var tr__794__auto___831 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
 quil.core.push_matrix.call(null);
 
-try{quil.core.translate.call(null,tr__794__auto___829);
+try{quil.core.translate.call(null,tr__794__auto___831);
 
 spacewar.ui.icons.draw_strategic_romulan.call(null);
 }finally {quil.core.pop_matrix.call(null);
 }
 
-var G__830 = cljs.core.next.call(null,seq__812__$1);
-var G__831 = null;
-var G__832 = (0);
-var G__833 = (0);
-seq__812 = G__830;
-chunk__813 = G__831;
-count__814 = G__832;
-i__815 = G__833;
+var G__832 = cljs.core.next.call(null,seq__814__$1);
+var G__833 = null;
+var G__834 = (0);
+var G__835 = (0);
+seq__814 = G__832;
+chunk__815 = G__833;
+count__816 = G__834;
+i__817 = G__835;
 continue;
 }
 } else {
@@ -304,88 +304,88 @@ return or__5002__auto__;
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(0),(0)], null);
 }
 })();
-var vec__834 = spacewar.vector.scale.call(null,spacewar.ui.config.velocity_vector_scale,velocity);
-var vx = cljs.core.nth.call(null,vec__834,(0),null);
-var vy = cljs.core.nth.call(null,vec__834,(1),null);
+var vec__836 = spacewar.vector.scale.call(null,spacewar.ui.config.velocity_vector_scale,velocity);
+var vx = cljs.core.nth.call(null,vec__836,(0),null);
+var vy = cljs.core.nth.call(null,vec__836,(1),null);
 var radians = spacewar.geometry.__GT_radians.call(null,heading);
 return spacewar.ui.icons.draw_ship_icon.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [vx,vy], null),radians,new cljs.core.Keyword(null,"ship","ship",197863473).cljs$core$IFn$_invoke$arity$1(state));
 });
 spacewar.ui.strategic_scan.draw_bases = (function spacewar$ui$strategic_scan$draw_bases(state){
-var map__837 = state;
-var map__837__$1 = cljs.core.__destructure_map.call(null,map__837);
-var bases = cljs.core.get.call(null,map__837__$1,new cljs.core.Keyword(null,"bases","bases",-1036892420));
-var pixel_width = cljs.core.get.call(null,map__837__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
-var ship = cljs.core.get.call(null,map__837__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
+var map__839 = state;
+var map__839__$1 = cljs.core.__destructure_map.call(null,map__839);
+var bases = cljs.core.get.call(null,map__839__$1,new cljs.core.Keyword(null,"bases","bases",-1036892420));
+var pixel_width = cljs.core.get.call(null,map__839__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
+var ship = cljs.core.get.call(null,map__839__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
 var sx = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(ship);
 var sy = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(ship);
 if(cljs.core.truth_(bases)){
-var seq__838 = cljs.core.seq.call(null,bases);
-var chunk__839 = null;
-var count__840 = (0);
-var i__841 = (0);
+var seq__840 = cljs.core.seq.call(null,bases);
+var chunk__841 = null;
+var count__842 = (0);
+var i__843 = (0);
 while(true){
-if((i__841 < count__840)){
-var map__844 = cljs.core._nth.call(null,chunk__839,i__841);
-var map__844__$1 = cljs.core.__destructure_map.call(null,map__844);
-var base = map__844__$1;
-var x = cljs.core.get.call(null,map__844__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__844__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var tr__794__auto___846 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
+if((i__843 < count__842)){
+var map__846 = cljs.core._nth.call(null,chunk__841,i__843);
+var map__846__$1 = cljs.core.__destructure_map.call(null,map__846);
+var base = map__846__$1;
+var x = cljs.core.get.call(null,map__846__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__846__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var tr__794__auto___848 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
 quil.core.push_matrix.call(null);
 
-try{quil.core.translate.call(null,tr__794__auto___846);
+try{quil.core.translate.call(null,tr__794__auto___848);
 
 spacewar.ui.icons.draw_base_icon.call(null,base);
 }finally {quil.core.pop_matrix.call(null);
 }
 
-var G__847 = seq__838;
-var G__848 = chunk__839;
-var G__849 = count__840;
-var G__850 = (i__841 + (1));
-seq__838 = G__847;
-chunk__839 = G__848;
-count__840 = G__849;
-i__841 = G__850;
+var G__849 = seq__840;
+var G__850 = chunk__841;
+var G__851 = count__842;
+var G__852 = (i__843 + (1));
+seq__840 = G__849;
+chunk__841 = G__850;
+count__842 = G__851;
+i__843 = G__852;
 continue;
 } else {
-var temp__5804__auto__ = cljs.core.seq.call(null,seq__838);
+var temp__5804__auto__ = cljs.core.seq.call(null,seq__840);
 if(temp__5804__auto__){
-var seq__838__$1 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__838__$1)){
-var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__838__$1);
-var G__851 = cljs.core.chunk_rest.call(null,seq__838__$1);
-var G__852 = c__5525__auto__;
-var G__853 = cljs.core.count.call(null,c__5525__auto__);
-var G__854 = (0);
-seq__838 = G__851;
-chunk__839 = G__852;
-count__840 = G__853;
-i__841 = G__854;
+var seq__840__$1 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__840__$1)){
+var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__840__$1);
+var G__853 = cljs.core.chunk_rest.call(null,seq__840__$1);
+var G__854 = c__5525__auto__;
+var G__855 = cljs.core.count.call(null,c__5525__auto__);
+var G__856 = (0);
+seq__840 = G__853;
+chunk__841 = G__854;
+count__842 = G__855;
+i__843 = G__856;
 continue;
 } else {
-var map__845 = cljs.core.first.call(null,seq__838__$1);
-var map__845__$1 = cljs.core.__destructure_map.call(null,map__845);
-var base = map__845__$1;
-var x = cljs.core.get.call(null,map__845__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__845__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var tr__794__auto___855 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
+var map__847 = cljs.core.first.call(null,seq__840__$1);
+var map__847__$1 = cljs.core.__destructure_map.call(null,map__847);
+var base = map__847__$1;
+var x = cljs.core.get.call(null,map__847__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__847__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var tr__794__auto___857 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [((x - sx) * pixel_width),((y - sy) * pixel_width)], null);
 quil.core.push_matrix.call(null);
 
-try{quil.core.translate.call(null,tr__794__auto___855);
+try{quil.core.translate.call(null,tr__794__auto___857);
 
 spacewar.ui.icons.draw_base_icon.call(null,base);
 }finally {quil.core.pop_matrix.call(null);
 }
 
-var G__856 = cljs.core.next.call(null,seq__838__$1);
-var G__857 = null;
-var G__858 = (0);
-var G__859 = (0);
-seq__838 = G__856;
-chunk__839 = G__857;
-count__840 = G__858;
-i__841 = G__859;
+var G__858 = cljs.core.next.call(null,seq__840__$1);
+var G__859 = null;
+var G__860 = (0);
+var G__861 = (0);
+seq__840 = G__858;
+chunk__841 = G__859;
+count__842 = G__860;
+i__843 = G__861;
 continue;
 }
 } else {
@@ -403,72 +403,72 @@ cljs.core.apply.call(null,quil.core.stroke,spacewar.ui.config.transport_route_co
 
 quil.core.stroke_weight.call(null,(3));
 
-var map__860 = state;
-var map__860__$1 = cljs.core.__destructure_map.call(null,map__860);
-var pixel_width = cljs.core.get.call(null,map__860__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
-var ship = cljs.core.get.call(null,map__860__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
-var transport_routes = cljs.core.get.call(null,map__860__$1,new cljs.core.Keyword(null,"transport-routes","transport-routes",1028896693));
+var map__862 = state;
+var map__862__$1 = cljs.core.__destructure_map.call(null,map__862);
+var pixel_width = cljs.core.get.call(null,map__862__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
+var ship = cljs.core.get.call(null,map__862__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
+var transport_routes = cljs.core.get.call(null,map__862__$1,new cljs.core.Keyword(null,"transport-routes","transport-routes",1028896693));
 var sx = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(ship);
 var sy = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(ship);
-var seq__861 = cljs.core.seq.call(null,transport_routes);
-var chunk__862 = null;
-var count__863 = (0);
-var i__864 = (0);
+var seq__863 = cljs.core.seq.call(null,transport_routes);
+var chunk__864 = null;
+var count__865 = (0);
+var i__866 = (0);
 while(true){
-if((i__864 < count__863)){
-var route = cljs.core._nth.call(null,chunk__862,i__864);
-var b1_865 = cljs.core.first.call(null,route);
-var b2_866 = cljs.core.second.call(null,route);
-var b1x_867 = ((cljs.core.first.call(null,b1_865) - sx) * pixel_width);
-var b1y_868 = ((cljs.core.second.call(null,b1_865) - sy) * pixel_width);
-var b2x_869 = ((cljs.core.first.call(null,b2_866) - sx) * pixel_width);
-var b2y_870 = ((cljs.core.second.call(null,b2_866) - sy) * pixel_width);
-quil.core.line.call(null,b1x_867,b1y_868,b2x_869,b2y_870);
+if((i__866 < count__865)){
+var route = cljs.core._nth.call(null,chunk__864,i__866);
+var b1_867 = cljs.core.first.call(null,route);
+var b2_868 = cljs.core.second.call(null,route);
+var b1x_869 = ((cljs.core.first.call(null,b1_867) - sx) * pixel_width);
+var b1y_870 = ((cljs.core.second.call(null,b1_867) - sy) * pixel_width);
+var b2x_871 = ((cljs.core.first.call(null,b2_868) - sx) * pixel_width);
+var b2y_872 = ((cljs.core.second.call(null,b2_868) - sy) * pixel_width);
+quil.core.line.call(null,b1x_869,b1y_870,b2x_871,b2y_872);
 
 
-var G__871 = seq__861;
-var G__872 = chunk__862;
-var G__873 = count__863;
-var G__874 = (i__864 + (1));
-seq__861 = G__871;
-chunk__862 = G__872;
-count__863 = G__873;
-i__864 = G__874;
+var G__873 = seq__863;
+var G__874 = chunk__864;
+var G__875 = count__865;
+var G__876 = (i__866 + (1));
+seq__863 = G__873;
+chunk__864 = G__874;
+count__865 = G__875;
+i__866 = G__876;
 continue;
 } else {
-var temp__5804__auto__ = cljs.core.seq.call(null,seq__861);
+var temp__5804__auto__ = cljs.core.seq.call(null,seq__863);
 if(temp__5804__auto__){
-var seq__861__$1 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__861__$1)){
-var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__861__$1);
-var G__875 = cljs.core.chunk_rest.call(null,seq__861__$1);
-var G__876 = c__5525__auto__;
-var G__877 = cljs.core.count.call(null,c__5525__auto__);
-var G__878 = (0);
-seq__861 = G__875;
-chunk__862 = G__876;
-count__863 = G__877;
-i__864 = G__878;
+var seq__863__$1 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__863__$1)){
+var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__863__$1);
+var G__877 = cljs.core.chunk_rest.call(null,seq__863__$1);
+var G__878 = c__5525__auto__;
+var G__879 = cljs.core.count.call(null,c__5525__auto__);
+var G__880 = (0);
+seq__863 = G__877;
+chunk__864 = G__878;
+count__865 = G__879;
+i__866 = G__880;
 continue;
 } else {
-var route = cljs.core.first.call(null,seq__861__$1);
-var b1_879 = cljs.core.first.call(null,route);
-var b2_880 = cljs.core.second.call(null,route);
-var b1x_881 = ((cljs.core.first.call(null,b1_879) - sx) * pixel_width);
-var b1y_882 = ((cljs.core.second.call(null,b1_879) - sy) * pixel_width);
-var b2x_883 = ((cljs.core.first.call(null,b2_880) - sx) * pixel_width);
-var b2y_884 = ((cljs.core.second.call(null,b2_880) - sy) * pixel_width);
-quil.core.line.call(null,b1x_881,b1y_882,b2x_883,b2y_884);
+var route = cljs.core.first.call(null,seq__863__$1);
+var b1_881 = cljs.core.first.call(null,route);
+var b2_882 = cljs.core.second.call(null,route);
+var b1x_883 = ((cljs.core.first.call(null,b1_881) - sx) * pixel_width);
+var b1y_884 = ((cljs.core.second.call(null,b1_881) - sy) * pixel_width);
+var b2x_885 = ((cljs.core.first.call(null,b2_882) - sx) * pixel_width);
+var b2y_886 = ((cljs.core.second.call(null,b2_882) - sy) * pixel_width);
+quil.core.line.call(null,b1x_883,b1y_884,b2x_885,b2y_886);
 
 
-var G__885 = cljs.core.next.call(null,seq__861__$1);
-var G__886 = null;
-var G__887 = (0);
-var G__888 = (0);
-seq__861 = G__885;
-chunk__862 = G__886;
-count__863 = G__887;
-i__864 = G__888;
+var G__887 = cljs.core.next.call(null,seq__863__$1);
+var G__888 = null;
+var G__889 = (0);
+var G__890 = (0);
+seq__863 = G__887;
+chunk__864 = G__888;
+count__865 = G__889;
+i__866 = G__890;
 continue;
 }
 } else {
@@ -479,82 +479,82 @@ break;
 }
 });
 spacewar.ui.strategic_scan.draw_transports = (function spacewar$ui$strategic_scan$draw_transports(state){
-var map__889 = state;
-var map__889__$1 = cljs.core.__destructure_map.call(null,map__889);
-var transports = cljs.core.get.call(null,map__889__$1,new cljs.core.Keyword(null,"transports","transports",1151421269));
-var pixel_width = cljs.core.get.call(null,map__889__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
-var ship = cljs.core.get.call(null,map__889__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
-var seq__890 = cljs.core.seq.call(null,transports);
-var chunk__891 = null;
-var count__892 = (0);
-var i__893 = (0);
+var map__891 = state;
+var map__891__$1 = cljs.core.__destructure_map.call(null,map__891);
+var transports = cljs.core.get.call(null,map__891__$1,new cljs.core.Keyword(null,"transports","transports",1151421269));
+var pixel_width = cljs.core.get.call(null,map__891__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
+var ship = cljs.core.get.call(null,map__891__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
+var seq__892 = cljs.core.seq.call(null,transports);
+var chunk__893 = null;
+var count__894 = (0);
+var i__895 = (0);
 while(true){
-if((i__893 < count__892)){
-var transport = cljs.core._nth.call(null,chunk__891,i__893);
-var sx_894 = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(ship);
-var sy_895 = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(ship);
-var tx_896 = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(transport);
-var ty_897 = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(transport);
-var x_898 = ((tx_896 - sx_894) * pixel_width);
-var y_899 = ((ty_897 - sy_895) * pixel_width);
-var tr__794__auto___900 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x_898,y_899], null);
+if((i__895 < count__894)){
+var transport = cljs.core._nth.call(null,chunk__893,i__895);
+var sx_896 = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(ship);
+var sy_897 = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(ship);
+var tx_898 = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(transport);
+var ty_899 = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(transport);
+var x_900 = ((tx_898 - sx_896) * pixel_width);
+var y_901 = ((ty_899 - sy_897) * pixel_width);
+var tr__794__auto___902 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x_900,y_901], null);
 quil.core.push_matrix.call(null);
 
-try{quil.core.translate.call(null,tr__794__auto___900);
+try{quil.core.translate.call(null,tr__794__auto___902);
 
 spacewar.ui.icons.draw_transport_icon.call(null,transport);
 }finally {quil.core.pop_matrix.call(null);
 }
 
-var G__901 = seq__890;
-var G__902 = chunk__891;
-var G__903 = count__892;
-var G__904 = (i__893 + (1));
-seq__890 = G__901;
-chunk__891 = G__902;
-count__892 = G__903;
-i__893 = G__904;
+var G__903 = seq__892;
+var G__904 = chunk__893;
+var G__905 = count__894;
+var G__906 = (i__895 + (1));
+seq__892 = G__903;
+chunk__893 = G__904;
+count__894 = G__905;
+i__895 = G__906;
 continue;
 } else {
-var temp__5804__auto__ = cljs.core.seq.call(null,seq__890);
+var temp__5804__auto__ = cljs.core.seq.call(null,seq__892);
 if(temp__5804__auto__){
-var seq__890__$1 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__890__$1)){
-var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__890__$1);
-var G__905 = cljs.core.chunk_rest.call(null,seq__890__$1);
-var G__906 = c__5525__auto__;
-var G__907 = cljs.core.count.call(null,c__5525__auto__);
-var G__908 = (0);
-seq__890 = G__905;
-chunk__891 = G__906;
-count__892 = G__907;
-i__893 = G__908;
+var seq__892__$1 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__892__$1)){
+var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__892__$1);
+var G__907 = cljs.core.chunk_rest.call(null,seq__892__$1);
+var G__908 = c__5525__auto__;
+var G__909 = cljs.core.count.call(null,c__5525__auto__);
+var G__910 = (0);
+seq__892 = G__907;
+chunk__893 = G__908;
+count__894 = G__909;
+i__895 = G__910;
 continue;
 } else {
-var transport = cljs.core.first.call(null,seq__890__$1);
-var sx_909 = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(ship);
-var sy_910 = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(ship);
-var tx_911 = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(transport);
-var ty_912 = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(transport);
-var x_913 = ((tx_911 - sx_909) * pixel_width);
-var y_914 = ((ty_912 - sy_910) * pixel_width);
-var tr__794__auto___915 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x_913,y_914], null);
+var transport = cljs.core.first.call(null,seq__892__$1);
+var sx_911 = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(ship);
+var sy_912 = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(ship);
+var tx_913 = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(transport);
+var ty_914 = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(transport);
+var x_915 = ((tx_913 - sx_911) * pixel_width);
+var y_916 = ((ty_914 - sy_912) * pixel_width);
+var tr__794__auto___917 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x_915,y_916], null);
 quil.core.push_matrix.call(null);
 
-try{quil.core.translate.call(null,tr__794__auto___915);
+try{quil.core.translate.call(null,tr__794__auto___917);
 
 spacewar.ui.icons.draw_transport_icon.call(null,transport);
 }finally {quil.core.pop_matrix.call(null);
 }
 
-var G__916 = cljs.core.next.call(null,seq__890__$1);
-var G__917 = null;
-var G__918 = (0);
-var G__919 = (0);
-seq__890 = G__916;
-chunk__891 = G__917;
-count__892 = G__918;
-i__893 = G__919;
+var G__918 = cljs.core.next.call(null,seq__892__$1);
+var G__919 = null;
+var G__920 = (0);
+var G__921 = (0);
+seq__892 = G__918;
+chunk__893 = G__919;
+count__894 = G__920;
+i__895 = G__921;
 continue;
 }
 } else {
@@ -565,10 +565,10 @@ break;
 }
 });
 spacewar.ui.strategic_scan.draw_sectors = (function spacewar$ui$strategic_scan$draw_sectors(state){
-var map__920 = state;
-var map__920__$1 = cljs.core.__destructure_map.call(null,map__920);
-var pixel_width = cljs.core.get.call(null,map__920__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
-var ship = cljs.core.get.call(null,map__920__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
+var map__922 = state;
+var map__922__$1 = cljs.core.__destructure_map.call(null,map__922);
+var pixel_width = cljs.core.get.call(null,map__922__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
+var ship = cljs.core.get.call(null,map__922__$1,new cljs.core.Keyword(null,"ship","ship",197863473));
 var sx = new cljs.core.Keyword(null,"x","x",2099068185).cljs$core$IFn$_invoke$arity$1(ship);
 var sy = new cljs.core.Keyword(null,"y","y",-1757859776).cljs$core$IFn$_invoke$arity$1(ship);
 var x__GT_frame = (function (x){
@@ -581,53 +581,59 @@ quil.core.stroke_weight.call(null,(1));
 
 cljs.core.apply.call(null,quil.core.stroke,cljs.core.conj.call(null,spacewar.ui.config.white,(100)));
 
-var seq__921_929 = cljs.core.seq.call(null,cljs.core.range.call(null,(0),spacewar.game_logic.config.known_space_x,spacewar.game_logic.config.strategic_range));
-var chunk__922_930 = null;
-var count__923_931 = (0);
-var i__924_932 = (0);
+var seq__923_931 = cljs.core.seq.call(null,cljs.core.range.call(null,(0),(spacewar.game_logic.config.known_space_x + (1)),spacewar.game_logic.config.strategic_range));
+var chunk__924_932 = null;
+var count__925_933 = (0);
+var i__926_934 = (0);
 while(true){
-if((i__924_932 < count__923_931)){
-var x_933 = cljs.core._nth.call(null,chunk__922_930,i__924_932);
-quil.core.line.call(null,x__GT_frame.call(null,x_933),y__GT_frame.call(null,(0)),x__GT_frame.call(null,x_933),y__GT_frame.call(null,spacewar.game_logic.config.known_space_y));
+if((i__926_934 < count__925_933)){
+var x_935 = cljs.core._nth.call(null,chunk__924_932,i__926_934);
+var sector_x_936 = x__GT_frame.call(null,x_935);
+var sector_y_min_937 = y__GT_frame.call(null,(0));
+var sector_y_max_938 = y__GT_frame.call(null,spacewar.game_logic.config.known_space_y);
+quil.core.line.call(null,sector_x_936,sector_y_min_937,sector_x_936,sector_y_max_938);
 
 
-var G__934 = seq__921_929;
-var G__935 = chunk__922_930;
-var G__936 = count__923_931;
-var G__937 = (i__924_932 + (1));
-seq__921_929 = G__934;
-chunk__922_930 = G__935;
-count__923_931 = G__936;
-i__924_932 = G__937;
+var G__939 = seq__923_931;
+var G__940 = chunk__924_932;
+var G__941 = count__925_933;
+var G__942 = (i__926_934 + (1));
+seq__923_931 = G__939;
+chunk__924_932 = G__940;
+count__925_933 = G__941;
+i__926_934 = G__942;
 continue;
 } else {
-var temp__5804__auto___938 = cljs.core.seq.call(null,seq__921_929);
-if(temp__5804__auto___938){
-var seq__921_939__$1 = temp__5804__auto___938;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__921_939__$1)){
-var c__5525__auto___940 = cljs.core.chunk_first.call(null,seq__921_939__$1);
-var G__941 = cljs.core.chunk_rest.call(null,seq__921_939__$1);
-var G__942 = c__5525__auto___940;
-var G__943 = cljs.core.count.call(null,c__5525__auto___940);
-var G__944 = (0);
-seq__921_929 = G__941;
-chunk__922_930 = G__942;
-count__923_931 = G__943;
-i__924_932 = G__944;
-continue;
-} else {
-var x_945 = cljs.core.first.call(null,seq__921_939__$1);
-quil.core.line.call(null,x__GT_frame.call(null,x_945),y__GT_frame.call(null,(0)),x__GT_frame.call(null,x_945),y__GT_frame.call(null,spacewar.game_logic.config.known_space_y));
-
-
-var G__946 = cljs.core.next.call(null,seq__921_939__$1);
-var G__947 = null;
-var G__948 = (0);
+var temp__5804__auto___943 = cljs.core.seq.call(null,seq__923_931);
+if(temp__5804__auto___943){
+var seq__923_944__$1 = temp__5804__auto___943;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__923_944__$1)){
+var c__5525__auto___945 = cljs.core.chunk_first.call(null,seq__923_944__$1);
+var G__946 = cljs.core.chunk_rest.call(null,seq__923_944__$1);
+var G__947 = c__5525__auto___945;
+var G__948 = cljs.core.count.call(null,c__5525__auto___945);
 var G__949 = (0);
-seq__921_929 = G__946;
-chunk__922_930 = G__947;
-count__923_931 = G__948;
-i__924_932 = G__949;
+seq__923_931 = G__946;
+chunk__924_932 = G__947;
+count__925_933 = G__948;
+i__926_934 = G__949;
+continue;
+} else {
+var x_950 = cljs.core.first.call(null,seq__923_944__$1);
+var sector_x_951 = x__GT_frame.call(null,x_950);
+var sector_y_min_952 = y__GT_frame.call(null,(0));
+var sector_y_max_953 = y__GT_frame.call(null,spacewar.game_logic.config.known_space_y);
+quil.core.line.call(null,sector_x_951,sector_y_min_952,sector_x_951,sector_y_max_953);
+
+
+var G__954 = cljs.core.next.call(null,seq__923_944__$1);
+var G__955 = null;
+var G__956 = (0);
+var G__957 = (0);
+seq__923_931 = G__954;
+chunk__924_932 = G__955;
+count__925_933 = G__956;
+i__926_934 = G__957;
 continue;
 }
 } else {
@@ -636,53 +642,59 @@ continue;
 break;
 }
 
-var seq__925 = cljs.core.seq.call(null,cljs.core.range.call(null,(0),spacewar.game_logic.config.known_space_y,spacewar.game_logic.config.strategic_range));
-var chunk__926 = null;
-var count__927 = (0);
-var i__928 = (0);
+var seq__927 = cljs.core.seq.call(null,cljs.core.range.call(null,(0),(spacewar.game_logic.config.known_space_y + (1)),spacewar.game_logic.config.strategic_range));
+var chunk__928 = null;
+var count__929 = (0);
+var i__930 = (0);
 while(true){
-if((i__928 < count__927)){
-var y = cljs.core._nth.call(null,chunk__926,i__928);
-quil.core.line.call(null,x__GT_frame.call(null,(0)),y__GT_frame.call(null,y),x__GT_frame.call(null,spacewar.game_logic.config.known_space_x),y__GT_frame.call(null,y));
+if((i__930 < count__929)){
+var y = cljs.core._nth.call(null,chunk__928,i__930);
+var sector_y_958 = y__GT_frame.call(null,y);
+var sector_x_min_959 = x__GT_frame.call(null,(0));
+var sector_x_max_960 = x__GT_frame.call(null,spacewar.game_logic.config.known_space_x);
+quil.core.line.call(null,sector_x_min_959,sector_y_958,sector_x_max_960,sector_y_958);
 
 
-var G__950 = seq__925;
-var G__951 = chunk__926;
-var G__952 = count__927;
-var G__953 = (i__928 + (1));
-seq__925 = G__950;
-chunk__926 = G__951;
-count__927 = G__952;
-i__928 = G__953;
+var G__961 = seq__927;
+var G__962 = chunk__928;
+var G__963 = count__929;
+var G__964 = (i__930 + (1));
+seq__927 = G__961;
+chunk__928 = G__962;
+count__929 = G__963;
+i__930 = G__964;
 continue;
 } else {
-var temp__5804__auto__ = cljs.core.seq.call(null,seq__925);
+var temp__5804__auto__ = cljs.core.seq.call(null,seq__927);
 if(temp__5804__auto__){
-var seq__925__$1 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__925__$1)){
-var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__925__$1);
-var G__954 = cljs.core.chunk_rest.call(null,seq__925__$1);
-var G__955 = c__5525__auto__;
-var G__956 = cljs.core.count.call(null,c__5525__auto__);
-var G__957 = (0);
-seq__925 = G__954;
-chunk__926 = G__955;
-count__927 = G__956;
-i__928 = G__957;
+var seq__927__$1 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__927__$1)){
+var c__5525__auto__ = cljs.core.chunk_first.call(null,seq__927__$1);
+var G__965 = cljs.core.chunk_rest.call(null,seq__927__$1);
+var G__966 = c__5525__auto__;
+var G__967 = cljs.core.count.call(null,c__5525__auto__);
+var G__968 = (0);
+seq__927 = G__965;
+chunk__928 = G__966;
+count__929 = G__967;
+i__930 = G__968;
 continue;
 } else {
-var y = cljs.core.first.call(null,seq__925__$1);
-quil.core.line.call(null,x__GT_frame.call(null,(0)),y__GT_frame.call(null,y),x__GT_frame.call(null,spacewar.game_logic.config.known_space_x),y__GT_frame.call(null,y));
+var y = cljs.core.first.call(null,seq__927__$1);
+var sector_y_969 = y__GT_frame.call(null,y);
+var sector_x_min_970 = x__GT_frame.call(null,(0));
+var sector_x_max_971 = x__GT_frame.call(null,spacewar.game_logic.config.known_space_x);
+quil.core.line.call(null,sector_x_min_970,sector_y_969,sector_x_max_971,sector_y_969);
 
 
-var G__958 = cljs.core.next.call(null,seq__925__$1);
-var G__959 = null;
-var G__960 = (0);
-var G__961 = (0);
-seq__925 = G__958;
-chunk__926 = G__959;
-count__927 = G__960;
-i__928 = G__961;
+var G__972 = cljs.core.next.call(null,seq__927__$1);
+var G__973 = null;
+var G__974 = (0);
+var G__975 = (0);
+seq__927 = G__972;
+chunk__928 = G__973;
+count__929 = G__974;
+i__930 = G__975;
 continue;
 }
 } else {
@@ -693,13 +705,13 @@ break;
 }
 });
 spacewar.ui.strategic_scan.click__GT_pos = (function spacewar$ui$strategic_scan$click__GT_pos(strategic_scan,ship,click){
-var map__962 = strategic_scan;
-var map__962__$1 = cljs.core.__destructure_map.call(null,map__962);
-var x = cljs.core.get.call(null,map__962__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__962__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var w = cljs.core.get.call(null,map__962__$1,new cljs.core.Keyword(null,"w","w",354169001));
-var h = cljs.core.get.call(null,map__962__$1,new cljs.core.Keyword(null,"h","h",1109658740));
-var pixel_width = cljs.core.get.call(null,map__962__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
+var map__976 = strategic_scan;
+var map__976__$1 = cljs.core.__destructure_map.call(null,map__976);
+var x = cljs.core.get.call(null,map__976__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__976__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var w = cljs.core.get.call(null,map__976__$1,new cljs.core.Keyword(null,"w","w",354169001));
+var h = cljs.core.get.call(null,map__976__$1,new cljs.core.Keyword(null,"h","h",1109658740));
+var pixel_width = cljs.core.get.call(null,map__976__$1,new cljs.core.Keyword(null,"pixel-width","pixel-width",462101859));
 var center = spacewar.vector.add.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(w / (2)),(h / (2))], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null));
 var click_delta = spacewar.vector.subtract.call(null,click,center);
 var scale = (1.0 / pixel_width);
@@ -719,12 +731,12 @@ this.state = state;
 (spacewar.ui.strategic_scan.strategic_scan.prototype.spacewar$ui$protocols$Drawable$draw$arity$1 = (function (_){
 var self__ = this;
 var ___$1 = this;
-var map__963 = self__.state;
-var map__963__$1 = cljs.core.__destructure_map.call(null,map__963);
-var x = cljs.core.get.call(null,map__963__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__963__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var w = cljs.core.get.call(null,map__963__$1,new cljs.core.Keyword(null,"w","w",354169001));
-var h = cljs.core.get.call(null,map__963__$1,new cljs.core.Keyword(null,"h","h",1109658740));
+var map__977 = self__.state;
+var map__977__$1 = cljs.core.__destructure_map.call(null,map__977);
+var x = cljs.core.get.call(null,map__977__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__977__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var w = cljs.core.get.call(null,map__977__$1,new cljs.core.Keyword(null,"w","w",354169001));
+var h = cljs.core.get.call(null,map__977__$1,new cljs.core.Keyword(null,"h","h",1109658740));
 var tr__794__auto__ = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(x + (w / (2))),(y + (h / (2)))], null);
 quil.core.push_matrix.call(null);
 
@@ -760,12 +772,12 @@ return (new spacewar.ui.strategic_scan.strategic_scan(cljs.core.assoc.call(null,
 (spacewar.ui.strategic_scan.strategic_scan.prototype.spacewar$ui$protocols$Drawable$update_state$arity$2 = (function (_,world){
 var self__ = this;
 var ___$1 = this;
-var map__964 = self__.state;
-var map__964__$1 = cljs.core.__destructure_map.call(null,map__964);
-var x = cljs.core.get.call(null,map__964__$1,new cljs.core.Keyword(null,"x","x",2099068185));
-var y = cljs.core.get.call(null,map__964__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
-var w = cljs.core.get.call(null,map__964__$1,new cljs.core.Keyword(null,"w","w",354169001));
-var h = cljs.core.get.call(null,map__964__$1,new cljs.core.Keyword(null,"h","h",1109658740));
+var map__978 = self__.state;
+var map__978__$1 = cljs.core.__destructure_map.call(null,map__978);
+var x = cljs.core.get.call(null,map__978__$1,new cljs.core.Keyword(null,"x","x",2099068185));
+var y = cljs.core.get.call(null,map__978__$1,new cljs.core.Keyword(null,"y","y",-1757859776));
+var w = cljs.core.get.call(null,map__978__$1,new cljs.core.Keyword(null,"w","w",354169001));
+var h = cljs.core.get.call(null,map__978__$1,new cljs.core.Keyword(null,"h","h",1109658740));
 var ship = new cljs.core.Keyword(null,"ship","ship",197863473).cljs$core$IFn$_invoke$arity$1(world);
 var scale = new cljs.core.Keyword(null,"strat-scale","strat-scale",-510133488).cljs$core$IFn$_invoke$arity$1(ship);
 var range = (scale * spacewar.game_logic.config.strategic_range);
@@ -805,24 +817,28 @@ return quil.core.key_as_keyword.call(null);
 return and__5000__auto__;
 }
 })();
-var event = (cljs.core.truth_(left_up)?(function (){var pred__965 = cljs.core._EQ_;
-var expr__966 = key;
-if(cljs.core.truth_(pred__965.call(null,new cljs.core.Keyword(null,"p","p",151049309),expr__966))){
+var event = (cljs.core.truth_(left_up)?(function (){var pred__979 = cljs.core._EQ_;
+var expr__980 = key;
+if(cljs.core.truth_(pred__979.call(null,new cljs.core.Keyword(null,"p","p",151049309),expr__980))){
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"event","event",301435442),new cljs.core.Keyword(null,"debug-position-ship","debug-position-ship",1001388142),new cljs.core.Keyword(null,"pos","pos",-864607220),spacewar.ui.strategic_scan.click__GT_pos.call(null,state__$1,ship,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [mx,my], null))], null);
 } else {
-if(cljs.core.truth_(pred__965.call(null,new cljs.core.Keyword(null,"k","k",-2146297393),expr__966))){
+if(cljs.core.truth_(pred__979.call(null,new cljs.core.Keyword(null,"k","k",-2146297393),expr__980))){
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"event","event",301435442),new cljs.core.Keyword(null,"debug-add-klingon","debug-add-klingon",-1401441744),new cljs.core.Keyword(null,"pos","pos",-864607220),spacewar.ui.strategic_scan.click__GT_pos.call(null,state__$1,ship,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [mx,my], null))], null);
 } else {
-if(cljs.core.truth_(pred__965.call(null,new cljs.core.Keyword(null,"r","r",-471384190),expr__966))){
+if(cljs.core.truth_(pred__979.call(null,new cljs.core.Keyword(null,"r","r",-471384190),expr__980))){
 return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"event","event",301435442),new cljs.core.Keyword(null,"debug-resupply-ship","debug-resupply-ship",1653705279)], null);
 } else {
-if(cljs.core.truth_(pred__965.call(null,new cljs.core.Keyword(null,"K","K",711741),expr__966))){
+if(cljs.core.truth_(pred__979.call(null,new cljs.core.Keyword(null,"K","K",711741),expr__980))){
 return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"event","event",301435442),new cljs.core.Keyword(null,"debug-new-klingon-from-praxis","debug-new-klingon-from-praxis",1326159196)], null);
 } else {
-if(cljs.core.truth_(pred__965.call(null,new cljs.core.Keyword(null,"c","c",-1763192079),expr__966))){
+if(cljs.core.truth_(pred__979.call(null,new cljs.core.Keyword(null,"c","c",-1763192079),expr__980))){
 return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"event","event",301435442),new cljs.core.Keyword(null,"debug-corbomite-device-installed","debug-corbomite-device-installed",247596390)], null);
 } else {
+if(cljs.core.truth_(pred__979.call(null,new cljs.core.Keyword(null,"f","f",-1597136552),expr__980))){
+return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"event","event",301435442),new cljs.core.Keyword(null,"debug-klingon-stats","debug-klingon-stats",239832412)], null);
+} else {
 return null;
+}
 }
 }
 }
