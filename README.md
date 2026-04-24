@@ -4,15 +4,23 @@ FIXME
 
 ## Prerequisites
 
-You will need [Leiningen][] 2.0.0 or above installed.
-
-[leiningen]: https://github.com/technomancy/leiningen
+You will need the [Clojure CLI](https://clojure.org/guides/install_clojure) installed.
 
 ## Running
 
 To start a web server for the application, run:
 
-    lein ring server
+    clojure -M:run
+
+The site starts on `http://localhost:3000`. You can override the port with:
+
+    PORT=4000 clojure -M:run
+
+## Testing
+
+To run the test suite, run:
+
+    clojure -M:test
 
 ## License
 

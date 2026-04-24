@@ -1,0 +1,17 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        compojure/compojure {:mvn/version "1.6.1"}
+        ring/ring-core {:mvn/version "1.7.1"}
+        ring/ring-devel {:mvn/version "1.7.1"}
+        hiccup/hiccup {:mvn/version "1.0.5"}
+        markdown-to-hiccup/markdown-to-hiccup {:mvn/version "0.6.2"}
+        markdown-clj/markdown-clj {:mvn/version "1.10.0"}
+        me.raynes/fs {:mvn/version "1.4.6"}
+        clj-time/clj-time {:mvn/version "0.15.0"}
+        http-kit/http-kit {:mvn/version "2.3.0"}
+        org.clojure/data.json {:mvn/version "0.2.6"}}
+ :aliases
+ {:run {:main-opts ["-m" "ubc-website.main"]}
+  :test {:extra-paths ["Test"]
+         :extra-deps {ring/ring-mock {:mvn/version "0.3.2"}}
+         :main-opts ["-m" "ubc-website.test-runner"]}}}
