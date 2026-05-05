@@ -61,7 +61,10 @@
                      (assoc response :status 200 :body (md-uri->html uri))
 
                      isJs?
-                     (assoc response :status 200 :body (slurp (str "resources" uri)))
+                     (assoc response
+                       :status 200
+                       :headers {"Content-Type" "application/javascript"}
+                       :body (slurp (str "resources" uri)))
 
                      :else response)]
       response)))
