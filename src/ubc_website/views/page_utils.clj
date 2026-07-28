@@ -44,14 +44,16 @@
       [:p#ubc-subtitle "Programmer, Speaker, Teacher"]]
      [:div#tabs
       [:a.tab {:href "/files/contact.md"} "Contact"]
-      [:br] [:br]
       [:a.tab {:href "books"} "Recommended Books"]
       [:a.tab {:href "http://blog.cleancoder.com"} "Blogs"]
       [:a.tab {:href "https://blog.cleancoder.com/craftsman-series"} "Craftsman-series"]
       [:a.tab {:href "http://butunclebob.com"} "Ancient Blogs"]
       [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/uncle-bob-consulting-llc/articles"} "Old Articles"]
       [:a.tab {:href "/a-little-clojure"} "A Little Clojure"]
-      [:a.tab {:href "/space-war"} "Space War!" ]
+      [:div.menu-item {:tabindex "0"}
+       [:span.tab.menu-label "Games"]
+       [:div.submenu
+        [:a.tab.subtab {:href "/space-war"} "Space War!"]]]
 
 
       ]

@@ -29,6 +29,11 @@ body {
 div#tabs {
     height: 50pt;
     background-color: rgba(230, 255, 230, 1);
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 20px;
+    white-space: nowrap;
 }
 
 a.tab {
@@ -36,7 +41,41 @@ a.tab {
     font-weight: bold;
     font-size: 14pt;
     color: darkgreen;
-    margin-right: 20px;
+    margin-right: 0;
+}
+
+.tab {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 14pt;
+    color: darkgreen;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-label {
+    cursor: default;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 4px;
+    background-color: rgba(230, 255, 230, 1);
+}
+
+.menu-item:hover .submenu,
+.menu-item:focus-within .submenu {
+    display: block;
+}
+
+a.subtab {
+    display: block;
+    padding-right: 20px;
 }
 
 div#content-area {
