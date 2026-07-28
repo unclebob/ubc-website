@@ -6,6 +6,7 @@
             [ring.middleware.reload :refer [wrap-reload]]
             [ring.middleware.session :refer [wrap-session]]
             [ring.util.response :refer [redirect]]
+            [ubc-website.views.home :as home]
             [ubc-website.interactors.notification-registration :as register]
             [ubc-website.interactors.product-page :as product-page]
             [ubc-website.interactors.recommended-books :as recommended-books]
@@ -18,7 +19,7 @@
 
 (defroutes
   app-routes
-  (GET "/" [] (redirect "/products"))
+  (GET "/" [] (home/show))
   (GET "/products" [:as {session :session}] (product-page/exec session))
   (GET "/books" [] (recommended-books/exec))
   (GET "/register" [:as {session :session} name email]
