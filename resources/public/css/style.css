@@ -65,7 +65,7 @@ div#content-area {
 #book-palette {
     display: grid;
     grid-template-columns: repeat(4, 160px);
-    justify-content: center;
+    justify-content: start;
     column-gap: 52px;
     row-gap: 42px;
     margin: 20px;
