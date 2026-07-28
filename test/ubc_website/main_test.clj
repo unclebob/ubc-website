@@ -15,6 +15,19 @@
       (is (= (:status response) 200))
       (is (.contains (:body response) "Clean Code, 2nd ed."))))
 
+  (testing "missile command route"
+    (let [response ((app) (mock/request :get "/missile-command"))]
+      (is (= (:status response) 200))
+      (is (.contains (:body response) "Missile Command"))
+      (is (.contains (:body response) "/missile-command/js/main.js"))))
+
+  (testing "missile command javascript route"
+    (let [response ((app) (mock/request :get "/missile-command/js/main.js"))]
+      (is (= (:status response) 200))
+      (is (= (get-in response [:headers "Content-Type"])
+             "application/javascript"))
+      (is (.contains (:body response) "missile_command.browser.main.run"))))
+
   (testing "not-found route"
     (let [response ((app) (mock/request :get "/invalid"))]
       (is (= (:status response) 404)))))
