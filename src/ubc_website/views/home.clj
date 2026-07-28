@@ -27,6 +27,9 @@
 
 (defn show []
   (page-template
-    (add-hiccup [:div#book-palette]
-                (map format-book books))
+    (add-hiccup [:div#home-page
+                 [:script
+                  "if (window.location.pathname === '/products') { window.history.replaceState(null, '', '/'); }"]]
+                [[:div#book-palette
+                  (map format-book books)]])
     {}))
