@@ -51,33 +51,6 @@ a.tab {
     color: darkgreen;
 }
 
-.menu-item {
-    position: relative;
-}
-
-.menu-label {
-    cursor: default;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding-top: 4px;
-    background-color: rgba(230, 255, 230, 1);
-}
-
-.menu-item:hover .submenu,
-.menu-item:focus-within .submenu {
-    display: block;
-}
-
-a.subtab {
-    display: block;
-    padding-right: 20px;
-}
-
 div#content-area {
     float: left;
     width: 70%;

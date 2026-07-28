@@ -1,32 +1,12 @@
 (ns ubc-website.views.page-utils
   (:use [hiccup core page])
   (:require
-    [ubc-website.presenters.events :as events]
-    [ubc-website.presenters.articles :as articles]
-
     [ubc-website.presenters.util :refer [add-hiccup]]))
 
-(defn format-event [event]
-  (let [presentation (events/present-event event)]
-    [:div.event
-     [:p.event (:date presentation)]
-     [:div.event-description (:description presentation)]]))
-
-(defn format-events [events]
-  (vec (map format-event events)))
-
-(defn format-article [{:keys [link title date]}]
-  [:div.article
-   [:a.article-title {:href link} title]
-   [:p.article-date date]])
-
-(defn format-articles [articles]
-  (map format-article (articles/present-articles articles)))
-
 ;link from publish.twitter.com
-(def embedded-twitter-feed "<a class=\"twitter-timeline\" data-width=\"400\" data-height=\"400\" data-theme=\"light\" href=\"https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw\">Tweets by unclebobmartin</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
+(def embedded-twitter-feed "<a class=\"twitter-timeline\" data-width=\"400\" data-tweet-limit=\"5\" data-theme=\"light\" href=\"https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw\">Posts by unclebobmartin</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
 
-(defn page-template [content {:keys [message events articles]}]
+(defn page-template [content {:keys [message]}]
   (html5
     [:head
      [:meta {:charset "UTF-8"}]
@@ -50,10 +30,7 @@
       [:a.tab {:href "http://butunclebob.com"} "Ancient Blogs"]
       [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/uncle-bob-consulting-llc/articles"} "Old Articles"]
       [:a.tab {:href "/a-little-clojure"} "A Little Clojure"]
-      [:div.menu-item {:tabindex "0"}
-       [:span.tab.menu-label "Games"]
-       [:div.submenu
-        [:a.tab.subtab {:href "/space-war"} "Space War!"]]]
+      [:a.tab {:href "/space-war"} "Space War!"]
 
 
       ]
@@ -61,11 +38,7 @@
      [:div#content-area
      content]
      [:div#sidebar
-      (add-hiccup [:p.sidebar-title "Upcoming Events"]
-                  (format-events events))
-      (add-hiccup [:p.sidebar-title "Uncle Bob's Tweets"]
+      (add-hiccup [:p.sidebar-title "Latest on X"]
                   embedded-twitter-feed)
-      (add-hiccup [:p.sidebar-title "Recent Articles"]
-                  (format-articles articles))
 
       ]]))
