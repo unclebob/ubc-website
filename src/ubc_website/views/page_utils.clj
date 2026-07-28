@@ -9,13 +9,14 @@
 (defn x-feed []
   [:div.x-feed
    [:p.sidebar-title "Latest on X"]
-   [:iframe.x-timeline
-    {:title "Recent posts by @unclebobmartin"
-     :src "https://syndication.twitter.com/srv/timeline-profile/screen-name/unclebobmartin?frame=false&hideBorder=false&hideFooter=false&hideHeader=false&hideScrollBar=false&maxHeight=600px&showHeader=false&showReplies=false&transparent=false&theme=light&width=400px"
-     :width "400"
-     :height "600"
-     :frameborder "0"
-     :scrolling "yes"}]])
+   [:a.twitter-timeline {:data-width "400"
+                         :data-height "600"
+                         :data-theme "light"
+                         :href "https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw"}
+    "Posts by @unclebobmartin"]
+   [:script {:async true
+             :src "https://platform.twitter.com/widgets.js"
+             :charset "utf-8"}]])
 
 (defn page-template [content {:keys [message canonical-home]}]
   (html5
@@ -24,7 +25,7 @@
      [:title "UBC"]
      (when canonical-home
        [:script canonical-home-script])
-     (include-css "/css/style.css?v=20260728-4")]
+     (include-css "/css/style.css?v=20260728-5")]
     [:body
      [:div#header
       [:a {:href "/"}
