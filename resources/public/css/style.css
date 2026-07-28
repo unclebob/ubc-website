@@ -27,13 +27,19 @@ body {
 }
 
 div#tabs {
-    height: 50pt;
+    height: 70pt;
     background-color: rgba(230, 255, 230, 1);
     display: flex;
     align-items: flex-start;
-    flex-wrap: nowrap;
-    gap: 20px;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 8px;
     white-space: nowrap;
+}
+
+.tab-break {
+    flex-basis: 100%;
+    height: 0;
 }
 
 a.tab {
