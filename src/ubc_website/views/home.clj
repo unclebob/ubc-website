@@ -20,6 +20,9 @@
    {:title "Clean Agile"
     :isbn "9780135781869"
     :url "https://www.amazon.com/Clean-Agile-Basics-Robert-Martin/dp/0135781868"}
+   {:title "Clean Craftsmanship"
+    :isbn "9780136915713"
+    :url "https://www.amazon.com/Clean-Craftsmanship-Disciplines-Standards-Ethics/dp/013691571X"}
    {:title "The Clean Coder"
     :isbn "9780137081073"
     :url "https://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073"}
@@ -32,8 +35,7 @@
 
 (defn format-book [{:keys [title isbn url]}]
   [:a.book-palette-link {:href url}
-   [:img.book-cover {:src (cover-url isbn) :alt title}]
-   [:span.book-palette-title title]])
+   [:img.book-cover {:src (cover-url isbn) :alt title}]])
 
 (defn show []
   (page-template

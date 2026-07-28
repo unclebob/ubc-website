@@ -58,9 +58,16 @@ div#content-area {
 
 #book-palette {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(4, 160px);
+    justify-content: center;
     gap: 24px;
     margin: 20px;
+}
+
+@media (max-width: 760px) {
+    #book-palette {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
 }
 
 a.book-palette-link {
@@ -83,14 +90,6 @@ a.book-palette-link:hover .book-cover {
     min-height: 208px;
     border: 5px double black;
     background: white;
-}
-
-.book-palette-title {
-    display: block;
-    width: 160px;
-    margin-top: 8px;
-    font-size: 12pt;
-    text-align: center;
 }
 
 #products {
