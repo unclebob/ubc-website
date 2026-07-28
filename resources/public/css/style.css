@@ -58,37 +58,39 @@ div#content-area {
 
 #book-palette {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
     margin: 20px;
 }
 
 a.book-palette-link {
-    display: block;
-    min-height: 110px;
-    padding: 18px;
-    border: 5px double black;
-    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: darkgreen;
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-decoration: none;
 }
 
-a.book-palette-link:hover {
-    background-color: rgba(230, 255, 230, 1);
+a.book-palette-link:hover .book-cover {
+    border-color: darkgreen;
+}
+
+.book-cover {
+    display: block;
+    width: 160px;
+    min-height: 208px;
+    border: 5px double black;
+    background: white;
 }
 
 .book-palette-title {
     display: block;
-    font-size: 18pt;
-}
-
-.book-palette-source {
-    display: block;
-    margin-top: 20px;
+    width: 160px;
+    margin-top: 8px;
     font-size: 12pt;
-    color: black;
+    text-align: center;
 }
 
 #products {
