@@ -6,11 +6,16 @@
 ;link from publish.twitter.com
 (def embedded-twitter-feed "<a class=\"twitter-timeline\" data-width=\"400\" data-tweet-limit=\"5\" data-theme=\"light\" href=\"https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw\">Posts by unclebobmartin</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
 
-(defn page-template [content {:keys [message]}]
+(def canonical-home-script
+  "if (/^\\/products\\/?$/.test(window.location.pathname)) { window.history.replaceState(null, '', '/'); }")
+
+(defn page-template [content {:keys [message canonical-home]}]
   (html5
     [:head
      [:meta {:charset "UTF-8"}]
      [:title "UBC"]
+     (when canonical-home
+       [:script canonical-home-script])
      (include-css "/css/style.css")]
     [:body
      [:div#header
