@@ -60,7 +60,8 @@ div#content-area {
     display: grid;
     grid-template-columns: repeat(4, 160px);
     justify-content: center;
-    gap: 24px;
+    column-gap: 52px;
+    row-gap: 42px;
     margin: 20px;
 }
 

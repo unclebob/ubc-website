@@ -28,7 +28,19 @@
     :url "https://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073"}
    {:title "Agile Software Development: Principles, Patterns, and Practices"
     :isbn "9780135974445"
-    :url "https://www.amazon.com/Software-Development-Principles-Patterns-Practices/dp/0135974445"}])
+    :url "https://www.amazon.com/Software-Development-Principles-Patterns-Practices/dp/0135974445"}
+   {:title "Agile Java"
+    :isbn "9780131482395"
+    :url "https://www.amazon.com/Agile-Java-Crafting-Test-Driven-Development/dp/0131482394"}
+   {:title "Code That Fits in Your Head"
+    :isbn "9780137464401"
+    :url "https://www.amazon.com/Code-That-Fits-Your-Head/dp/0137464401"}
+   {:title "Agile Estimating and Planning"
+    :isbn "9780131479418"
+    :url "https://www.amazon.com/Agile-Estimating-Planning-Mike-Cohn/dp/0131479415"}
+   {:title "Clean Code, 1st ed."
+    :isbn "9780132350884"
+    :url "https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"}])
 
 (defn cover-url [isbn]
   (str "https://www.informit.com/ShowCover.aspx?isbn=" isbn "&type=f"))
