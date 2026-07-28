@@ -20,7 +20,7 @@
 (defroutes
   app-routes
   (GET "/" [] (home/show))
-  (GET "/products" [:as {session :session}] (product-page/exec session))
+  (GET "/products" [] (home/show))
   (GET "/books" [] (recommended-books/exec))
   (GET "/register" [:as {session :session} name email]
     (register/registration-page name email session))
@@ -74,7 +74,7 @@
   (fn [request]
     (let [response (handler request)]
       (assoc-in response [:headers "Cache-Control"]
-                (str "public, max-age=" 86400))))) ; one day.
+                "no-cache"))))
 
 (defn app []
   (-> app-routes
