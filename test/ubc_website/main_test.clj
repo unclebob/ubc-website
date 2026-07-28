@@ -28,6 +28,11 @@
              "application/javascript"))
       (is (.contains (:body response) "missile_command.browser.main.run"))))
 
+  (testing "missile command sound route"
+    (let [response ((app) (mock/request :get "/sounds/launch.wav"))]
+      (is (= (:status response) 200))
+      (is (pos? (.length ^java.io.File (:body response))))))
+
   (testing "not-found route"
     (let [response ((app) (mock/request :get "/invalid"))]
       (is (= (:status response) 404)))))

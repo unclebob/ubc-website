@@ -31,6 +31,7 @@
   (GET "/missile-command" [] (serve "resources/missile-command/index.html"))
   (GET "/zorch" [key] (zorch/exec key))
 
+  (route/files "/sounds" {:root "resources/sounds"})
   (route/resources "/")
   (route/not-found "Not Found"))
 
