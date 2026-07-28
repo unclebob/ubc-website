@@ -43,9 +43,6 @@
       [:p#ubc "Uncle Bob Martin"]
       [:p#ubc-subtitle "Programmer, Speaker, Teacher"]]
      [:div#tabs
-      [:a.tab {:href "products"} "Classes & Talks"]
-      [:a.tab {:href "user-groups"} "Invite Me!"]
-      [:a.tab {:href "register"} "Subscribe"]
       [:a.tab {:href "/files/contact.md"} "Contact"]
       [:br] [:br]
       [:a.tab {:href "books"} "Recommended Books"]
@@ -53,7 +50,6 @@
       [:a.tab {:href "https://blog.cleancoder.com/craftsman-series"} "Craftsman-series"]
       [:a.tab {:href "http://butunclebob.com"} "Ancient Blogs"]
       [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/uncle-bob-consulting-llc/articles"} "Old Articles"]
-      [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/uncle-bob-consulting-llc/clean-coder-gear"} "Clean Code Gear"]
       [:a.tab {:href "/a-little-clojure"} "A Little Clojure"]
       [:a.tab {:href "/space-war"} "Space War!" ]
 
