@@ -51,7 +51,7 @@
       [:head
        [:title "UBC"]
        (include-css "/css/style.css")]
-      hiccup)))
+      [:div.markdown-page hiccup])))
 
 (defn wrap-special-files [handler]
   (fn [request]

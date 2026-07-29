@@ -336,6 +336,46 @@ div.page-content {
     margin-left: 50px;
 }
 
+.markdown-page {
+    grid-column: 1 / -1;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 8.5in;
+    margin: 24px auto;
+    padding: 0 24px;
+    font-family: "Times New Roman", serif;
+    font-size: 14pt;
+    line-height: 1.35;
+}
+
+.markdown-page h2,
+.markdown-page h3 {
+    font-family: Arial, sans-serif;
+}
+
+.markdown-page h2 {
+    margin-bottom: 0;
+}
+
+.markdown-page h3 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.markdown-page p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.markdown-page ul {
+    margin-top: 6px;
+    margin-bottom: 14px;
+}
+
+.markdown-page li {
+    margin-bottom: 6px;
+}
+
 @media (max-width: 900px) {
     body {
         grid-template-columns: 1fr;
@@ -410,6 +450,12 @@ div.page-content {
     div.page-content {
         margin-left: 12px;
         margin-right: 12px;
+    }
+
+    .markdown-page {
+        margin: 16px auto;
+        padding: 0 14px;
+        font-size: 13pt;
     }
 }
 

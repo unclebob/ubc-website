@@ -47,8 +47,11 @@
   (testing "resume route"
     (let [response ((app) (mock/request :get "/files/about.md"))]
       (is (= (:status response) 200))
+      (is (.contains (:body response) "markdown-page"))
       (is (.contains (:body response) "Robert C. Martin"))
       (is (.contains (:body response) "Agile Manifesto"))
+      (is (.contains (:body response) "Craft Dispatch System"))
+      (is (.contains (:body response) "Teradyne Central"))
       (is (.contains (:body response) "Clean Coders Inc."))))
 
   (testing "morning bathrobe rant image route"
