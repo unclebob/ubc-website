@@ -338,13 +338,13 @@ div.page-content {
 
 .markdown-page {
     grid-column: 1 / -1;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 8.5in;
+    box-sizing: content-box;
+    width: min(8.5in, calc(100vw - 48px));
+    max-width: none;
     margin: 24px auto;
     padding: 0 24px;
     font-family: "Times New Roman", serif;
-    font-size: 14pt;
+    font-size: 16pt;
     line-height: 1.35;
 }
 
@@ -453,9 +453,11 @@ div.page-content {
     }
 
     .markdown-page {
+        box-sizing: border-box;
+        width: 100%;
         margin: 16px auto;
         padding: 0 14px;
-        font-size: 13pt;
+        font-size: 15pt;
     }
 }
 
