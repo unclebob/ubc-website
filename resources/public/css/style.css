@@ -28,15 +28,21 @@ body {
 
 #header {
     grid-column: 1 / -1;
-    min-height: 220px;
+    min-height: 0;
     height: auto;
     overflow: auto;
+    text-align: center;
 }
 
 #logo,
 #caricature {
-    max-width: 30vw;
+    float: none;
+    display: inline-block;
+    max-width: 160px;
+    max-height: 160px;
     height: auto;
+    margin: 0 8px 8px 8px;
+    vertical-align: top;
 }
 
 div#tabs {
@@ -167,7 +173,7 @@ div.product-description {
     font-family: Arial, sans-serif;
     font-size: 20pt;
     margin-left: 5px;
-    margin-top: 50px;
+    margin-top: 0;
     margin-bottom: 2px;
 }
 
@@ -345,19 +351,10 @@ div.page-content {
         grid-column: 1;
     }
 
-    #header {
-        min-height: 0;
-        text-align: center;
-    }
-
     #logo,
     #caricature {
-        float: none;
-        display: inline-block;
         max-width: 36vw;
         max-height: 120px;
-        margin: 0 6px 8px 6px;
-        vertical-align: top;
     }
 
     #ubc {
