@@ -6,19 +6,12 @@
 (def canonical-home-script
   "if (/^\\/products\\/?$/.test(window.location.pathname)) { window.history.replaceState(null, '', '/'); }")
 
-(def x-widget-loader
-  "!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return window.twttr=t;}(document,'script','twitter-wjs');")
-
-(defn x-feed []
-  [:div.x-feed
-   [:p.sidebar-title "Latest on X"]
-   [:a.twitter-timeline {:data-width "400"
-                         :data-height "600"
-                         :data-tweet-limit "5"
-                         :data-theme "light"
-                         :href "https://twitter.com/unclebobmartin?ref_src=twsrc%5Etfw"}
-    "Posts by @unclebobmartin"]
-   [:script x-widget-loader]])
+(defn morning-bathrobe-rant []
+  [:div.morning-bathrobe-rant
+   [:p.sidebar-title "Morning Bathrobe Rant"]
+   [:img.morning-bathrobe-rant-image
+    {:src "/images/morning-bathrobe-rant.jpg"
+     :alt "Morning Bathrobe Rant"}]])
 
 (defn page-template [content {:keys [message canonical-home]}]
   (html5
@@ -27,7 +20,7 @@
      [:title "UBC"]
      (when canonical-home
        [:script canonical-home-script])
-     (include-css "/css/style.css?v=20260728-6")]
+     (include-css "/css/style.css?v=20260729-1")]
     [:body
      [:div#header
       [:a {:href "/"}
@@ -56,6 +49,6 @@
      [:div#content-area
      content]
      [:div#sidebar
-      (x-feed)
+      (morning-bathrobe-rant)
 
       ]]))

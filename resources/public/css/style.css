@@ -158,6 +158,15 @@ div.product-description {
     margin-bottom: 2px;
 }
 
+.morning-bathrobe-rant-image {
+    display: block;
+    width: calc(100% - 10px);
+    max-width: 420px;
+    height: auto;
+    margin-left: 5px;
+    margin-top: 8px;
+}
+
 div.event {
     margin-bottom: 1px;
     margin-top: 5px;

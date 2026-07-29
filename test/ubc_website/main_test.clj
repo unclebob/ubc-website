@@ -8,7 +8,10 @@
     (let [response ((app) (mock/request :get "/"))]
       (is (= (:status response) 200))
       (is (.contains (:body response) "Clean Code, 2nd ed."))
-      (is (.contains (:body response) "Agile Software Development: Principles, Patterns, and Practices"))))
+      (is (.contains (:body response) "Agile Software Development: Principles, Patterns, and Practices"))
+      (is (.contains (:body response) "Morning Bathrobe Rant"))
+      (is (.contains (:body response) "/images/morning-bathrobe-rant.jpg"))
+      (is (not (.contains (:body response) "Latest on X")))))
 
   (testing "products route shows front page"
     (let [response ((app) (mock/request :get "/products"))]
@@ -30,6 +33,11 @@
 
   (testing "missile command sound route"
     (let [response ((app) (mock/request :get "/sounds/launch.wav"))]
+      (is (= (:status response) 200))
+      (is (pos? (.length ^java.io.File (:body response))))))
+
+  (testing "morning bathrobe rant image route"
+    (let [response ((app) (mock/request :get "/images/morning-bathrobe-rant.jpg"))]
       (is (= (:status response) 200))
       (is (pos? (.length ^java.io.File (:body response))))))
 
