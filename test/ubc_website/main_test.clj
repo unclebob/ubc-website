@@ -11,8 +11,8 @@
       (is (.contains (:body response) "Agile Software Development: Principles, Patterns, and Practices"))
       (is (.contains (:body response) "Morning Bathrobe Rants"))
       (is (.contains (:body response) "/images/morning-bathrobe-rant.jpg"))
-      (is (.contains (:body response) "2026-07-26 20X"))
-      (is (.contains (:body response) "2025-04-30 about SQL"))
+      (is (.contains (:body response) "2026-07-26 -- 20X"))
+      (is (.contains (:body response) "2025-04-30 -- about SQL"))
       (is (not (.contains (:body response) "Latest on X")))))
 
   (testing "products route shows front page"

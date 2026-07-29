@@ -168,25 +168,22 @@ div.product-description {
 }
 
 .morning-bathrobe-rant-links {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 14px;
-    row-gap: 7px;
     margin: 12px 5px 0 5px;
     padding-left: 0;
-    font-family: Arial, sans-serif;
-    font-size: 10pt;
     line-height: 1.25;
     list-style: none;
 }
 
 .morning-bathrobe-rant-links li {
-    margin-bottom: 0;
+    margin-bottom: 7px;
     text-align: left;
 }
 
 .morning-bathrobe-rant-links a {
-    color: #000;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    color: darkgreen;
 }
 
 div.event {
