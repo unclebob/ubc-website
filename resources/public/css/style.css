@@ -160,23 +160,29 @@ div.product-description {
 
 .morning-bathrobe-rant-image {
     display: block;
-    width: calc(100% - 10px);
-    max-width: 420px;
+    width: 300px;
+    max-width: calc(100% - 10px);
     height: auto;
     margin-left: 5px;
     margin-top: 8px;
 }
 
 .morning-bathrobe-rant-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 14px;
+    row-gap: 7px;
     margin: 12px 5px 0 5px;
-    padding-left: 20px;
+    padding-left: 0;
     font-family: Arial, sans-serif;
-    font-size: 12pt;
+    font-size: 10pt;
     line-height: 1.25;
+    list-style: none;
 }
 
 .morning-bathrobe-rant-links li {
-    margin-bottom: 7px;
+    margin-bottom: 0;
+    text-align: left;
 }
 
 .morning-bathrobe-rant-links a {
