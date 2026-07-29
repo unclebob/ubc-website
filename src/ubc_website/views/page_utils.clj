@@ -44,7 +44,7 @@
      [:title "UBC"]
      (when canonical-home
        [:script canonical-home-script])
-     (include-css "/css/style.css?v=20260729-6")]
+     (include-css "/css/style.css?v=20260729-7")]
     [:body
      [:div#header
       [:a {:href "/"}

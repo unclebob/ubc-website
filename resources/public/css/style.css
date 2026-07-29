@@ -1,7 +1,7 @@
 body {
     background: rgba(250, 255, 250, 1);
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 28%);
+    grid-template-columns: 836px 300px;
     column-gap: 20px;
     margin: 8px;
 }
@@ -160,7 +160,7 @@ div.product-description {
 #sidebar {
     grid-column: 2;
     min-width: 0;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .sidebar-title {
