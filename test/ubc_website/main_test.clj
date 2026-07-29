@@ -7,6 +7,8 @@
   (testing "main route"
     (let [response ((app) (mock/request :get "/"))]
       (is (= (:status response) 200))
+      (is (.contains (:body response) "width=device-width, initial-scale=1"))
+      (is (.contains (:body response) "/css/style.css?v=20260729-6"))
       (is (.contains (:body response) "Clean Code, 2nd ed."))
       (is (.contains (:body response) "Agile Software Development: Principles, Patterns, and Practices"))
       (is (.contains (:body response) "Morning Bathrobe Rants"))

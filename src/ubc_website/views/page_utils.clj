@@ -39,10 +39,12 @@
   (html5
     [:head
      [:meta {:charset "UTF-8"}]
+     [:meta {:name "viewport"
+             :content "width=device-width, initial-scale=1"}]
      [:title "UBC"]
      (when canonical-home
        [:script canonical-home-script])
-     (include-css "/css/style.css?v=20260729-5")]
+     (include-css "/css/style.css?v=20260729-6")]
     [:body
      [:div#header
       [:a {:href "/"}

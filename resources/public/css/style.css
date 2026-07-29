@@ -1,5 +1,9 @@
 body {
     background: rgba(250, 255, 250, 1);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 28%);
+    column-gap: 20px;
+    margin: 8px;
 }
 
 #ubc {
@@ -23,11 +27,21 @@ body {
 }
 
 #header {
-    height: 220px;
+    grid-column: 1 / -1;
+    min-height: 220px;
+    height: auto;
+    overflow: auto;
+}
+
+#logo,
+#caricature {
+    max-width: 30vw;
+    height: auto;
 }
 
 div#tabs {
-    height: 70pt;
+    grid-column: 1 / -1;
+    min-height: 70pt;
     background-color: rgba(230, 255, 230, 1);
     display: flex;
     align-items: flex-start;
@@ -58,8 +72,8 @@ a.tab {
 }
 
 div#content-area {
-    float: left;
-    width: 70%;
+    grid-column: 1;
+    min-width: 0;
 }
 
 #book-palette {
@@ -100,7 +114,6 @@ a.book-palette-link:hover .book-cover {
 }
 
 #products {
-    float: left;
     width: 97%;
 }
 
@@ -145,8 +158,8 @@ div.product-description {
 }
 
 #sidebar {
-    float: right;
-    width: 28%;
+    grid-column: 2;
+    min-width: 0;
     margin-top: 10px;
 }
 
@@ -300,6 +313,7 @@ input.submit {
 }
 
 div#message {
+    grid-column: 1 / -1;
     margin-top: 5px;
     margin-left: 10px;
     padding-left: 10px;
@@ -314,4 +328,100 @@ div#message {
 div.page-content {
     font-size: 14pt;
     margin-left: 50px;
+}
+
+@media (max-width: 900px) {
+    body {
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+        margin: 6px;
+    }
+
+    #header,
+    div#tabs,
+    div#content-area,
+    #sidebar,
+    div#message {
+        grid-column: 1;
+    }
+
+    #header {
+        min-height: 0;
+        text-align: center;
+    }
+
+    #logo,
+    #caricature {
+        float: none;
+        display: inline-block;
+        max-width: 36vw;
+        max-height: 120px;
+        margin: 0 6px 8px 6px;
+        vertical-align: top;
+    }
+
+    #ubc {
+        clear: both;
+        font-size: 28pt;
+        margin-bottom: 6px;
+    }
+
+    #ubc-subtitle {
+        font-size: 17pt;
+        margin-bottom: 10px;
+    }
+
+    div#tabs {
+        min-height: 0;
+        padding: 8px;
+        column-gap: 14px;
+        row-gap: 8px;
+        white-space: normal;
+    }
+
+    a.tab,
+    .tab {
+        font-size: 12pt;
+    }
+
+    #book-palette {
+        grid-template-columns: repeat(2, minmax(130px, 160px));
+        justify-content: center;
+        column-gap: 24px;
+        row-gap: 28px;
+        margin: 18px 8px;
+    }
+
+    .book-cover {
+        width: min(160px, 40vw);
+        min-height: 0;
+    }
+
+    #sidebar {
+        margin-top: 8px;
+    }
+
+    .sidebar-title {
+        font-size: 17pt;
+        margin-top: 22px;
+    }
+
+    .morning-bathrobe-rant-image {
+        width: min(300px, calc(100% - 10px));
+    }
+
+    div.page-content {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    #book-palette {
+        grid-template-columns: minmax(130px, 160px);
+    }
+
+    #ubc {
+        font-size: 24pt;
+    }
 }
