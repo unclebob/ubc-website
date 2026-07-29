@@ -12,7 +12,11 @@
       (is (.contains (:body response) "Morning Bathrobe Rants"))
       (is (.contains (:body response) "/images/morning-bathrobe-rant.jpg"))
       (is (.contains (:body response) "2026-07-26 -- 20X"))
-      (is (.contains (:body response) "2025-04-30 -- about SQL"))
+      (is (.contains (:body response) "2026-05-06 -- Disengage from the Syntax"))
+      (is (.contains (:body response) "2025-07-21 -- Casey Muratori's Talk at the Better Software Conference"))
+      (is (.contains (:body response) "2025-05-16 -- Vibe Coding"))
+      (is (.contains (:body response) "2025-05-01 -- ORMs"))
+      (is (.contains (:body response) "2025-04-30 -- SQL"))
       (is (not (.contains (:body response) "Latest on X")))))
 
   (testing "products route shows front page"
