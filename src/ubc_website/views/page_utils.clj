@@ -8,10 +8,24 @@
 
 (defn morning-bathrobe-rant []
   [:div.morning-bathrobe-rant
-   [:p.sidebar-title "Morning Bathrobe Rant"]
+   [:p.sidebar-title "Morning Bathrobe Rants"]
    [:img.morning-bathrobe-rant-image
     {:src "/images/morning-bathrobe-rant.jpg"
-     :alt "Morning Bathrobe Rant"}]])
+     :alt "Morning Bathrobe Rants"}]
+   [:ul.morning-bathrobe-rant-links
+    [:li [:a {:href "https://x.com/unclebobmartin/status/2081334541667410312"} "20X - 2026-07-26"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/2057064795241676838"} "tubes on pegs - 2026-05-20"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/2046578685080220074"} "Quicksilver - 2026-04-21"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/2046206145597972849"} "AI out-codes you; deal with it - 2026-04-20"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/1999825947726340531"} "Truly Bizarre Failure Modes - 2025-12-13"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/1982432101665484900"} "SOLID up front - 2025-10-26"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/1930572242099769507"} "agile - 2025-06-05"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/1929854761626436092"} "testing discipline - 2025-06-03"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/1921895270322786438"} "Micro Services - 2025-05-12"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/1920794352214741335"} "Write your damned tests - 2025-05-09"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/1920433782563254776"} "Types - 2025-05-08"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/1918276572760486249"} "OOP - 2025-05-02"]]
+    [:li [:a {:href "https://x.com/unclebobmartin/status/1917558113177108537"} "about SQL - 2025-04-30"]]]])
 
 (defn page-template [content {:keys [message canonical-home]}]
   (html5
@@ -20,7 +34,7 @@
      [:title "UBC"]
      (when canonical-home
        [:script canonical-home-script])
-     (include-css "/css/style.css?v=20260729-1")]
+     (include-css "/css/style.css?v=20260729-2")]
     [:body
      [:div#header
       [:a {:href "/"}

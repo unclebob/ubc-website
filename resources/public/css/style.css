@@ -167,6 +167,22 @@ div.product-description {
     margin-top: 8px;
 }
 
+.morning-bathrobe-rant-links {
+    margin: 12px 5px 0 5px;
+    padding-left: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    line-height: 1.25;
+}
+
+.morning-bathrobe-rant-links li {
+    margin-bottom: 7px;
+}
+
+.morning-bathrobe-rant-links a {
+    color: #000;
+}
+
 div.event {
     margin-bottom: 1px;
     margin-top: 5px;

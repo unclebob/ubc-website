@@ -9,8 +9,10 @@
       (is (= (:status response) 200))
       (is (.contains (:body response) "Clean Code, 2nd ed."))
       (is (.contains (:body response) "Agile Software Development: Principles, Patterns, and Practices"))
-      (is (.contains (:body response) "Morning Bathrobe Rant"))
+      (is (.contains (:body response) "Morning Bathrobe Rants"))
       (is (.contains (:body response) "/images/morning-bathrobe-rant.jpg"))
+      (is (.contains (:body response) "20X - 2026-07-26"))
+      (is (.contains (:body response) "about SQL - 2025-04-30"))
       (is (not (.contains (:body response) "Latest on X")))))
 
   (testing "products route shows front page"
