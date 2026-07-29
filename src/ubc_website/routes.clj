@@ -50,7 +50,7 @@
     (html5
       [:head
        [:title "UBC"]
-       (include-css "/css/style.css")]
+       (include-css "/css/style.css?v=20260729-9")]
       [:div.markdown-page hiccup])))
 
 (defn wrap-special-files [handler]

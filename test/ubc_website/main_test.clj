@@ -48,6 +48,7 @@
     (let [response ((app) (mock/request :get "/files/about.md"))]
       (is (= (:status response) 200))
       (is (.contains (:body response) "markdown-page"))
+      (is (.contains (:body response) "/css/style.css?v=20260729-9"))
       (is (.contains (:body response) "Robert C. Martin"))
       (is (.contains (:body response) "Agile Manifesto"))
       (is (.contains (:body response) "Craft Dispatch System"))
