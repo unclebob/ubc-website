@@ -44,6 +44,13 @@
       (is (= (:status response) 200))
       (is (pos? (.length ^java.io.File (:body response))))))
 
+  (testing "resume route"
+    (let [response ((app) (mock/request :get "/files/about.md"))]
+      (is (= (:status response) 200))
+      (is (.contains (:body response) "Robert C. Martin"))
+      (is (.contains (:body response) "Agile Manifesto"))
+      (is (.contains (:body response) "Clean Coders Inc."))))
+
   (testing "morning bathrobe rant image route"
     (let [response ((app) (mock/request :get "/images/morning-bathrobe-rant.jpg"))]
       (is (= (:status response) 200))
