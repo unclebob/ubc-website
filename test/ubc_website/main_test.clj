@@ -51,8 +51,13 @@
       (is (.contains (:body response) "/css/style.css?v=20260729-9"))
       (is (.contains (:body response) "Robert C. Martin"))
       (is (.contains (:body response) "Agile Manifesto"))
+      (is (.contains (:body response) "Outboard Marine Corporation"))
+      (is (.contains (:body response) "IBM System/7 shop-floor control"))
       (is (.contains (:body response) "Craft Dispatch System"))
-      (is (.contains (:body response) "Teradyne Central"))
+      (is (.contains (:body response) "Teradyne Central/Telecommunications Division"))
+      (is (.contains (:body response) "4-TEL distributed telephone testing"))
+      (is (.contains (:body response) "8085 COLT migration"))
+      (is (.contains (:body response) "EEPROM/ROM vectoring"))
       (is (.contains (:body response) "Clean Coders Inc."))))
 
   (testing "morning bathrobe rant image route"

@@ -17,17 +17,33 @@ Martin's first paid programming work was at A.S.C. Tabulating in Lake Bluff, Ill
 
 ### Teradyne Applied Systems
 
-Martin joined Teradyne Applied Systems in 1973. The work centered on computer-controlled laser trimming systems and telephone test equipment.
+Martin joined Teradyne Applied Systems in 1973. The work centered on computer-controlled laser trimming systems.
 
 * **Laser trimming systems.** He wrote assembler for Teradyne minicomputers controlling CO2 laser systems that trimmed electronic components to precise resistance values.
 
-* **4-TEL and real-time screens.** He worked on telephone line test systems, learned early software design lessons, and wrote real-time terminal screens and forms for Teradyne video terminals.
+### Outboard Marine Corporation
 
-* **Development environment migration.** He helped move M365 development from magnetic tape cartridges to PDP-11/VAX tooling, improving editing, assembly, and binary download workflows.
+Martin worked at Outboard Marine Corporation in Waukegan, Illinois, on factory automation for the company's manufacturing operations.
 
-### Teradyne Central
+* **IBM System/7 shop-floor control.** He programmed an IBM System/7 to monitor die-casting machines that produced parts for Lawnboy lawnmowers and Johnson outboard motors. The system counted pieces, timed mold cycles, reported scrap, and gathered data through a local network connected to machines and reporting stations on the plant floor.
+
+* **IBM 370 batch development workflow.** Because the System/7 had no native compiler, source editing and assembly were done through an IBM 370 mainframe. Programmers punched edit directives and compile jobs, waited for the 370 batch queue, received binaries over a private connection to the System/7, and debugged with the System/7 front panel.
+
+* **Structured Programming course.** After reading an article on structured programming, Martin wrote a one-day training class and delivered it to an OMC programming team in St. Louis. It was his first business trip as a trainer and an early preview of his later career as an instructor and consultant.
+
+### Teradyne Central/Telecommunications Division
 
 At Teradyne Central, Martin worked on telephone service automation, voice technology, development tools, and team leadership.
+
+* **4-TEL distributed telephone testing.** He worked on 4-TEL, a distributed telephone-line quality measurement system. A Service Area Computer in the telephone-company service center communicated over modem lines with Central Office Line Testers in telephone central offices. Those line testers could dial a subscriber line without ringing it, measure AC and DC characteristics, estimate line length, detect faults, and report results back to the service center.
+
+* **4-TEL real-time software.** He wrote M365 assembly for the Service Area Computer and Central Office Line Tester software. The system used a polling, event-driven task switcher with processes for terminals, modem traffic, timed events, screen output, and other asynchronous work.
+
+* **8085 COLT migration.** He helped replace the M365-based Central Office Line Tester with a smaller Intel 8085 implementation. The migration translated COLT software from M365 assembly to 8085 assembly, reduced the field hardware to a compact ROM/RAM-based industrial enclosure, and lowered power, size, and service burden in central-office environments.
+
+* **EEPROM/ROM vectoring.** To make field updates possible despite ROM-based deployment, the team used RAM vector tables that pointed to routines in ROM. Calls went through vectors initialized at boot, allowing selected routines to be redirected without replacing the whole ROM image.
+
+* **Development environment migration.** He helped move M365 and 8085 development from magnetic tape cartridges and M365-hosted assemblers to PDP-11/VAX tooling, improving editing, assembly, compile queuing, and binary download workflows.
 
 * **Electronic Receptionist.** He helped design and prototype an early digital voice-mail and call-management system. The system used custom hardware, embedded processors, C, assembly, voice storage, touch-tone control, and a small Forth-like diagnostic interpreter.
 
