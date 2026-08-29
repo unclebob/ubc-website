@@ -8,7 +8,7 @@
     (let [response ((app) (mock/request :get "/"))]
       (is (= (:status response) 200))
       (is (.contains (:body response) "width=device-width, initial-scale=1"))
-      (is (.contains (:body response) "/css/style.css?v=20260829-1"))
+      (is (.contains (:body response) "/css/style.css?v=20260829-3"))
       (is (.contains (:body response) "Clean Code, 2nd ed."))
       (is (.contains (:body response) "Agile Software Development: Principles, Patterns, and Practices"))
       (is (.contains (:body response) "Morning Bathrobe Rants"))
@@ -25,7 +25,7 @@
     (let [response ((app) (mock/request :get "/books"))
           body (:body response)]
       (is (= (:status response) 200))
-      (is (.contains body "/css/style.css?v=20260829-1"))
+      (is (.contains body "/css/style.css?v=20260829-3"))
       (is (.contains body "book-title-bar"))
       (is (.contains body "book-thumbnail"))
       (is (.contains body "Extreme Programming Explained (1st ed.)"))
@@ -69,7 +69,7 @@
     (let [response ((app) (mock/request :get "/files/about.md"))]
       (is (= (:status response) 200))
       (is (.contains (:body response) "markdown-page"))
-      (is (.contains (:body response) "/css/style.css?v=20260829-2"))
+      (is (.contains (:body response) "/css/style.css?v=20260829-4"))
       (is (.contains (:body response) "Robert C. Martin"))
       (is (.contains (:body response) "Agile Manifesto"))
       (is (.contains (:body response) "Outboard Marine Corporation"))

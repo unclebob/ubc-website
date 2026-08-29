@@ -238,8 +238,9 @@ div.book {
 div.book-title-bar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     column-gap: 12px;
+    min-height: 7.5em;
 }
 
 p.book-title {
@@ -251,6 +252,7 @@ p.book-title {
     margin-left: 5px;
     flex: 1;
     min-width: 0;
+    align-self: center;
 }
 
 a.book-title-link {
@@ -265,15 +267,16 @@ a.book-title-link:hover {
 
 a.book-cover-link {
     flex: 0 0 auto;
-    margin: 4px 6px 4px 0;
+    display: flex;
+    align-items: stretch;
+    margin: 0 6px 0 0;
     line-height: 0;
 }
 
 img.book-thumbnail {
     display: block;
-    height: 72px;
+    height: 7.5em;
     width: auto;
-    max-width: 58px;
     object-fit: contain;
     border: 1px solid #333;
     background: white;
@@ -467,11 +470,6 @@ div.page-content {
     .book-cover {
         width: min(160px, 40vw);
         min-height: 0;
-    }
-
-    img.book-thumbnail {
-        height: 60px;
-        max-width: 48px;
     }
 
     #sidebar {
