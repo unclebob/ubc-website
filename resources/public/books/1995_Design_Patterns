@@ -3,6 +3,9 @@
 :author "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides"
 :publisher "Addison Wesley"
 :date "1995"
+:isbn "9780201633610"
+:url "https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612"
+:cover "https://www.informit.com/ShowCover.aspx?isbn=9780201633610&type=f"
 :description "
 Probably the most important software design book written
 within the last half decade.  This book contains nothing

@@ -3,6 +3,9 @@
 :author "Eric Evans"
 :publisher "Addison Wesley"
 :date "2004"
+:isbn "9780321125217"
+:url "https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215"
+:cover "https://www.informit.com/ShowCover.aspx?isbn=9780321125217&type=f"
 :description "
 This is the definitive work on domain analysis.  It provides both the motivation for, and the techniques that support,
 the analysis of an automated business domain.  The book is deeply technical, and yet covers the behavior of the

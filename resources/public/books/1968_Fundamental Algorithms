@@ -3,6 +3,9 @@
 :author "Donald Knuth"
 :publisher "Addison Wesley"
 :date "1973,1968"
+:isbn "9780201038095"
+:url "https://www.amazon.com/Art-Computer-Programming-Vol-Fundamental/dp/0201038099"
+:cover "https://www.informit.com/ShowCover.aspx?isbn=9780201896831&type=f"
 :description "This is Volume I of Knuth's series on _The Art of Computer Programming_.
 
 The book walks through the basics of data structures and computational

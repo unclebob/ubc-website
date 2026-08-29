@@ -3,6 +3,9 @@
 :author "John Ousterhout"
 :publisher "self"
 :date "2022"
+:isbn "9781732102217"
+:url "https://www.amazon.com/Philosophy-Software-Design-2nd/dp/173210221X"
+:cover "https://images-na.ssl-images-amazon.com/images/P/173210221X.01._SX200_.jpg"
 :description "This is a short book that describes the author's collection of software design principles.
 
 The author worked on a number of software projects, including the Tcl scripting language and the Tk toolkit.

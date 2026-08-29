@@ -3,6 +3,9 @@
 :author "Martin Fowler"
 :publisher "Addison Wesley"
 :date "1997"
+:isbn "9780201895421"
+:url "https://www.amazon.com/Analysis-Patterns-Reusable-Object-Models/dp/0201895420"
+:cover "https://www.informit.com/ShowCover.aspx?isbn=9780201895421&type=f"
 :description "
 An extremely important and vastly under-utilized book.  _Analysis Patterns_ is the harbinger of _Domain Driven Design_
 and provides a deep look into the most common data and behavior models for real business applications.  In this book

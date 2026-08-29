@@ -3,6 +3,9 @@
 :author "Bertrand Meyer"
 :publisher "Prentice Hall"
 :date "1988"
+:isbn "9780136290490"
+:url "https://www.amazon.com/Object-Oriented-Software-Construction-Prentice-Hall-International/dp/0136290493"
+:cover "https://covers.openlibrary.org/b/isbn/9780136290490-M.jpg"
 :description "
 A classic book on Object Oriented Design, written by one of the founding masters of the
 technique.  This is the book that defines the Open-Closed principle, and so much more.

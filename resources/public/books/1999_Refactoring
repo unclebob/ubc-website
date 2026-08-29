@@ -3,6 +3,9 @@
 :author "Martin Fowler"
 :publisher "Addison Wesley"
 :date "1999"
+:isbn "9780201485677"
+:url "https://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485677"
+:cover "https://www.informit.com/ShowCover.aspx?isbn=9780201485677&type=f"
 :description "
 When my son was 11, he was on a hockey team.  As all hockey parents know, your player will be
 on the ice for 5 minutes and then cooling down for 10.  When my son was on the ice I was

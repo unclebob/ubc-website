@@ -3,6 +3,9 @@
 :author "O.-J. Dahl, E. W. Dijkstra and C. A. R. Hoare"
 :publisher "Academic Press"
 :date "1972"
+:isbn "9780122005503"
+:url "https://www.amazon.com/Structured-Programming-P-I-C-studies-processing/dp/0122005503"
+:cover "/images/books/structured-programming.jpg"
 :description "This is the book in which Dijkstra told us that `goto` might not
 be such a good idea.  This is also the book in which Ole-Johan Dahl described the
 early principles of Object-Oriented Programming.  There is much wealth within these pages

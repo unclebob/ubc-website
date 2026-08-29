@@ -5,6 +5,7 @@
             [ubc-website.interactors.recommended-books-test]
             [ubc-website.interactors.sidebar-test]
             [ubc-website.main-test]
+            [ubc-website.presenters.recommended-books-test]
             [ubc-website.presenters.testutil]))
 
 (def test-namespaces
@@ -13,6 +14,7 @@
    'ubc-website.interactors.recommended-books-test
    'ubc-website.interactors.sidebar-test
    'ubc-website.main-test
+   'ubc-website.presenters.recommended-books-test
    'ubc-website.presenters.testutil])
 
 (defn -main []

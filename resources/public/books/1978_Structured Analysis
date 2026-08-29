@@ -3,6 +3,9 @@
 :author "Tom DeMarco"
 :publisher "Yourdon Press"
 :date "1979, 1978"
+:isbn "9780138543808"
+:url "https://www.amazon.com/Structured-Analysis-System-Specification-DeMarco/dp/0138543801"
+:cover "https://www.informit.com/ShowCover.aspx?isbn=9780138543808&type=f"
 :description "
 This is a classic of early software system design.  DeMarco describes
 the top-down approach of _functional decomposition_ and introduces
