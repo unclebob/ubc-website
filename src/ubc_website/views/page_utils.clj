@@ -13,6 +13,7 @@
     {:src "/images/morning-bathrobe-rant.jpg"
      :alt "Morning Bathrobe Rants"}]
    [:ul.morning-bathrobe-rant-links
+    [:li [:a {:href "https://x.com/unclebobmartin/status/2094742094187307295"} "2026-09-01 -- AI slop"]]
     [:li [:a {:href "https://x.com/unclebobmartin/status/2081334541667410312"} "2026-07-26 -- 20X"]]
     [:li [:a {:href "https://x.com/unclebobmartin/status/2057064795241676838"} "2026-05-20 -- Tubes on Pegs"]]
     [:li [:a {:href "https://x.com/unclebobmartin/status/2052002463452958899"} "2026-05-06 -- Disengage from the Syntax"]]
