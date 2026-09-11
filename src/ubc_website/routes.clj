@@ -29,6 +29,7 @@
   (GET "/a-little-clojure" [] (serve "resources/files/aLittleClojure.html"))
   (GET "/space-war" [] (serve "resources/index.html"))
   (GET "/missile-command" [] (serve "resources/missile-command/index.html"))
+  (GET "/othello" [] (serve "resources/othello/index.html"))
   (GET "/zorch" [key] (zorch/exec key))
 
   (route/files "/sounds" {:root "resources/sounds"})

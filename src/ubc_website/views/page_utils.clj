@@ -45,7 +45,7 @@
      [:title "UBC"]
      (when canonical-home
        [:script canonical-home-script])
-     (include-css "/css/style.css?v=20260829-3")]
+     (include-css "/css/style.css?v=20260911-1")]
     [:body
      [:div#header
       [:a {:href "/"}
@@ -64,8 +64,12 @@
       [:a.tab {:href "http://butunclebob.com"} "Ancient Blogs"]
       [:a.tab {:href "https://sites.google.com/site/unclebobconsultingllc/uncle-bob-consulting-llc/articles"} "Old Articles"]
       [:a.tab {:href "/a-little-clojure"} "A Little Clojure"]
-      [:a.tab {:href "/space-war"} "Space War!"]
-      [:a.tab {:href "/missile-command"} "Missile Command!"]
+      [:div.tab-menu
+       [:span.tab {:tabindex "0"} "Games!"]
+       [:div.tab-menu-items
+        [:a.tab-menu-item {:href "/space-war"} "Space War!"]
+        [:a.tab-menu-item {:href "/missile-command"} "Missile Command!"]
+        [:a.tab-menu-item {:href "/othello"} "Othello"]]]
 
 
       ]

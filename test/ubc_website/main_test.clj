@@ -8,7 +8,12 @@
     (let [response ((app) (mock/request :get "/"))]
       (is (= (:status response) 200))
       (is (.contains (:body response) "width=device-width, initial-scale=1"))
-      (is (.contains (:body response) "/css/style.css?v=20260829-3"))
+      (is (.contains (:body response) "/css/style.css?v=20260911-1"))
+      (is (.contains (:body response) "Games!"))
+      (is (.contains (:body response) "tab-menu"))
+      (is (.contains (:body response) "/space-war"))
+      (is (.contains (:body response) "/missile-command"))
+      (is (.contains (:body response) "/othello"))
       (is (.contains (:body response) "Clean Code, 2nd ed."))
       (is (.contains (:body response) "Agile Software Development: Principles, Patterns, and Practices"))
       (is (.contains (:body response) "Morning Bathrobe Rants"))
@@ -26,7 +31,7 @@
     (let [response ((app) (mock/request :get "/books"))
           body (:body response)]
       (is (= (:status response) 200))
-      (is (.contains body "/css/style.css?v=20260829-3"))
+      (is (.contains body "/css/style.css?v=20260911-1"))
       (is (.contains body "book-title-bar"))
       (is (.contains body "book-thumbnail"))
       (is (.contains body "Extreme Programming Explained (1st ed.)"))
@@ -60,6 +65,27 @@
       (is (= (get-in response [:headers "Content-Type"])
              "application/javascript"))
       (is (.contains (:body response) "missile_command.browser.main.run"))))
+
+  (testing "othello route"
+    (let [response ((app) (mock/request :get "/othello"))]
+      (is (= (:status response) 200))
+      (is (.contains (:body response) "Othello"))
+      (is (.contains (:body response) "/othello/js/p5.min.js"))
+      (is (.contains (:body response) "/othello/js/main.js"))))
+
+  (testing "othello javascript route"
+    (let [response ((app) (mock/request :get "/othello/js/main.js"))]
+      (is (= (:status response) 200))
+      (is (= (get-in response [:headers "Content-Type"])
+             "application/javascript"))
+      (is (.contains (:body response) "othello.ui.web.init"))))
+
+  (testing "othello p5 route"
+    (let [response ((app) (mock/request :get "/othello/js/p5.min.js"))]
+      (is (= (:status response) 200))
+      (is (= (get-in response [:headers "Content-Type"])
+             "application/javascript"))
+      (is (pos? (.length (:body response))))))
 
   (testing "missile command sound route"
     (let [response ((app) (mock/request :get "/sounds/launch.wav"))]
