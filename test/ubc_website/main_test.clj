@@ -18,6 +18,7 @@
       (is (.contains (:body response) "Agile Software Development: Principles, Patterns, and Practices"))
       (is (.contains (:body response) "Morning Bathrobe Rants"))
       (is (.contains (:body response) "/images/morning-bathrobe-rant.jpg"))
+      (is (.contains (:body response) "2026-09-12 -- Rethinking Harnesses"))
       (is (.contains (:body response) "2026-09-01 -- AI slop"))
       (is (.contains (:body response) "2026-07-26 -- 20X"))
       (is (.contains (:body response) "2026-05-06 -- Disengage from the Syntax"))
