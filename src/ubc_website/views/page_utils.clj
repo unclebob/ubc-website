@@ -13,6 +13,7 @@
     {:src "/images/morning-bathrobe-rant.jpg"
      :alt "Morning Bathrobe Rants"}]
    [:ul.morning-bathrobe-rant-links
+    [:li [:a {:href "https://x.com/unclebobmartin/status/2099481469433323588"} "2026-09-14 -- No bathrobe. No rant. The AI threat."]]
     [:li [:a {:href "https://x.com/unclebobmartin/status/2098744156709441896"} "2026-09-12 -- Rethinking Harnesses"]]
     [:li [:a {:href "https://x.com/unclebobmartin/status/2094742094187307295"} "2026-09-01 -- AI slop"]]
     [:li [:a {:href "https://x.com/unclebobmartin/status/2081334541667410312"} "2026-07-26 -- 20X"]]
