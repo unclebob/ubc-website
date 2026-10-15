@@ -26,6 +26,7 @@
     (register/registration-page name email session))
   (POST "/postregistration" [name email] (register/exec name email))
   (GET "/user-groups" [] (user-groups/exec))
+  (GET "/privacyforgoogle" [] (serve "resources/files/privacyforgoogle.html"))
   (GET "/a-little-clojure" [] (serve "resources/files/aLittleClojure.html"))
   (GET "/space-war" [] (serve "resources/index.html"))
   (GET "/missile-command" [] (serve "resources/missile-command/index.html"))

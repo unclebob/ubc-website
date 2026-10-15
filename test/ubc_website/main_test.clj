@@ -70,6 +70,12 @@
              "application/javascript"))
       (is (.contains (:body response) "missile_command.browser.main.run"))))
 
+  (testing "privacy for google route"
+    (let [response ((app) (mock/request :get "/privacyforgoogle"))]
+      (is (= (:status response) 200))
+      (is (.contains (:body response) "Home Monitor Nest"))
+      (is (.contains (:body response) "Smart Device Management API"))))
+
   (testing "othello route"
     (let [response ((app) (mock/request :get "/othello"))]
       (is (= (:status response) 200))
